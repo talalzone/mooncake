@@ -97,7 +97,7 @@ For evaluation the validation rules are passed to the `mooncake executor` along 
     rules := string(content)
     
     // to validate
-    jsonFile := "sample_items.json"
+    json := "sample.json"
     
     // sample context struct
     ctx := struct {
@@ -111,7 +111,7 @@ For evaluation the validation rules are passed to the `mooncake executor` along 
     }
     
     // pass to executor
-    result := executor.Execute(rules, jsonFile, ctx)
+    result := executor.Execute(rules, json, ctx)
 ```
 
 Validation Results
@@ -195,7 +195,8 @@ A commented out statement looks as follows:
 ```
 
 
-####TODO
+#### TODO:
+
 * Ability to pass custom reference functions in implication
 * Ability to configure Error Structure
 * Ability to validate Golang structures
