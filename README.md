@@ -1,2 +1,2 @@
-# mooncake
-A simplistic validation language to validate complex objects.
+# Mooncake
+A simplistic validation language for validating complex objects.

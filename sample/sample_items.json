@@ -1,0 +1,24 @@
+{
+  "sample": {
+    "someitem": {
+      "itemlist": [
+        {
+          "neat": "wow"
+        },
+        {
+          "neat": "tubular"
+        }
+      ]
+    },
+    "coolcolors": [
+      {
+        "color":"red",
+        "hex":  "ff0000"
+      },
+      {
+        "color":"blue",
+        "hex":"0000ff"
+      }
+    ]
+  }
+}

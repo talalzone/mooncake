@@ -1,0 +1,7 @@
+sample eq nil                                =>  E0001:01!!! # This is a fatal error
+{
+    ~sample.someitem eq nil                  =>  E0002:02!! #  This is a severe error
+    ~@len sample.someitem.itemlist eq 0      =>  E0002:02! #  This is a warning
+
+    @len sample.itemlist eq 0                =>  E0002:02! #  This is a warning
+}
