@@ -3,10 +3,10 @@
     "someitem": {
       "itemlist": [
         {
-          "neat": "wow"
+          "abc": 1
         },
         {
-          "neat": "tubular"
+          "xyz": 2
         }
       ]
     },

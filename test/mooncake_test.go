@@ -30,5 +30,5 @@ func TestBasicRules(t *testing.T) {
 
 	result := executor.Execute(rules, jsonFile, ctx)
 
-	log.Printf("Result %v", result)
+	log.Printf("Result - %+v\n", result)
 }

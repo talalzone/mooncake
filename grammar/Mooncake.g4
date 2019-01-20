@@ -25,7 +25,7 @@ inlineStmt
     ;
 
 errorStmt
-    : humanCode=ERROR_CODE ':' errCode=INT errType=errorType
+    : '[' code=ERROR_CODE ',' info=ERROR_INFO ']' errType=errorType
     ;
 
 linkedStmt
@@ -39,7 +39,6 @@ simpleStmt
 expression
     : id=identifier  op=operator  val=literal
     ;
-
 
 identifier
     : IDENTIFIER
@@ -90,13 +89,6 @@ WARNING
 
 LINKED
     : '~'
-    ;
-
-IF  : 'if'
-    ;
-
-ELIF
-    : 'elif'
     ;
 
 EQ  : 'eq'
@@ -156,7 +148,7 @@ EMPTY
     ;
 
 DOUBLE
-    : '-'? INT '.' [0-9]+ ?
+    : '-'? INT '.' [0-9]+
     ;
 
 INT
@@ -179,10 +171,6 @@ NULL
     : 'nil'
     ;
 
-ERROR_CODE
-    : 'E' INT
-    ;
-
 COMMENT
     : '#' ~[\r\n]* -> skip
     ;
@@ -195,14 +183,21 @@ TERMINATOR
 	;
 
 IDENTIFIER
-    : ('a'..'z'|'A'..'Z'|'[' INT ']')+ ('.' IDENTIFIER)?
+    : ( 'a'..'z' | 'A'..'Z' | '[' INT ']' )+ ( '.' IDENTIFIER )?
     ;
 
 CTX_ID
-    : '${'IDENTIFIER'}'
+    : '${' IDENTIFIER '}'
     ;
 
 INLINE_ID
-    : '_' ('a'..'z' | 'A'..'Z')+
+    : '_' ( 'a'..'z' | 'A'..'Z' )+
     ;
 
+ERROR_CODE
+    : ( 'a'..'z' | 'A'..'Z' | [0-9] )+
+    ;
+
+ERROR_INFO
+    :  '\'' .*? '\''
+    ;

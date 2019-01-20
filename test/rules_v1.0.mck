@@ -1,7 +1,7 @@
-sample eq nil                                =>  E0001:01!!! # This is a fatal error
+sample eq nil                                =>  [E0001, 'sample is empty']!!!     # This is a fatal error
 {
-    ~sample.someitem eq nil                  =>  E0002:02!! #  This is a severe error
-    ~@len sample.someitem.itemlist eq 0      =>  E0002:02! #  This is a warning
+    ~sample.someitem eq nil                  =>  [E0002, 'someitem is not set']!!  #  This is a severe error
+    ~@len sample.someitem.itemlist eq 5      =>  [E0003, 'itemlist is empty']!     #  This is a warning
 
-    @len sample.itemlist eq 0                =>  E0002:02! #  This is a warning
+    #@len sample.itemlist eq 0               =>  [E0004, 'itemlist is empty']!     #  This is a warning
 }

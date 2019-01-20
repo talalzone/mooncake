@@ -17,58 +17,58 @@ var _ = strconv.Itoa
 
 
 var parserATN = []uint16{
-	3, 24715, 42794, 33075, 47597, 16764, 15335, 30598, 22884, 3, 39, 90, 4, 
+	3, 24715, 42794, 33075, 47597, 16764, 15335, 30598, 22884, 3, 40, 92, 4, 
 	2, 9, 2, 4, 3, 9, 3, 4, 4, 9, 4, 4, 5, 9, 5, 4, 6, 9, 6, 4, 7, 9, 7, 4, 
 	8, 9, 8, 4, 9, 9, 9, 4, 10, 9, 10, 4, 11, 9, 11, 4, 12, 9, 12, 4, 13, 9, 
 	13, 4, 14, 9, 14, 4, 15, 9, 15, 3, 2, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 
 	4, 3, 4, 5, 4, 39, 10, 4, 7, 4, 41, 10, 4, 12, 4, 14, 4, 44, 11, 4, 3, 
 	5, 3, 5, 3, 5, 5, 5, 49, 10, 5, 3, 6, 3, 6, 3, 6, 3, 6, 5, 6, 55, 10, 6, 
-	3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 8, 3, 8, 3, 8, 5, 8, 65, 10, 8, 3, 9, 
-	5, 9, 68, 10, 9, 3, 9, 3, 9, 3, 9, 3, 9, 5, 9, 74, 10, 9, 3, 10, 3, 10, 
-	3, 10, 3, 10, 3, 11, 3, 11, 3, 12, 3, 12, 3, 13, 3, 13, 3, 14, 3, 14, 3, 
-	15, 3, 15, 3, 15, 2, 2, 16, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 
-	26, 28, 2, 7, 4, 2, 37, 37, 39, 39, 5, 2, 27, 29, 32, 32, 38, 38, 3, 2, 
-	21, 24, 4, 2, 13, 14, 17, 20, 3, 2, 7, 9, 2, 84, 2, 30, 3, 2, 2, 2, 4, 
-	32, 3, 2, 2, 2, 6, 42, 3, 2, 2, 2, 8, 48, 3, 2, 2, 2, 10, 54, 3, 2, 2, 
-	2, 12, 56, 3, 2, 2, 2, 14, 61, 3, 2, 2, 2, 16, 67, 3, 2, 2, 2, 18, 75, 
-	3, 2, 2, 2, 20, 79, 3, 2, 2, 2, 22, 81, 3, 2, 2, 2, 24, 83, 3, 2, 2, 2, 
-	26, 85, 3, 2, 2, 2, 28, 87, 3, 2, 2, 2, 30, 31, 5, 6, 4, 2, 31, 3, 3, 2, 
-	2, 2, 32, 33, 7, 3, 2, 2, 33, 34, 5, 6, 4, 2, 34, 35, 7, 4, 2, 2, 35, 5, 
-	3, 2, 2, 2, 36, 38, 5, 8, 5, 2, 37, 39, 7, 34, 2, 2, 38, 37, 3, 2, 2, 2, 
-	38, 39, 3, 2, 2, 2, 39, 41, 3, 2, 2, 2, 40, 36, 3, 2, 2, 2, 41, 44, 3, 
-	2, 2, 2, 42, 40, 3, 2, 2, 2, 42, 43, 3, 2, 2, 2, 43, 7, 3, 2, 2, 2, 44, 
-	42, 3, 2, 2, 2, 45, 49, 5, 4, 3, 2, 46, 49, 5, 14, 8, 2, 47, 49, 5, 16, 
-	9, 2, 48, 45, 3, 2, 2, 2, 48, 46, 3, 2, 2, 2, 48, 47, 3, 2, 2, 2, 49, 9, 
-	3, 2, 2, 2, 50, 55, 7, 39, 2, 2, 51, 55, 5, 24, 13, 2, 52, 53, 7, 39, 2, 
-	2, 53, 55, 5, 24, 13, 2, 54, 50, 3, 2, 2, 2, 54, 51, 3, 2, 2, 2, 54, 52, 
-	3, 2, 2, 2, 55, 11, 3, 2, 2, 2, 56, 57, 7, 33, 2, 2, 57, 58, 7, 5, 2, 2, 
-	58, 59, 7, 28, 2, 2, 59, 60, 5, 28, 15, 2, 60, 13, 3, 2, 2, 2, 61, 62, 
-	7, 10, 2, 2, 62, 64, 5, 16, 9, 2, 63, 65, 5, 14, 8, 2, 64, 63, 3, 2, 2, 
-	2, 64, 65, 3, 2, 2, 2, 65, 15, 3, 2, 2, 2, 66, 68, 5, 10, 6, 2, 67, 66, 
-	3, 2, 2, 2, 67, 68, 3, 2, 2, 2, 68, 69, 3, 2, 2, 2, 69, 70, 5, 18, 10, 
-	2, 70, 71, 7, 6, 2, 2, 71, 73, 5, 12, 7, 2, 72, 74, 5, 4, 3, 2, 73, 72, 
-	3, 2, 2, 2, 73, 74, 3, 2, 2, 2, 74, 17, 3, 2, 2, 2, 75, 76, 5, 20, 11, 
-	2, 76, 77, 5, 26, 14, 2, 77, 78, 5, 22, 12, 2, 78, 19, 3, 2, 2, 2, 79, 
-	80, 9, 2, 2, 2, 80, 21, 3, 2, 2, 2, 81, 82, 9, 3, 2, 2, 82, 23, 3, 2, 2, 
-	2, 83, 84, 9, 4, 2, 2, 84, 25, 3, 2, 2, 2, 85, 86, 9, 5, 2, 2, 86, 27, 
-	3, 2, 2, 2, 87, 88, 9, 6, 2, 2, 88, 29, 3, 2, 2, 2, 9, 38, 42, 48, 54, 
-	64, 67, 73,
+	3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 8, 3, 8, 3, 8, 5, 8, 67, 10, 
+	8, 3, 9, 5, 9, 70, 10, 9, 3, 9, 3, 9, 3, 9, 3, 9, 5, 9, 76, 10, 9, 3, 10, 
+	3, 10, 3, 10, 3, 10, 3, 11, 3, 11, 3, 12, 3, 12, 3, 13, 3, 13, 3, 14, 3, 
+	14, 3, 15, 3, 15, 3, 15, 2, 2, 16, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 
+	22, 24, 26, 28, 2, 7, 4, 2, 36, 36, 38, 38, 5, 2, 27, 29, 32, 32, 37, 37, 
+	3, 2, 21, 24, 4, 2, 13, 14, 17, 20, 3, 2, 9, 11, 2, 86, 2, 30, 3, 2, 2, 
+	2, 4, 32, 3, 2, 2, 2, 6, 42, 3, 2, 2, 2, 8, 48, 3, 2, 2, 2, 10, 54, 3, 
+	2, 2, 2, 12, 56, 3, 2, 2, 2, 14, 63, 3, 2, 2, 2, 16, 69, 3, 2, 2, 2, 18, 
+	77, 3, 2, 2, 2, 20, 81, 3, 2, 2, 2, 22, 83, 3, 2, 2, 2, 24, 85, 3, 2, 2, 
+	2, 26, 87, 3, 2, 2, 2, 28, 89, 3, 2, 2, 2, 30, 31, 5, 6, 4, 2, 31, 3, 3, 
+	2, 2, 2, 32, 33, 7, 3, 2, 2, 33, 34, 5, 6, 4, 2, 34, 35, 7, 4, 2, 2, 35, 
+	5, 3, 2, 2, 2, 36, 38, 5, 8, 5, 2, 37, 39, 7, 33, 2, 2, 38, 37, 3, 2, 2, 
+	2, 38, 39, 3, 2, 2, 2, 39, 41, 3, 2, 2, 2, 40, 36, 3, 2, 2, 2, 41, 44, 
+	3, 2, 2, 2, 42, 40, 3, 2, 2, 2, 42, 43, 3, 2, 2, 2, 43, 7, 3, 2, 2, 2, 
+	44, 42, 3, 2, 2, 2, 45, 49, 5, 4, 3, 2, 46, 49, 5, 14, 8, 2, 47, 49, 5, 
+	16, 9, 2, 48, 45, 3, 2, 2, 2, 48, 46, 3, 2, 2, 2, 48, 47, 3, 2, 2, 2, 49, 
+	9, 3, 2, 2, 2, 50, 55, 7, 38, 2, 2, 51, 55, 5, 24, 13, 2, 52, 53, 7, 38, 
+	2, 2, 53, 55, 5, 24, 13, 2, 54, 50, 3, 2, 2, 2, 54, 51, 3, 2, 2, 2, 54, 
+	52, 3, 2, 2, 2, 55, 11, 3, 2, 2, 2, 56, 57, 7, 5, 2, 2, 57, 58, 7, 39, 
+	2, 2, 58, 59, 7, 6, 2, 2, 59, 60, 7, 40, 2, 2, 60, 61, 7, 7, 2, 2, 61, 
+	62, 5, 28, 15, 2, 62, 13, 3, 2, 2, 2, 63, 64, 7, 12, 2, 2, 64, 66, 5, 16, 
+	9, 2, 65, 67, 5, 14, 8, 2, 66, 65, 3, 2, 2, 2, 66, 67, 3, 2, 2, 2, 67, 
+	15, 3, 2, 2, 2, 68, 70, 5, 10, 6, 2, 69, 68, 3, 2, 2, 2, 69, 70, 3, 2, 
+	2, 2, 70, 71, 3, 2, 2, 2, 71, 72, 5, 18, 10, 2, 72, 73, 7, 8, 2, 2, 73, 
+	75, 5, 12, 7, 2, 74, 76, 5, 4, 3, 2, 75, 74, 3, 2, 2, 2, 75, 76, 3, 2, 
+	2, 2, 76, 17, 3, 2, 2, 2, 77, 78, 5, 20, 11, 2, 78, 79, 5, 26, 14, 2, 79, 
+	80, 5, 22, 12, 2, 80, 19, 3, 2, 2, 2, 81, 82, 9, 2, 2, 2, 82, 21, 3, 2, 
+	2, 2, 83, 84, 9, 3, 2, 2, 84, 23, 3, 2, 2, 2, 85, 86, 9, 4, 2, 2, 86, 25, 
+	3, 2, 2, 2, 87, 88, 9, 5, 2, 2, 88, 27, 3, 2, 2, 2, 89, 90, 9, 6, 2, 2, 
+	90, 29, 3, 2, 2, 2, 9, 38, 42, 48, 54, 66, 69, 75,
 }
 var deserializer = antlr.NewATNDeserializer(nil)
 var deserializedATN = deserializer.DeserializeFromUInt16(parserATN)
 
 var literalNames = []string{
-	"", "'{'", "'}'", "':'", "'=>'", "'!!!'", "'!!'", "'!'", "'~'", "'if'", 
-	"'elif'", "", "", "", "", "", "", "", "", "'@len'", "'@float'", "'@dateTimeLong'", 
+	"", "'{'", "'}'", "'['", "','", "']'", "'=>'", "'!!!'", "'!!'", "'!'", 
+	"'~'", "", "", "", "", "", "", "", "", "'@len'", "'@float'", "'@dateTimeLong'", 
 	"'@afterCurrentTime'", "'exists'", "'empty'", "", "", "", "'true'", "'false'", 
 	"'nil'",
 }
 var symbolicNames = []string{
-	"", "", "", "", "", "FATAL", "SEVERE", "WARNING", "LINKED", "IF", "ELIF", 
-	"EQ", "NE", "AND", "OR", "GT", "LT", "GTE", "LTE", "LEN_FUNC", "FLOAT_FUNC", 
+	"", "", "", "", "", "", "", "FATAL", "SEVERE", "WARNING", "LINKED", "EQ", 
+	"NE", "AND", "OR", "GT", "LT", "GTE", "LTE", "LEN_FUNC", "FLOAT_FUNC", 
 	"DATETIME_LONG", "AFTER_CURR_TIME", "EXISTS", "EMPTY", "DOUBLE", "INT", 
-	"BOOL", "TRUE", "FALSE", "NULL", "ERROR_CODE", "COMMENT", "WS", "TERMINATOR", 
-	"IDENTIFIER", "CTX_ID", "INLINE_ID",
+	"BOOL", "TRUE", "FALSE", "NULL", "COMMENT", "WS", "TERMINATOR", "IDENTIFIER", 
+	"CTX_ID", "INLINE_ID", "ERROR_CODE", "ERROR_INFO",
 }
 
 var ruleNames = []string{
@@ -109,12 +109,12 @@ const (
 	MooncakeParserT__1 = 2
 	MooncakeParserT__2 = 3
 	MooncakeParserT__3 = 4
-	MooncakeParserFATAL = 5
-	MooncakeParserSEVERE = 6
-	MooncakeParserWARNING = 7
-	MooncakeParserLINKED = 8
-	MooncakeParserIF = 9
-	MooncakeParserELIF = 10
+	MooncakeParserT__4 = 5
+	MooncakeParserT__5 = 6
+	MooncakeParserFATAL = 7
+	MooncakeParserSEVERE = 8
+	MooncakeParserWARNING = 9
+	MooncakeParserLINKED = 10
 	MooncakeParserEQ = 11
 	MooncakeParserNE = 12
 	MooncakeParserAND = 13
@@ -135,13 +135,14 @@ const (
 	MooncakeParserTRUE = 28
 	MooncakeParserFALSE = 29
 	MooncakeParserNULL = 30
-	MooncakeParserERROR_CODE = 31
-	MooncakeParserCOMMENT = 32
-	MooncakeParserWS = 33
-	MooncakeParserTERMINATOR = 34
-	MooncakeParserIDENTIFIER = 35
-	MooncakeParserCTX_ID = 36
-	MooncakeParserINLINE_ID = 37
+	MooncakeParserCOMMENT = 31
+	MooncakeParserWS = 32
+	MooncakeParserTERMINATOR = 33
+	MooncakeParserIDENTIFIER = 34
+	MooncakeParserCTX_ID = 35
+	MooncakeParserINLINE_ID = 36
+	MooncakeParserERROR_CODE = 37
+	MooncakeParserERROR_INFO = 38
 )
 
 // MooncakeParser rules.
@@ -913,18 +914,18 @@ type IErrorStmtContext interface {
 	// GetParser returns the parser.
 	GetParser() antlr.Parser
 
-	// GetHumanCode returns the humanCode token.
-	GetHumanCode() antlr.Token 
+	// GetCode returns the code token.
+	GetCode() antlr.Token 
 
-	// GetErrCode returns the errCode token.
-	GetErrCode() antlr.Token 
+	// GetInfo returns the info token.
+	GetInfo() antlr.Token 
 
 
-	// SetHumanCode sets the humanCode token.
-	SetHumanCode(antlr.Token) 
+	// SetCode sets the code token.
+	SetCode(antlr.Token) 
 
-	// SetErrCode sets the errCode token.
-	SetErrCode(antlr.Token) 
+	// SetInfo sets the info token.
+	SetInfo(antlr.Token) 
 
 
 	// GetErrType returns the errType rule contexts.
@@ -942,8 +943,8 @@ type IErrorStmtContext interface {
 type ErrorStmtContext struct {
 	*antlr.BaseParserRuleContext
 	parser antlr.Parser
-	humanCode antlr.Token
-	errCode antlr.Token
+	code antlr.Token
+	info antlr.Token
 	errType IErrorTypeContext 
 }
 
@@ -969,14 +970,14 @@ func NewErrorStmtContext(parser antlr.Parser, parent antlr.ParserRuleContext, in
 
 func (s *ErrorStmtContext) GetParser() antlr.Parser { return s.parser }
 
-func (s *ErrorStmtContext) GetHumanCode() antlr.Token { return s.humanCode }
+func (s *ErrorStmtContext) GetCode() antlr.Token { return s.code }
 
-func (s *ErrorStmtContext) GetErrCode() antlr.Token { return s.errCode }
+func (s *ErrorStmtContext) GetInfo() antlr.Token { return s.info }
 
 
-func (s *ErrorStmtContext) SetHumanCode(v antlr.Token) { s.humanCode = v }
+func (s *ErrorStmtContext) SetCode(v antlr.Token) { s.code = v }
 
-func (s *ErrorStmtContext) SetErrCode(v antlr.Token) { s.errCode = v }
+func (s *ErrorStmtContext) SetInfo(v antlr.Token) { s.info = v }
 
 
 func (s *ErrorStmtContext) GetErrType() IErrorTypeContext { return s.errType }
@@ -989,8 +990,8 @@ func (s *ErrorStmtContext) ERROR_CODE() antlr.TerminalNode {
 	return s.GetToken(MooncakeParserERROR_CODE, 0)
 }
 
-func (s *ErrorStmtContext) INT() antlr.TerminalNode {
-	return s.GetToken(MooncakeParserINT, 0)
+func (s *ErrorStmtContext) ERROR_INFO() antlr.TerminalNode {
+	return s.GetToken(MooncakeParserERROR_INFO, 0)
 }
 
 func (s *ErrorStmtContext) ErrorType() IErrorTypeContext {
@@ -1060,24 +1061,32 @@ func (p *MooncakeParser) ErrorStmt() (localctx IErrorStmtContext) {
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(54)
-
-		var _m = p.Match(MooncakeParserERROR_CODE)
-
-		localctx.(*ErrorStmtContext).humanCode = _m
-	}
-	{
-		p.SetState(55)
 		p.Match(MooncakeParserT__2)
 	}
 	{
+		p.SetState(55)
+
+		var _m = p.Match(MooncakeParserERROR_CODE)
+
+		localctx.(*ErrorStmtContext).code = _m
+	}
+	{
 		p.SetState(56)
-
-		var _m = p.Match(MooncakeParserINT)
-
-		localctx.(*ErrorStmtContext).errCode = _m
+		p.Match(MooncakeParserT__3)
 	}
 	{
 		p.SetState(57)
+
+		var _m = p.Match(MooncakeParserERROR_INFO)
+
+		localctx.(*ErrorStmtContext).info = _m
+	}
+	{
+		p.SetState(58)
+		p.Match(MooncakeParserT__4)
+	}
+	{
+		p.SetState(59)
 
 		var _x = p.ErrorType()
 
@@ -1209,20 +1218,20 @@ func (p *MooncakeParser) LinkedStmt() (localctx ILinkedStmtContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(59)
+		p.SetState(61)
 		p.Match(MooncakeParserLINKED)
 	}
 	{
-		p.SetState(60)
+		p.SetState(62)
 		p.SimpleStmt()
 	}
-	p.SetState(62)
+	p.SetState(64)
 	p.GetErrorHandler().Sync(p)
 
 
 	if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 4, p.GetParserRuleContext()) == 1 {
 		{
-			p.SetState(61)
+			p.SetState(63)
 			p.LinkedStmt()
 		}
 
@@ -1368,37 +1377,37 @@ func (p *MooncakeParser) SimpleStmt() (localctx ISimpleStmtContext) {
 	}()
 
 	p.EnterOuterAlt(localctx, 1)
-	p.SetState(65)
+	p.SetState(67)
 	p.GetErrorHandler().Sync(p)
 
 
 	if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 5, p.GetParserRuleContext()) == 1 {
 		{
-			p.SetState(64)
+			p.SetState(66)
 			p.InlineStmt()
 		}
 
 
 	}
 	{
-		p.SetState(67)
+		p.SetState(69)
 		p.Expression()
 	}
 	{
-		p.SetState(68)
-		p.Match(MooncakeParserT__3)
+		p.SetState(70)
+		p.Match(MooncakeParserT__5)
 	}
 	{
-		p.SetState(69)
+		p.SetState(71)
 		p.ErrorStmt()
 	}
-	p.SetState(71)
+	p.SetState(73)
 	p.GetErrorHandler().Sync(p)
 
 
 	if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 6, p.GetParserRuleContext()) == 1 {
 		{
-			p.SetState(70)
+			p.SetState(72)
 			p.Block()
 		}
 
@@ -1572,7 +1581,7 @@ func (p *MooncakeParser) Expression() (localctx IExpressionContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(73)
+		p.SetState(75)
 
 		var _x = p.Identifier()
 
@@ -1580,7 +1589,7 @@ func (p *MooncakeParser) Expression() (localctx IExpressionContext) {
 		localctx.(*ExpressionContext).id = _x
 	}
 	{
-		p.SetState(74)
+		p.SetState(76)
 
 		var _x = p.Operator()
 
@@ -1588,7 +1597,7 @@ func (p *MooncakeParser) Expression() (localctx IExpressionContext) {
 		localctx.(*ExpressionContext).op = _x
 	}
 	{
-		p.SetState(75)
+		p.SetState(77)
 
 		var _x = p.Literal()
 
@@ -1706,7 +1715,7 @@ func (p *MooncakeParser) Identifier() (localctx IIdentifierContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(77)
+		p.SetState(79)
 		_la = p.GetTokenStream().LA(1)
 
 		if !(_la == MooncakeParserIDENTIFIER || _la == MooncakeParserINLINE_ID) {
@@ -1839,7 +1848,7 @@ func (p *MooncakeParser) Literal() (localctx ILiteralContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(79)
+		p.SetState(81)
 		_la = p.GetTokenStream().LA(1)
 
 		if !(((((_la - 25)) & -(0x1f+1)) == 0 && ((1 << uint((_la - 25))) & ((1 << (MooncakeParserDOUBLE - 25)) | (1 << (MooncakeParserINT - 25)) | (1 << (MooncakeParserBOOL - 25)) | (1 << (MooncakeParserNULL - 25)) | (1 << (MooncakeParserCTX_ID - 25)))) != 0)) {
@@ -1968,7 +1977,7 @@ func (p *MooncakeParser) Function() (localctx IFunctionContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(81)
+		p.SetState(83)
 		_la = p.GetTokenStream().LA(1)
 
 		if !((((_la) & -(0x1f+1)) == 0 && ((1 << uint(_la)) & ((1 << MooncakeParserLEN_FUNC) | (1 << MooncakeParserFLOAT_FUNC) | (1 << MooncakeParserDATETIME_LONG) | (1 << MooncakeParserAFTER_CURR_TIME))) != 0)) {
@@ -2105,7 +2114,7 @@ func (p *MooncakeParser) Operator() (localctx IOperatorContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(83)
+		p.SetState(85)
 		_la = p.GetTokenStream().LA(1)
 
 		if !((((_la) & -(0x1f+1)) == 0 && ((1 << uint(_la)) & ((1 << MooncakeParserEQ) | (1 << MooncakeParserNE) | (1 << MooncakeParserGT) | (1 << MooncakeParserLT) | (1 << MooncakeParserGTE) | (1 << MooncakeParserLTE))) != 0)) {
@@ -2230,7 +2239,7 @@ func (p *MooncakeParser) ErrorType() (localctx IErrorTypeContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(85)
+		p.SetState(87)
 		_la = p.GetTokenStream().LA(1)
 
 		if !((((_la) & -(0x1f+1)) == 0 && ((1 << uint(_la)) & ((1 << MooncakeParserFATAL) | (1 << MooncakeParserSEVERE) | (1 << MooncakeParserWARNING))) != 0)) {

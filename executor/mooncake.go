@@ -26,9 +26,9 @@ type expr struct {
 }
 
 type err struct {
-	humanCode   string
-	numericCode int
-	errorType   antlr.Token
+	code      string
+	info      string
+	errorType antlr.Token
 }
 
 type rule struct {
@@ -83,13 +83,13 @@ func (mv *mooncakeVisitor) VisitInlineStmt(ctx *parser.InlineStmtContext) interf
 
 func (mv *mooncakeVisitor) VisitErrorStmt(ctx *parser.ErrorStmtContext) interface{} {
 	log.Printf("VisitErrorStmt - %v", ctx.GetText())
-	humanCode := ctx.GetHumanCode().GetText()
-	errCode, _ := strconv.Atoi(ctx.GetErrCode().GetText())
+	code := ctx.GetCode().GetText()
+	info := ctx.GetInfo().GetText()
 	errType := ctx.ErrorType().Accept(mv).(antlr.Token)
 
 	err := err{
-		humanCode,
-		errCode,
+		code,
+		info,
 		errType,
 	}
 	return err
@@ -138,28 +138,28 @@ func (mv *mooncakeVisitor) VisitSimpleStmt(ctx *parser.SimpleStmtContext) interf
 
 	log.Printf("Evaluating Expr - {%v, %v, %v} Err - %v:%v",
 		rule.expr.identifier, rule.expr.operator.GetText(),
-		rule.expr.literal, rule.err.humanCode,
-		rule.err.numericCode)
+		rule.expr.literal, rule.err.code,
+		rule.err.info)
 
-	isValid := true
+	isValid := false
 	switch rule.expr.operator.GetTokenType() {
 	case parser.MooncakeParserEQ:
 		if identifier == rule.expr.literal {
-			isValid = false
+			isValid = true
 		}
 	case parser.MooncakeParserNE:
 		if rule.expr.identifier != rule.expr.literal {
-			isValid = false
+			isValid = true
 		}
 	}
-
-	log.Printf("Evaluated Expr - %v", mv.result)
 
 	if !isValid {
 		mv.setError(rule.err)
 	} else if reflect.ValueOf(ctx.Block()).IsValid() {
 		ctx.Block().Accept(mv)
 	}
+
+	log.Printf("Evaluated Expr - %v", mv.result)
 
 	return isValid
 }
@@ -259,11 +259,11 @@ func (v *mooncakeVisitor) VisitErrorNode(node antlr.ErrorNode) interface{} {
 func (v *mooncakeVisitor) setError(err err) {
 	switch err.errorType.GetTokenType() {
 	case parser.MooncakeParserWARNING:
-		v.result.WarningCodes = append(v.result.WarningCodes, domain.Error{err.numericCode, err.humanCode})
+		v.result.Warning = append(v.result.Warning, domain.Error{err.code, err.info})
 	case parser.MooncakeParserSEVERE:
-		v.result.SevereCodes = append(v.result.SevereCodes, domain.Error{err.numericCode, err.humanCode})
+		v.result.Severe = append(v.result.Severe, domain.Error{err.code, err.info})
 	case parser.MooncakeParserFATAL:
-		v.result.FatalCodes = append(v.result.FatalCodes, domain.Error{err.numericCode, err.humanCode})
+		v.result.Fatal = append(v.result.Fatal, domain.Error{err.code, err.info})
 	}
 }
 

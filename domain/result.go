@@ -1,12 +1,12 @@
 package domain
 
 type Error struct {
-	Code int
+	Code string
 	Info string
 }
 
 type ValidationResult struct {
-	FatalCodes   []Error `json:"fatalCodes"`
-	SevereCodes  []Error `json:"severeCodes"`
-	WarningCodes []Error `json:"warningCodes"`
+	Fatal   []Error `json:"fatalCodes"`
+	Severe  []Error `json:"severeCodes"`
+	Warning []Error `json:"warningCodes"`
 }
