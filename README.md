@@ -187,10 +187,10 @@ Inline comments are represented with `#` and can come after a rule statement:
 	
 ```
 
-A commented out statement looks as follows:
+Commented out statement looks as follows:
 ```
 
-# ~item.name eq nil => [E0001, 'info-1']!! # this rule is a commented out
+# ~item.name eq nil => [E0001, 'info-1']!! # this rule is commented out
 	
 ```
 
@@ -198,6 +198,7 @@ A commented out statement looks as follows:
 #### TODO:
 
 * Ability to pass custom reference functions in implication
+* Ability to have further expression in literal's place
 * Ability to configure Error Structure
 * Ability to validate Golang structures
 * Ability to handle more data types
