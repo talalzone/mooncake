@@ -2,7 +2,9 @@ Mooncake
 ========
 **A simplistic validation language for validating complex objects.**
 
-Built with Antlr and Golang.
+Built with Antlr and Golang. 
+
+Visit the blog https://talal.zone/static/mooncake/
 
 Getting Started
 ---------------
