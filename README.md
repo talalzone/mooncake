@@ -148,7 +148,6 @@ Operators
 | `lte` or `<=`             | left is less or equal to right                                     |
 | `gt` or `>`               | left is greater than right                                         |
 | `gte` or `>=`             | left is greater than or equal to right                             |
-| `lt` or `<`               | left is less than right                                            |
 | `in`                      | left exists in right. **incomplete**                               |
 | `nin`                     | left does not exists in right. **incomplete**                      |
 
