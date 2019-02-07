@@ -1,14 +1,15 @@
 package test
 
 import (
-	"../executor"
+	"encoding/json"
 	"io/ioutil"
 	"log"
+	"mooncake/executor"
 	"testing"
 )
 
 func TestBasicRules(t *testing.T) {
-	content, err := ioutil.ReadFile("../test/rules_v1.0.mck")
+	content, err := ioutil.ReadFile("../test/rules_v1.1.mck")
 
 	if err != nil {
 		panic(err)
@@ -21,14 +22,16 @@ func TestBasicRules(t *testing.T) {
 	ctx := struct {
 		item1 string
 		item2 string
-		item3 int
+		threshold int
 	}{
 		"comingFromContextA",
 		"comingFromContextB",
-		100000,
+		10,
 	}
 
 	result := executor.Execute(rules, jsonFile, ctx)
 
-	log.Printf("Result - %+v\n", result)
+	prettyResult, err := json.MarshalIndent(result, "", "  ");
+
+	log.Printf("\n\n====Result===== \n\n %s\n\n", prettyResult)
 }

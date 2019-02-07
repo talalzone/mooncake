@@ -1,0 +1,19 @@
+sample eq nil                                                    => [E0001, 'sample is empty']!!!     # This is a fatal error
+{
+     sample.first eq nil                                         => [E0002, 'someitem1 not set']!!  #  This is a severe error
+     sample.second eq nil                                        => [E0003, 'someitem2 not set']!!  #  This is a severe error
+     {
+         sample.third eq nil                                     => [E0004, 'someitem3 not set']!!  #  This is a severe error
+     }
+
+     sample.fourth.value gt 5                                    => [E0005, 'someitem4 not valid']!!  #  This is a severe error
+
+     sample.fourth.value < ${threshold}                          => [E0006, 'someitem4 not in threshold']!  # This is a warning
+
+     @len sample.third gt 3                                      => [E0007, 'someitem2 not valid']!!  #  This is a severe error
+
+     _x @len sample.third gt 4                                   => [E0008, 'someitem2 not valid']!!  #  This is a severe error
+     {
+        _x eq 2                                                  => [E0009, 'someitem4 has 2 threshold']!  # This is a warning
+     }
+}

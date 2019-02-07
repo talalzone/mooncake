@@ -19,9 +19,9 @@ statement
 	;
 
 inlineStmt
-    : id=INLINE_ID
+    : id=DECL_ID
     | fn=function
-    | id=INLINE_ID fn=function
+    | id=DECL_ID fn=function
     ;
 
 errorStmt
@@ -33,46 +33,121 @@ linkedStmt
     ;
 
 simpleStmt
-    : ( inlineStmt )? expression '=>' errorStmt block?
+    : ( inlineStmt )? exprStmt '=>' errorStmt block?
     ;
 
-expression
+exprStmt
     : id=identifier  op=operator  val=literal
     ;
 
 identifier
-    : IDENTIFIER
-    | INLINE_ID
+    : attributeIdentifier
+    | declarationIdentifier
     ;
 
 literal
-    : INT
-    | DOUBLE
-    | BOOL
-    | NULL
-    | CTX_ID
+    : intLiteral
+    | floatLiteral
+    | boolLiteral
+    | nullLiteral
+    | ctxLiteral
     ;
 
 function
-    : LEN_FUNC
-    | FLOAT_FUNC
-    | DATETIME_LONG
-    | AFTER_CURR_TIME
+    : lengthFunction
+    | dateTimeLongFunction
+    | afterCurrentTimeFunction
     ;
 
 operator
-    : EQ
-    | NE
-    | GT
-    | LT
-    | GTE
-    | LTE
+    : equalOperator
+    | notEqualOperator
+    | greaterThanOperator
+    | lessThanOperator
+    | greaterThanOrEqualOperator
+    | lessThanOrEqualOperator
     ;
 
 errorType
+    : fatalError
+    | severeError
+    | warningError
+    ;
+
+fatalError
     : FATAL
-    | SEVERE
-    | WARNING
+    ;
+
+severeError
+    : SEVERE
+    ;
+
+warningError
+    : WARNING
+    ;
+
+equalOperator
+    : EQ
+    ;
+
+notEqualOperator
+    : NE
+    ;
+
+greaterThanOperator
+    : GT
+    ;
+
+lessThanOperator
+    : LT
+    ;
+
+greaterThanOrEqualOperator
+    : GTE
+    ;
+
+lessThanOrEqualOperator
+    : LTE
+    ;
+
+intLiteral
+    : INT
+    ;
+
+floatLiteral
+    : FLOAT
+    ;
+
+boolLiteral
+    : BOOL
+    ;
+
+nullLiteral
+    : NULL
+    ;
+
+ctxLiteral
+    : CTX_ID
+    ;
+
+attributeIdentifier
+    : ATTR_ID
+    ;
+
+declarationIdentifier
+    : DECL_ID
+    ;
+
+lengthFunction
+    : LEN_FUNC
+    ;
+
+dateTimeLongFunction
+    : DATETIME_LONG
+    ;
+
+afterCurrentTimeFunction
+    : AFTER_CURR_TIME
     ;
 
 FATAL
@@ -147,7 +222,7 @@ EMPTY
     : 'empty'
     ;
 
-DOUBLE
+FLOAT
     : '-'? INT '.' [0-9]+
     ;
 
@@ -182,15 +257,15 @@ TERMINATOR
 	: [\r\n]+ -> channel(HIDDEN)
 	;
 
-IDENTIFIER
-    : ( 'a'..'z' | 'A'..'Z' | '[' INT ']' )+ ( '.' IDENTIFIER )?
+ATTR_ID
+    : ( 'a'..'z' | 'A'..'Z'  | '[' INT ']' )+ ( '.' ATTR_ID )?
     ;
 
 CTX_ID
-    : '${' IDENTIFIER '}'
+    : '${' ATTR_ID '}'
     ;
 
-INLINE_ID
+DECL_ID
     : '_' ( 'a'..'z' | 'A'..'Z' )+
     ;
 

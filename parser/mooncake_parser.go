@@ -1,4 +1,4 @@
-// Code generated from /Users/talal/Development/antlr-lang/mooncake/grammar/Mooncake.g4 by ANTLR 4.7.2. DO NOT EDIT.
+// Code generated from /Users/talal/go/src/mooncake/grammar/Mooncake.g4 by ANTLR 4.7.2. DO NOT EDIT.
 
 package parser // Mooncake
 
@@ -17,42 +17,80 @@ var _ = strconv.Itoa
 
 
 var parserATN = []uint16{
-	3, 24715, 42794, 33075, 47597, 16764, 15335, 30598, 22884, 3, 40, 92, 4, 
-	2, 9, 2, 4, 3, 9, 3, 4, 4, 9, 4, 4, 5, 9, 5, 4, 6, 9, 6, 4, 7, 9, 7, 4, 
-	8, 9, 8, 4, 9, 9, 9, 4, 10, 9, 10, 4, 11, 9, 11, 4, 12, 9, 12, 4, 13, 9, 
-	13, 4, 14, 9, 14, 4, 15, 9, 15, 3, 2, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 
-	4, 3, 4, 5, 4, 39, 10, 4, 7, 4, 41, 10, 4, 12, 4, 14, 4, 44, 11, 4, 3, 
-	5, 3, 5, 3, 5, 5, 5, 49, 10, 5, 3, 6, 3, 6, 3, 6, 3, 6, 5, 6, 55, 10, 6, 
-	3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 8, 3, 8, 3, 8, 5, 8, 67, 10, 
-	8, 3, 9, 5, 9, 70, 10, 9, 3, 9, 3, 9, 3, 9, 3, 9, 5, 9, 76, 10, 9, 3, 10, 
-	3, 10, 3, 10, 3, 10, 3, 11, 3, 11, 3, 12, 3, 12, 3, 13, 3, 13, 3, 14, 3, 
-	14, 3, 15, 3, 15, 3, 15, 2, 2, 16, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 
-	22, 24, 26, 28, 2, 7, 4, 2, 36, 36, 38, 38, 5, 2, 27, 29, 32, 32, 37, 37, 
-	3, 2, 21, 24, 4, 2, 13, 14, 17, 20, 3, 2, 9, 11, 2, 86, 2, 30, 3, 2, 2, 
-	2, 4, 32, 3, 2, 2, 2, 6, 42, 3, 2, 2, 2, 8, 48, 3, 2, 2, 2, 10, 54, 3, 
-	2, 2, 2, 12, 56, 3, 2, 2, 2, 14, 63, 3, 2, 2, 2, 16, 69, 3, 2, 2, 2, 18, 
-	77, 3, 2, 2, 2, 20, 81, 3, 2, 2, 2, 22, 83, 3, 2, 2, 2, 24, 85, 3, 2, 2, 
-	2, 26, 87, 3, 2, 2, 2, 28, 89, 3, 2, 2, 2, 30, 31, 5, 6, 4, 2, 31, 3, 3, 
-	2, 2, 2, 32, 33, 7, 3, 2, 2, 33, 34, 5, 6, 4, 2, 34, 35, 7, 4, 2, 2, 35, 
-	5, 3, 2, 2, 2, 36, 38, 5, 8, 5, 2, 37, 39, 7, 33, 2, 2, 38, 37, 3, 2, 2, 
-	2, 38, 39, 3, 2, 2, 2, 39, 41, 3, 2, 2, 2, 40, 36, 3, 2, 2, 2, 41, 44, 
-	3, 2, 2, 2, 42, 40, 3, 2, 2, 2, 42, 43, 3, 2, 2, 2, 43, 7, 3, 2, 2, 2, 
-	44, 42, 3, 2, 2, 2, 45, 49, 5, 4, 3, 2, 46, 49, 5, 14, 8, 2, 47, 49, 5, 
-	16, 9, 2, 48, 45, 3, 2, 2, 2, 48, 46, 3, 2, 2, 2, 48, 47, 3, 2, 2, 2, 49, 
-	9, 3, 2, 2, 2, 50, 55, 7, 38, 2, 2, 51, 55, 5, 24, 13, 2, 52, 53, 7, 38, 
-	2, 2, 53, 55, 5, 24, 13, 2, 54, 50, 3, 2, 2, 2, 54, 51, 3, 2, 2, 2, 54, 
-	52, 3, 2, 2, 2, 55, 11, 3, 2, 2, 2, 56, 57, 7, 5, 2, 2, 57, 58, 7, 39, 
-	2, 2, 58, 59, 7, 6, 2, 2, 59, 60, 7, 40, 2, 2, 60, 61, 7, 7, 2, 2, 61, 
-	62, 5, 28, 15, 2, 62, 13, 3, 2, 2, 2, 63, 64, 7, 12, 2, 2, 64, 66, 5, 16, 
-	9, 2, 65, 67, 5, 14, 8, 2, 66, 65, 3, 2, 2, 2, 66, 67, 3, 2, 2, 2, 67, 
-	15, 3, 2, 2, 2, 68, 70, 5, 10, 6, 2, 69, 68, 3, 2, 2, 2, 69, 70, 3, 2, 
-	2, 2, 70, 71, 3, 2, 2, 2, 71, 72, 5, 18, 10, 2, 72, 73, 7, 8, 2, 2, 73, 
-	75, 5, 12, 7, 2, 74, 76, 5, 4, 3, 2, 75, 74, 3, 2, 2, 2, 75, 76, 3, 2, 
-	2, 2, 76, 17, 3, 2, 2, 2, 77, 78, 5, 20, 11, 2, 78, 79, 5, 26, 14, 2, 79, 
-	80, 5, 22, 12, 2, 80, 19, 3, 2, 2, 2, 81, 82, 9, 2, 2, 2, 82, 21, 3, 2, 
-	2, 2, 83, 84, 9, 3, 2, 2, 84, 23, 3, 2, 2, 2, 85, 86, 9, 4, 2, 2, 86, 25, 
-	3, 2, 2, 2, 87, 88, 9, 5, 2, 2, 88, 27, 3, 2, 2, 2, 89, 90, 9, 6, 2, 2, 
-	90, 29, 3, 2, 2, 2, 9, 38, 42, 48, 54, 66, 69, 75,
+	3, 24715, 42794, 33075, 47597, 16764, 15335, 30598, 22884, 3, 40, 187, 
+	4, 2, 9, 2, 4, 3, 9, 3, 4, 4, 9, 4, 4, 5, 9, 5, 4, 6, 9, 6, 4, 7, 9, 7, 
+	4, 8, 9, 8, 4, 9, 9, 9, 4, 10, 9, 10, 4, 11, 9, 11, 4, 12, 9, 12, 4, 13, 
+	9, 13, 4, 14, 9, 14, 4, 15, 9, 15, 4, 16, 9, 16, 4, 17, 9, 17, 4, 18, 9, 
+	18, 4, 19, 9, 19, 4, 20, 9, 20, 4, 21, 9, 21, 4, 22, 9, 22, 4, 23, 9, 23, 
+	4, 24, 9, 24, 4, 25, 9, 25, 4, 26, 9, 26, 4, 27, 9, 27, 4, 28, 9, 28, 4, 
+	29, 9, 29, 4, 30, 9, 30, 4, 31, 9, 31, 4, 32, 9, 32, 4, 33, 9, 33, 4, 34, 
+	9, 34, 3, 2, 3, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 3, 4, 5, 4, 77, 10, 4, 
+	7, 4, 79, 10, 4, 12, 4, 14, 4, 82, 11, 4, 3, 5, 3, 5, 3, 5, 5, 5, 87, 10, 
+	5, 3, 6, 3, 6, 3, 6, 3, 6, 5, 6, 93, 10, 6, 3, 7, 3, 7, 3, 7, 3, 7, 3, 
+	7, 3, 7, 3, 7, 3, 8, 3, 8, 3, 8, 5, 8, 105, 10, 8, 3, 9, 5, 9, 108, 10, 
+	9, 3, 9, 3, 9, 3, 9, 3, 9, 5, 9, 114, 10, 9, 3, 10, 3, 10, 3, 10, 3, 10, 
+	3, 11, 3, 11, 5, 11, 122, 10, 11, 3, 12, 3, 12, 3, 12, 3, 12, 3, 12, 5, 
+	12, 129, 10, 12, 3, 13, 3, 13, 3, 13, 5, 13, 134, 10, 13, 3, 14, 3, 14, 
+	3, 14, 3, 14, 3, 14, 3, 14, 5, 14, 142, 10, 14, 3, 15, 3, 15, 3, 15, 5, 
+	15, 147, 10, 15, 3, 16, 3, 16, 3, 17, 3, 17, 3, 18, 3, 18, 3, 19, 3, 19, 
+	3, 20, 3, 20, 3, 21, 3, 21, 3, 22, 3, 22, 3, 23, 3, 23, 3, 24, 3, 24, 3, 
+	25, 3, 25, 3, 26, 3, 26, 3, 27, 3, 27, 3, 28, 3, 28, 3, 29, 3, 29, 3, 30, 
+	3, 30, 3, 31, 3, 31, 3, 32, 3, 32, 3, 33, 3, 33, 3, 34, 3, 34, 3, 34, 2, 
+	2, 35, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 
+	36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 2, 2, 2, 
+	176, 2, 68, 3, 2, 2, 2, 4, 70, 3, 2, 2, 2, 6, 80, 3, 2, 2, 2, 8, 86, 3, 
+	2, 2, 2, 10, 92, 3, 2, 2, 2, 12, 94, 3, 2, 2, 2, 14, 101, 3, 2, 2, 2, 16, 
+	107, 3, 2, 2, 2, 18, 115, 3, 2, 2, 2, 20, 121, 3, 2, 2, 2, 22, 128, 3, 
+	2, 2, 2, 24, 133, 3, 2, 2, 2, 26, 141, 3, 2, 2, 2, 28, 146, 3, 2, 2, 2, 
+	30, 148, 3, 2, 2, 2, 32, 150, 3, 2, 2, 2, 34, 152, 3, 2, 2, 2, 36, 154, 
+	3, 2, 2, 2, 38, 156, 3, 2, 2, 2, 40, 158, 3, 2, 2, 2, 42, 160, 3, 2, 2, 
+	2, 44, 162, 3, 2, 2, 2, 46, 164, 3, 2, 2, 2, 48, 166, 3, 2, 2, 2, 50, 168, 
+	3, 2, 2, 2, 52, 170, 3, 2, 2, 2, 54, 172, 3, 2, 2, 2, 56, 174, 3, 2, 2, 
+	2, 58, 176, 3, 2, 2, 2, 60, 178, 3, 2, 2, 2, 62, 180, 3, 2, 2, 2, 64, 182, 
+	3, 2, 2, 2, 66, 184, 3, 2, 2, 2, 68, 69, 5, 6, 4, 2, 69, 3, 3, 2, 2, 2, 
+	70, 71, 7, 3, 2, 2, 71, 72, 5, 6, 4, 2, 72, 73, 7, 4, 2, 2, 73, 5, 3, 2, 
+	2, 2, 74, 76, 5, 8, 5, 2, 75, 77, 7, 33, 2, 2, 76, 75, 3, 2, 2, 2, 76, 
+	77, 3, 2, 2, 2, 77, 79, 3, 2, 2, 2, 78, 74, 3, 2, 2, 2, 79, 82, 3, 2, 2, 
+	2, 80, 78, 3, 2, 2, 2, 80, 81, 3, 2, 2, 2, 81, 7, 3, 2, 2, 2, 82, 80, 3, 
+	2, 2, 2, 83, 87, 5, 4, 3, 2, 84, 87, 5, 14, 8, 2, 85, 87, 5, 16, 9, 2, 
+	86, 83, 3, 2, 2, 2, 86, 84, 3, 2, 2, 2, 86, 85, 3, 2, 2, 2, 87, 9, 3, 2, 
+	2, 2, 88, 93, 7, 38, 2, 2, 89, 93, 5, 24, 13, 2, 90, 91, 7, 38, 2, 2, 91, 
+	93, 5, 24, 13, 2, 92, 88, 3, 2, 2, 2, 92, 89, 3, 2, 2, 2, 92, 90, 3, 2, 
+	2, 2, 93, 11, 3, 2, 2, 2, 94, 95, 7, 5, 2, 2, 95, 96, 7, 39, 2, 2, 96, 
+	97, 7, 6, 2, 2, 97, 98, 7, 40, 2, 2, 98, 99, 7, 7, 2, 2, 99, 100, 5, 28, 
+	15, 2, 100, 13, 3, 2, 2, 2, 101, 102, 7, 12, 2, 2, 102, 104, 5, 16, 9, 
+	2, 103, 105, 5, 14, 8, 2, 104, 103, 3, 2, 2, 2, 104, 105, 3, 2, 2, 2, 105, 
+	15, 3, 2, 2, 2, 106, 108, 5, 10, 6, 2, 107, 106, 3, 2, 2, 2, 107, 108, 
+	3, 2, 2, 2, 108, 109, 3, 2, 2, 2, 109, 110, 5, 18, 10, 2, 110, 111, 7, 
+	8, 2, 2, 111, 113, 5, 12, 7, 2, 112, 114, 5, 4, 3, 2, 113, 112, 3, 2, 2, 
+	2, 113, 114, 3, 2, 2, 2, 114, 17, 3, 2, 2, 2, 115, 116, 5, 20, 11, 2, 116, 
+	117, 5, 26, 14, 2, 117, 118, 5, 22, 12, 2, 118, 19, 3, 2, 2, 2, 119, 122, 
+	5, 58, 30, 2, 120, 122, 5, 60, 31, 2, 121, 119, 3, 2, 2, 2, 121, 120, 3, 
+	2, 2, 2, 122, 21, 3, 2, 2, 2, 123, 129, 5, 48, 25, 2, 124, 129, 5, 50, 
+	26, 2, 125, 129, 5, 52, 27, 2, 126, 129, 5, 54, 28, 2, 127, 129, 5, 56, 
+	29, 2, 128, 123, 3, 2, 2, 2, 128, 124, 3, 2, 2, 2, 128, 125, 3, 2, 2, 2, 
+	128, 126, 3, 2, 2, 2, 128, 127, 3, 2, 2, 2, 129, 23, 3, 2, 2, 2, 130, 134, 
+	5, 62, 32, 2, 131, 134, 5, 64, 33, 2, 132, 134, 5, 66, 34, 2, 133, 130, 
+	3, 2, 2, 2, 133, 131, 3, 2, 2, 2, 133, 132, 3, 2, 2, 2, 134, 25, 3, 2, 
+	2, 2, 135, 142, 5, 36, 19, 2, 136, 142, 5, 38, 20, 2, 137, 142, 5, 40, 
+	21, 2, 138, 142, 5, 42, 22, 2, 139, 142, 5, 44, 23, 2, 140, 142, 5, 46, 
+	24, 2, 141, 135, 3, 2, 2, 2, 141, 136, 3, 2, 2, 2, 141, 137, 3, 2, 2, 2, 
+	141, 138, 3, 2, 2, 2, 141, 139, 3, 2, 2, 2, 141, 140, 3, 2, 2, 2, 142, 
+	27, 3, 2, 2, 2, 143, 147, 5, 30, 16, 2, 144, 147, 5, 32, 17, 2, 145, 147, 
+	5, 34, 18, 2, 146, 143, 3, 2, 2, 2, 146, 144, 3, 2, 2, 2, 146, 145, 3, 
+	2, 2, 2, 147, 29, 3, 2, 2, 2, 148, 149, 7, 9, 2, 2, 149, 31, 3, 2, 2, 2, 
+	150, 151, 7, 10, 2, 2, 151, 33, 3, 2, 2, 2, 152, 153, 7, 11, 2, 2, 153, 
+	35, 3, 2, 2, 2, 154, 155, 7, 13, 2, 2, 155, 37, 3, 2, 2, 2, 156, 157, 7, 
+	14, 2, 2, 157, 39, 3, 2, 2, 2, 158, 159, 7, 17, 2, 2, 159, 41, 3, 2, 2, 
+	2, 160, 161, 7, 18, 2, 2, 161, 43, 3, 2, 2, 2, 162, 163, 7, 19, 2, 2, 163, 
+	45, 3, 2, 2, 2, 164, 165, 7, 20, 2, 2, 165, 47, 3, 2, 2, 2, 166, 167, 7, 
+	28, 2, 2, 167, 49, 3, 2, 2, 2, 168, 169, 7, 27, 2, 2, 169, 51, 3, 2, 2, 
+	2, 170, 171, 7, 29, 2, 2, 171, 53, 3, 2, 2, 2, 172, 173, 7, 32, 2, 2, 173, 
+	55, 3, 2, 2, 2, 174, 175, 7, 37, 2, 2, 175, 57, 3, 2, 2, 2, 176, 177, 7, 
+	36, 2, 2, 177, 59, 3, 2, 2, 2, 178, 179, 7, 38, 2, 2, 179, 61, 3, 2, 2, 
+	2, 180, 181, 7, 21, 2, 2, 181, 63, 3, 2, 2, 2, 182, 183, 7, 23, 2, 2, 183, 
+	65, 3, 2, 2, 2, 184, 185, 7, 24, 2, 2, 185, 67, 3, 2, 2, 2, 14, 76, 80, 
+	86, 92, 104, 107, 113, 121, 128, 133, 141, 146,
 }
 var deserializer = antlr.NewATNDeserializer(nil)
 var deserializedATN = deserializer.DeserializeFromUInt16(parserATN)
@@ -66,15 +104,19 @@ var literalNames = []string{
 var symbolicNames = []string{
 	"", "", "", "", "", "", "", "FATAL", "SEVERE", "WARNING", "LINKED", "EQ", 
 	"NE", "AND", "OR", "GT", "LT", "GTE", "LTE", "LEN_FUNC", "FLOAT_FUNC", 
-	"DATETIME_LONG", "AFTER_CURR_TIME", "EXISTS", "EMPTY", "DOUBLE", "INT", 
-	"BOOL", "TRUE", "FALSE", "NULL", "COMMENT", "WS", "TERMINATOR", "IDENTIFIER", 
-	"CTX_ID", "INLINE_ID", "ERROR_CODE", "ERROR_INFO",
+	"DATETIME_LONG", "AFTER_CURR_TIME", "EXISTS", "EMPTY", "FLOAT", "INT", 
+	"BOOL", "TRUE", "FALSE", "NULL", "COMMENT", "WS", "TERMINATOR", "ATTR_ID", 
+	"CTX_ID", "DECL_ID", "ERROR_CODE", "ERROR_INFO",
 }
 
 var ruleNames = []string{
 	"mcrule", "block", "statementList", "statement", "inlineStmt", "errorStmt", 
-	"linkedStmt", "simpleStmt", "expression", "identifier", "literal", "function", 
-	"operator", "errorType",
+	"linkedStmt", "simpleStmt", "exprStmt", "identifier", "literal", "function", 
+	"operator", "errorType", "fatalError", "severeError", "warningError", "equalOperator", 
+	"notEqualOperator", "greaterThanOperator", "lessThanOperator", "greaterThanOrEqualOperator", 
+	"lessThanOrEqualOperator", "intLiteral", "floatLiteral", "boolLiteral", 
+	"nullLiteral", "ctxLiteral", "attributeIdentifier", "declarationIdentifier", 
+	"lengthFunction", "dateTimeLongFunction", "afterCurrentTimeFunction",
 }
 var decisionToDFA = make([]*antlr.DFA, len(deserializedATN.DecisionToState))
 
@@ -129,7 +171,7 @@ const (
 	MooncakeParserAFTER_CURR_TIME = 22
 	MooncakeParserEXISTS = 23
 	MooncakeParserEMPTY = 24
-	MooncakeParserDOUBLE = 25
+	MooncakeParserFLOAT = 25
 	MooncakeParserINT = 26
 	MooncakeParserBOOL = 27
 	MooncakeParserTRUE = 28
@@ -138,9 +180,9 @@ const (
 	MooncakeParserCOMMENT = 31
 	MooncakeParserWS = 32
 	MooncakeParserTERMINATOR = 33
-	MooncakeParserIDENTIFIER = 34
+	MooncakeParserATTR_ID = 34
 	MooncakeParserCTX_ID = 35
-	MooncakeParserINLINE_ID = 36
+	MooncakeParserDECL_ID = 36
 	MooncakeParserERROR_CODE = 37
 	MooncakeParserERROR_INFO = 38
 )
@@ -155,12 +197,31 @@ const (
 	MooncakeParserRULE_errorStmt = 5
 	MooncakeParserRULE_linkedStmt = 6
 	MooncakeParserRULE_simpleStmt = 7
-	MooncakeParserRULE_expression = 8
+	MooncakeParserRULE_exprStmt = 8
 	MooncakeParserRULE_identifier = 9
 	MooncakeParserRULE_literal = 10
 	MooncakeParserRULE_function = 11
 	MooncakeParserRULE_operator = 12
 	MooncakeParserRULE_errorType = 13
+	MooncakeParserRULE_fatalError = 14
+	MooncakeParserRULE_severeError = 15
+	MooncakeParserRULE_warningError = 16
+	MooncakeParserRULE_equalOperator = 17
+	MooncakeParserRULE_notEqualOperator = 18
+	MooncakeParserRULE_greaterThanOperator = 19
+	MooncakeParserRULE_lessThanOperator = 20
+	MooncakeParserRULE_greaterThanOrEqualOperator = 21
+	MooncakeParserRULE_lessThanOrEqualOperator = 22
+	MooncakeParserRULE_intLiteral = 23
+	MooncakeParserRULE_floatLiteral = 24
+	MooncakeParserRULE_boolLiteral = 25
+	MooncakeParserRULE_nullLiteral = 26
+	MooncakeParserRULE_ctxLiteral = 27
+	MooncakeParserRULE_attributeIdentifier = 28
+	MooncakeParserRULE_declarationIdentifier = 29
+	MooncakeParserRULE_lengthFunction = 30
+	MooncakeParserRULE_dateTimeLongFunction = 31
+	MooncakeParserRULE_afterCurrentTimeFunction = 32
 )
 
 // IMcruleContext is an interface to support dynamic dispatch.
@@ -267,7 +328,7 @@ func (p *MooncakeParser) Mcrule() (localctx IMcruleContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(28)
+		p.SetState(66)
 		p.StatementList()
 	}
 
@@ -381,15 +442,15 @@ func (p *MooncakeParser) Block() (localctx IBlockContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(30)
+		p.SetState(68)
 		p.Match(MooncakeParserT__0)
 	}
 	{
-		p.SetState(31)
+		p.SetState(69)
 		p.StatementList()
 	}
 	{
-		p.SetState(32)
+		p.SetState(70)
 		p.Match(MooncakeParserT__1)
 	}
 
@@ -525,31 +586,31 @@ func (p *MooncakeParser) StatementList() (localctx IStatementListContext) {
 	}()
 
 	p.EnterOuterAlt(localctx, 1)
-	p.SetState(40)
+	p.SetState(78)
 	p.GetErrorHandler().Sync(p)
 	_la = p.GetTokenStream().LA(1)
 
 
-	for (((_la) & -(0x1f+1)) == 0 && ((1 << uint(_la)) & ((1 << MooncakeParserT__0) | (1 << MooncakeParserLINKED) | (1 << MooncakeParserLEN_FUNC) | (1 << MooncakeParserFLOAT_FUNC) | (1 << MooncakeParserDATETIME_LONG) | (1 << MooncakeParserAFTER_CURR_TIME))) != 0) || _la == MooncakeParserIDENTIFIER || _la == MooncakeParserINLINE_ID {
+	for (((_la) & -(0x1f+1)) == 0 && ((1 << uint(_la)) & ((1 << MooncakeParserT__0) | (1 << MooncakeParserLINKED) | (1 << MooncakeParserLEN_FUNC) | (1 << MooncakeParserDATETIME_LONG) | (1 << MooncakeParserAFTER_CURR_TIME))) != 0) || _la == MooncakeParserATTR_ID || _la == MooncakeParserDECL_ID {
 		{
-			p.SetState(34)
+			p.SetState(72)
 			p.Statement()
 		}
-		p.SetState(36)
+		p.SetState(74)
 		p.GetErrorHandler().Sync(p)
 		_la = p.GetTokenStream().LA(1)
 
 
 		if _la == MooncakeParserCOMMENT {
 			{
-				p.SetState(35)
+				p.SetState(73)
 				p.Match(MooncakeParserCOMMENT)
 			}
 
 		}
 
 
-		p.SetState(42)
+		p.SetState(80)
 		p.GetErrorHandler().Sync(p)
 		_la = p.GetTokenStream().LA(1)
 	}
@@ -682,14 +743,14 @@ func (p *MooncakeParser) Statement() (localctx IStatementContext) {
 		}
 	}()
 
-	p.SetState(46)
+	p.SetState(84)
 	p.GetErrorHandler().Sync(p)
 
 	switch p.GetTokenStream().LA(1) {
 	case MooncakeParserT__0:
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(43)
+			p.SetState(81)
 			p.Block()
 		}
 
@@ -697,15 +758,15 @@ func (p *MooncakeParser) Statement() (localctx IStatementContext) {
 	case MooncakeParserLINKED:
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(44)
+			p.SetState(82)
 			p.LinkedStmt()
 		}
 
 
-	case MooncakeParserLEN_FUNC, MooncakeParserFLOAT_FUNC, MooncakeParserDATETIME_LONG, MooncakeParserAFTER_CURR_TIME, MooncakeParserIDENTIFIER, MooncakeParserINLINE_ID:
+	case MooncakeParserLEN_FUNC, MooncakeParserDATETIME_LONG, MooncakeParserAFTER_CURR_TIME, MooncakeParserATTR_ID, MooncakeParserDECL_ID:
 		p.EnterOuterAlt(localctx, 3)
 		{
-			p.SetState(45)
+			p.SetState(83)
 			p.SimpleStmt()
 		}
 
@@ -788,8 +849,8 @@ func (s *InlineStmtContext) GetFn() IFunctionContext { return s.fn }
 func (s *InlineStmtContext) SetFn(v IFunctionContext) { s.fn = v }
 
 
-func (s *InlineStmtContext) INLINE_ID() antlr.TerminalNode {
-	return s.GetToken(MooncakeParserINLINE_ID, 0)
+func (s *InlineStmtContext) DECL_ID() antlr.TerminalNode {
+	return s.GetToken(MooncakeParserDECL_ID, 0)
 }
 
 func (s *InlineStmtContext) Function() IFunctionContext {
@@ -856,15 +917,15 @@ func (p *MooncakeParser) InlineStmt() (localctx IInlineStmtContext) {
 		}
 	}()
 
-	p.SetState(52)
+	p.SetState(90)
 	p.GetErrorHandler().Sync(p)
 	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 3, p.GetParserRuleContext()) {
 	case 1:
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(48)
+			p.SetState(86)
 
-			var _m = p.Match(MooncakeParserINLINE_ID)
+			var _m = p.Match(MooncakeParserDECL_ID)
 
 			localctx.(*InlineStmtContext).id = _m
 		}
@@ -873,7 +934,7 @@ func (p *MooncakeParser) InlineStmt() (localctx IInlineStmtContext) {
 	case 2:
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(49)
+			p.SetState(87)
 
 			var _x = p.Function()
 
@@ -885,14 +946,14 @@ func (p *MooncakeParser) InlineStmt() (localctx IInlineStmtContext) {
 	case 3:
 		p.EnterOuterAlt(localctx, 3)
 		{
-			p.SetState(50)
+			p.SetState(88)
 
-			var _m = p.Match(MooncakeParserINLINE_ID)
+			var _m = p.Match(MooncakeParserDECL_ID)
 
 			localctx.(*InlineStmtContext).id = _m
 		}
 		{
-			p.SetState(51)
+			p.SetState(89)
 
 			var _x = p.Function()
 
@@ -1060,33 +1121,33 @@ func (p *MooncakeParser) ErrorStmt() (localctx IErrorStmtContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(54)
+		p.SetState(92)
 		p.Match(MooncakeParserT__2)
 	}
 	{
-		p.SetState(55)
+		p.SetState(93)
 
 		var _m = p.Match(MooncakeParserERROR_CODE)
 
 		localctx.(*ErrorStmtContext).code = _m
 	}
 	{
-		p.SetState(56)
+		p.SetState(94)
 		p.Match(MooncakeParserT__3)
 	}
 	{
-		p.SetState(57)
+		p.SetState(95)
 
 		var _m = p.Match(MooncakeParserERROR_INFO)
 
 		localctx.(*ErrorStmtContext).info = _m
 	}
 	{
-		p.SetState(58)
+		p.SetState(96)
 		p.Match(MooncakeParserT__4)
 	}
 	{
-		p.SetState(59)
+		p.SetState(97)
 
 		var _x = p.ErrorType()
 
@@ -1218,20 +1279,20 @@ func (p *MooncakeParser) LinkedStmt() (localctx ILinkedStmtContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(61)
+		p.SetState(99)
 		p.Match(MooncakeParserLINKED)
 	}
 	{
-		p.SetState(62)
+		p.SetState(100)
 		p.SimpleStmt()
 	}
-	p.SetState(64)
+	p.SetState(102)
 	p.GetErrorHandler().Sync(p)
 
 
 	if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 4, p.GetParserRuleContext()) == 1 {
 		{
-			p.SetState(63)
+			p.SetState(101)
 			p.LinkedStmt()
 		}
 
@@ -1282,14 +1343,14 @@ func NewSimpleStmtContext(parser antlr.Parser, parent antlr.ParserRuleContext, i
 
 func (s *SimpleStmtContext) GetParser() antlr.Parser { return s.parser }
 
-func (s *SimpleStmtContext) Expression() IExpressionContext {
-	var t = s.GetTypedRuleContext(reflect.TypeOf((*IExpressionContext)(nil)).Elem(), 0)
+func (s *SimpleStmtContext) ExprStmt() IExprStmtContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IExprStmtContext)(nil)).Elem(), 0)
 
 	if t == nil {
 		return nil
 	}
 
-	return t.(IExpressionContext)
+	return t.(IExprStmtContext)
 }
 
 func (s *SimpleStmtContext) ErrorStmt() IErrorStmtContext {
@@ -1377,37 +1438,37 @@ func (p *MooncakeParser) SimpleStmt() (localctx ISimpleStmtContext) {
 	}()
 
 	p.EnterOuterAlt(localctx, 1)
-	p.SetState(67)
+	p.SetState(105)
 	p.GetErrorHandler().Sync(p)
 
 
 	if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 5, p.GetParserRuleContext()) == 1 {
 		{
-			p.SetState(66)
+			p.SetState(104)
 			p.InlineStmt()
 		}
 
 
 	}
 	{
-		p.SetState(69)
-		p.Expression()
+		p.SetState(107)
+		p.ExprStmt()
 	}
 	{
-		p.SetState(70)
+		p.SetState(108)
 		p.Match(MooncakeParserT__5)
 	}
 	{
-		p.SetState(71)
+		p.SetState(109)
 		p.ErrorStmt()
 	}
-	p.SetState(73)
+	p.SetState(111)
 	p.GetErrorHandler().Sync(p)
 
 
 	if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 6, p.GetParserRuleContext()) == 1 {
 		{
-			p.SetState(72)
+			p.SetState(110)
 			p.Block()
 		}
 
@@ -1420,8 +1481,8 @@ func (p *MooncakeParser) SimpleStmt() (localctx ISimpleStmtContext) {
 }
 
 
-// IExpressionContext is an interface to support dynamic dispatch.
-type IExpressionContext interface {
+// IExprStmtContext is an interface to support dynamic dispatch.
+type IExprStmtContext interface {
 	antlr.ParserRuleContext
 
 	// GetParser returns the parser.
@@ -1447,11 +1508,11 @@ type IExpressionContext interface {
 	SetVal(ILiteralContext)
 
 
-	// IsExpressionContext differentiates from other interfaces.
-	IsExpressionContext()
+	// IsExprStmtContext differentiates from other interfaces.
+	IsExprStmtContext()
 }
 
-type ExpressionContext struct {
+type ExprStmtContext struct {
 	*antlr.BaseParserRuleContext
 	parser antlr.Parser
 	id IIdentifierContext 
@@ -1459,43 +1520,43 @@ type ExpressionContext struct {
 	val ILiteralContext 
 }
 
-func NewEmptyExpressionContext() *ExpressionContext {
-	var p = new(ExpressionContext)
+func NewEmptyExprStmtContext() *ExprStmtContext {
+	var p = new(ExprStmtContext)
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
-	p.RuleIndex = MooncakeParserRULE_expression
+	p.RuleIndex = MooncakeParserRULE_exprStmt
 	return p
 }
 
-func (*ExpressionContext) IsExpressionContext() {}
+func (*ExprStmtContext) IsExprStmtContext() {}
 
-func NewExpressionContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *ExpressionContext {
-	var p = new(ExpressionContext)
+func NewExprStmtContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *ExprStmtContext {
+	var p = new(ExprStmtContext)
 
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = MooncakeParserRULE_expression
+	p.RuleIndex = MooncakeParserRULE_exprStmt
 
 	return p
 }
 
-func (s *ExpressionContext) GetParser() antlr.Parser { return s.parser }
+func (s *ExprStmtContext) GetParser() antlr.Parser { return s.parser }
 
-func (s *ExpressionContext) GetId() IIdentifierContext { return s.id }
+func (s *ExprStmtContext) GetId() IIdentifierContext { return s.id }
 
-func (s *ExpressionContext) GetOp() IOperatorContext { return s.op }
+func (s *ExprStmtContext) GetOp() IOperatorContext { return s.op }
 
-func (s *ExpressionContext) GetVal() ILiteralContext { return s.val }
-
-
-func (s *ExpressionContext) SetId(v IIdentifierContext) { s.id = v }
-
-func (s *ExpressionContext) SetOp(v IOperatorContext) { s.op = v }
-
-func (s *ExpressionContext) SetVal(v ILiteralContext) { s.val = v }
+func (s *ExprStmtContext) GetVal() ILiteralContext { return s.val }
 
 
-func (s *ExpressionContext) Identifier() IIdentifierContext {
+func (s *ExprStmtContext) SetId(v IIdentifierContext) { s.id = v }
+
+func (s *ExprStmtContext) SetOp(v IOperatorContext) { s.op = v }
+
+func (s *ExprStmtContext) SetVal(v ILiteralContext) { s.val = v }
+
+
+func (s *ExprStmtContext) Identifier() IIdentifierContext {
 	var t = s.GetTypedRuleContext(reflect.TypeOf((*IIdentifierContext)(nil)).Elem(), 0)
 
 	if t == nil {
@@ -1505,7 +1566,7 @@ func (s *ExpressionContext) Identifier() IIdentifierContext {
 	return t.(IIdentifierContext)
 }
 
-func (s *ExpressionContext) Operator() IOperatorContext {
+func (s *ExprStmtContext) Operator() IOperatorContext {
 	var t = s.GetTypedRuleContext(reflect.TypeOf((*IOperatorContext)(nil)).Elem(), 0)
 
 	if t == nil {
@@ -1515,7 +1576,7 @@ func (s *ExpressionContext) Operator() IOperatorContext {
 	return t.(IOperatorContext)
 }
 
-func (s *ExpressionContext) Literal() ILiteralContext {
+func (s *ExprStmtContext) Literal() ILiteralContext {
 	var t = s.GetTypedRuleContext(reflect.TypeOf((*ILiteralContext)(nil)).Elem(), 0)
 
 	if t == nil {
@@ -1525,31 +1586,31 @@ func (s *ExpressionContext) Literal() ILiteralContext {
 	return t.(ILiteralContext)
 }
 
-func (s *ExpressionContext) GetRuleContext() antlr.RuleContext {
+func (s *ExprStmtContext) GetRuleContext() antlr.RuleContext {
 	return s
 }
 
-func (s *ExpressionContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+func (s *ExprStmtContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
 
-func (s *ExpressionContext) EnterRule(listener antlr.ParseTreeListener) {
+func (s *ExprStmtContext) EnterRule(listener antlr.ParseTreeListener) {
 	if listenerT, ok := listener.(MooncakeListener); ok {
-		listenerT.EnterExpression(s)
+		listenerT.EnterExprStmt(s)
 	}
 }
 
-func (s *ExpressionContext) ExitRule(listener antlr.ParseTreeListener) {
+func (s *ExprStmtContext) ExitRule(listener antlr.ParseTreeListener) {
 	if listenerT, ok := listener.(MooncakeListener); ok {
-		listenerT.ExitExpression(s)
+		listenerT.ExitExprStmt(s)
 	}
 }
 
-func (s *ExpressionContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+func (s *ExprStmtContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
 	case MooncakeVisitor:
-		return t.VisitExpression(s)
+		return t.VisitExprStmt(s)
 
 	default:
 		return t.VisitChildren(s)
@@ -1559,9 +1620,9 @@ func (s *ExpressionContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 
 
 
-func (p *MooncakeParser) Expression() (localctx IExpressionContext) {
-	localctx = NewExpressionContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 16, MooncakeParserRULE_expression)
+func (p *MooncakeParser) ExprStmt() (localctx IExprStmtContext) {
+	localctx = NewExprStmtContext(p, p.GetParserRuleContext(), p.GetState())
+	p.EnterRule(localctx, 16, MooncakeParserRULE_exprStmt)
 
 	defer func() {
 		p.ExitRule()
@@ -1581,28 +1642,28 @@ func (p *MooncakeParser) Expression() (localctx IExpressionContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(75)
+		p.SetState(113)
 
 		var _x = p.Identifier()
 
 
-		localctx.(*ExpressionContext).id = _x
+		localctx.(*ExprStmtContext).id = _x
 	}
 	{
-		p.SetState(76)
+		p.SetState(114)
 
 		var _x = p.Operator()
 
 
-		localctx.(*ExpressionContext).op = _x
+		localctx.(*ExprStmtContext).op = _x
 	}
 	{
-		p.SetState(77)
+		p.SetState(115)
 
 		var _x = p.Literal()
 
 
-		localctx.(*ExpressionContext).val = _x
+		localctx.(*ExprStmtContext).val = _x
 	}
 
 
@@ -1649,12 +1710,24 @@ func NewIdentifierContext(parser antlr.Parser, parent antlr.ParserRuleContext, i
 
 func (s *IdentifierContext) GetParser() antlr.Parser { return s.parser }
 
-func (s *IdentifierContext) IDENTIFIER() antlr.TerminalNode {
-	return s.GetToken(MooncakeParserIDENTIFIER, 0)
+func (s *IdentifierContext) AttributeIdentifier() IAttributeIdentifierContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IAttributeIdentifierContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IAttributeIdentifierContext)
 }
 
-func (s *IdentifierContext) INLINE_ID() antlr.TerminalNode {
-	return s.GetToken(MooncakeParserINLINE_ID, 0)
+func (s *IdentifierContext) DeclarationIdentifier() IDeclarationIdentifierContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IDeclarationIdentifierContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IDeclarationIdentifierContext)
 }
 
 func (s *IdentifierContext) GetRuleContext() antlr.RuleContext {
@@ -1694,8 +1767,6 @@ func (s *IdentifierContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 func (p *MooncakeParser) Identifier() (localctx IIdentifierContext) {
 	localctx = NewIdentifierContext(p, p.GetParserRuleContext(), p.GetState())
 	p.EnterRule(localctx, 18, MooncakeParserRULE_identifier)
-	var _la int
-
 
 	defer func() {
 		p.ExitRule()
@@ -1713,19 +1784,30 @@ func (p *MooncakeParser) Identifier() (localctx IIdentifierContext) {
 		}
 	}()
 
-	p.EnterOuterAlt(localctx, 1)
-	{
-		p.SetState(79)
-		_la = p.GetTokenStream().LA(1)
+	p.SetState(119)
+	p.GetErrorHandler().Sync(p)
 
-		if !(_la == MooncakeParserIDENTIFIER || _la == MooncakeParserINLINE_ID) {
-			p.GetErrorHandler().RecoverInline(p)
-		} else {
-			p.GetErrorHandler().ReportMatch(p)
-			p.Consume()
+	switch p.GetTokenStream().LA(1) {
+	case MooncakeParserATTR_ID:
+		p.EnterOuterAlt(localctx, 1)
+		{
+			p.SetState(117)
+			p.AttributeIdentifier()
 		}
-	}
 
+
+	case MooncakeParserDECL_ID:
+		p.EnterOuterAlt(localctx, 2)
+		{
+			p.SetState(118)
+			p.DeclarationIdentifier()
+		}
+
+
+
+	default:
+		panic(antlr.NewNoViableAltException(p, nil, nil, nil, nil, nil))
+	}
 
 
 	return localctx
@@ -1770,24 +1852,54 @@ func NewLiteralContext(parser antlr.Parser, parent antlr.ParserRuleContext, invo
 
 func (s *LiteralContext) GetParser() antlr.Parser { return s.parser }
 
-func (s *LiteralContext) INT() antlr.TerminalNode {
-	return s.GetToken(MooncakeParserINT, 0)
+func (s *LiteralContext) IntLiteral() IIntLiteralContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IIntLiteralContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IIntLiteralContext)
 }
 
-func (s *LiteralContext) DOUBLE() antlr.TerminalNode {
-	return s.GetToken(MooncakeParserDOUBLE, 0)
+func (s *LiteralContext) FloatLiteral() IFloatLiteralContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IFloatLiteralContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IFloatLiteralContext)
 }
 
-func (s *LiteralContext) BOOL() antlr.TerminalNode {
-	return s.GetToken(MooncakeParserBOOL, 0)
+func (s *LiteralContext) BoolLiteral() IBoolLiteralContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IBoolLiteralContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IBoolLiteralContext)
 }
 
-func (s *LiteralContext) NULL() antlr.TerminalNode {
-	return s.GetToken(MooncakeParserNULL, 0)
+func (s *LiteralContext) NullLiteral() INullLiteralContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*INullLiteralContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(INullLiteralContext)
 }
 
-func (s *LiteralContext) CTX_ID() antlr.TerminalNode {
-	return s.GetToken(MooncakeParserCTX_ID, 0)
+func (s *LiteralContext) CtxLiteral() ICtxLiteralContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*ICtxLiteralContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(ICtxLiteralContext)
 }
 
 func (s *LiteralContext) GetRuleContext() antlr.RuleContext {
@@ -1827,8 +1939,6 @@ func (s *LiteralContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 func (p *MooncakeParser) Literal() (localctx ILiteralContext) {
 	localctx = NewLiteralContext(p, p.GetParserRuleContext(), p.GetState())
 	p.EnterRule(localctx, 20, MooncakeParserRULE_literal)
-	var _la int
-
 
 	defer func() {
 		p.ExitRule()
@@ -1846,19 +1956,54 @@ func (p *MooncakeParser) Literal() (localctx ILiteralContext) {
 		}
 	}()
 
-	p.EnterOuterAlt(localctx, 1)
-	{
-		p.SetState(81)
-		_la = p.GetTokenStream().LA(1)
+	p.SetState(126)
+	p.GetErrorHandler().Sync(p)
 
-		if !(((((_la - 25)) & -(0x1f+1)) == 0 && ((1 << uint((_la - 25))) & ((1 << (MooncakeParserDOUBLE - 25)) | (1 << (MooncakeParserINT - 25)) | (1 << (MooncakeParserBOOL - 25)) | (1 << (MooncakeParserNULL - 25)) | (1 << (MooncakeParserCTX_ID - 25)))) != 0)) {
-			p.GetErrorHandler().RecoverInline(p)
-		} else {
-			p.GetErrorHandler().ReportMatch(p)
-			p.Consume()
+	switch p.GetTokenStream().LA(1) {
+	case MooncakeParserINT:
+		p.EnterOuterAlt(localctx, 1)
+		{
+			p.SetState(121)
+			p.IntLiteral()
 		}
-	}
 
+
+	case MooncakeParserFLOAT:
+		p.EnterOuterAlt(localctx, 2)
+		{
+			p.SetState(122)
+			p.FloatLiteral()
+		}
+
+
+	case MooncakeParserBOOL:
+		p.EnterOuterAlt(localctx, 3)
+		{
+			p.SetState(123)
+			p.BoolLiteral()
+		}
+
+
+	case MooncakeParserNULL:
+		p.EnterOuterAlt(localctx, 4)
+		{
+			p.SetState(124)
+			p.NullLiteral()
+		}
+
+
+	case MooncakeParserCTX_ID:
+		p.EnterOuterAlt(localctx, 5)
+		{
+			p.SetState(125)
+			p.CtxLiteral()
+		}
+
+
+
+	default:
+		panic(antlr.NewNoViableAltException(p, nil, nil, nil, nil, nil))
+	}
 
 
 	return localctx
@@ -1903,20 +2048,34 @@ func NewFunctionContext(parser antlr.Parser, parent antlr.ParserRuleContext, inv
 
 func (s *FunctionContext) GetParser() antlr.Parser { return s.parser }
 
-func (s *FunctionContext) LEN_FUNC() antlr.TerminalNode {
-	return s.GetToken(MooncakeParserLEN_FUNC, 0)
+func (s *FunctionContext) LengthFunction() ILengthFunctionContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*ILengthFunctionContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(ILengthFunctionContext)
 }
 
-func (s *FunctionContext) FLOAT_FUNC() antlr.TerminalNode {
-	return s.GetToken(MooncakeParserFLOAT_FUNC, 0)
+func (s *FunctionContext) DateTimeLongFunction() IDateTimeLongFunctionContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IDateTimeLongFunctionContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IDateTimeLongFunctionContext)
 }
 
-func (s *FunctionContext) DATETIME_LONG() antlr.TerminalNode {
-	return s.GetToken(MooncakeParserDATETIME_LONG, 0)
-}
+func (s *FunctionContext) AfterCurrentTimeFunction() IAfterCurrentTimeFunctionContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IAfterCurrentTimeFunctionContext)(nil)).Elem(), 0)
 
-func (s *FunctionContext) AFTER_CURR_TIME() antlr.TerminalNode {
-	return s.GetToken(MooncakeParserAFTER_CURR_TIME, 0)
+	if t == nil {
+		return nil
+	}
+
+	return t.(IAfterCurrentTimeFunctionContext)
 }
 
 func (s *FunctionContext) GetRuleContext() antlr.RuleContext {
@@ -1956,8 +2115,6 @@ func (s *FunctionContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 func (p *MooncakeParser) Function() (localctx IFunctionContext) {
 	localctx = NewFunctionContext(p, p.GetParserRuleContext(), p.GetState())
 	p.EnterRule(localctx, 22, MooncakeParserRULE_function)
-	var _la int
-
 
 	defer func() {
 		p.ExitRule()
@@ -1975,19 +2132,38 @@ func (p *MooncakeParser) Function() (localctx IFunctionContext) {
 		}
 	}()
 
-	p.EnterOuterAlt(localctx, 1)
-	{
-		p.SetState(83)
-		_la = p.GetTokenStream().LA(1)
+	p.SetState(131)
+	p.GetErrorHandler().Sync(p)
 
-		if !((((_la) & -(0x1f+1)) == 0 && ((1 << uint(_la)) & ((1 << MooncakeParserLEN_FUNC) | (1 << MooncakeParserFLOAT_FUNC) | (1 << MooncakeParserDATETIME_LONG) | (1 << MooncakeParserAFTER_CURR_TIME))) != 0)) {
-			p.GetErrorHandler().RecoverInline(p)
-		} else {
-			p.GetErrorHandler().ReportMatch(p)
-			p.Consume()
+	switch p.GetTokenStream().LA(1) {
+	case MooncakeParserLEN_FUNC:
+		p.EnterOuterAlt(localctx, 1)
+		{
+			p.SetState(128)
+			p.LengthFunction()
 		}
-	}
 
+
+	case MooncakeParserDATETIME_LONG:
+		p.EnterOuterAlt(localctx, 2)
+		{
+			p.SetState(129)
+			p.DateTimeLongFunction()
+		}
+
+
+	case MooncakeParserAFTER_CURR_TIME:
+		p.EnterOuterAlt(localctx, 3)
+		{
+			p.SetState(130)
+			p.AfterCurrentTimeFunction()
+		}
+
+
+
+	default:
+		panic(antlr.NewNoViableAltException(p, nil, nil, nil, nil, nil))
+	}
 
 
 	return localctx
@@ -2032,28 +2208,64 @@ func NewOperatorContext(parser antlr.Parser, parent antlr.ParserRuleContext, inv
 
 func (s *OperatorContext) GetParser() antlr.Parser { return s.parser }
 
-func (s *OperatorContext) EQ() antlr.TerminalNode {
-	return s.GetToken(MooncakeParserEQ, 0)
+func (s *OperatorContext) EqualOperator() IEqualOperatorContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IEqualOperatorContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IEqualOperatorContext)
 }
 
-func (s *OperatorContext) NE() antlr.TerminalNode {
-	return s.GetToken(MooncakeParserNE, 0)
+func (s *OperatorContext) NotEqualOperator() INotEqualOperatorContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*INotEqualOperatorContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(INotEqualOperatorContext)
 }
 
-func (s *OperatorContext) GT() antlr.TerminalNode {
-	return s.GetToken(MooncakeParserGT, 0)
+func (s *OperatorContext) GreaterThanOperator() IGreaterThanOperatorContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IGreaterThanOperatorContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IGreaterThanOperatorContext)
 }
 
-func (s *OperatorContext) LT() antlr.TerminalNode {
-	return s.GetToken(MooncakeParserLT, 0)
+func (s *OperatorContext) LessThanOperator() ILessThanOperatorContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*ILessThanOperatorContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(ILessThanOperatorContext)
 }
 
-func (s *OperatorContext) GTE() antlr.TerminalNode {
-	return s.GetToken(MooncakeParserGTE, 0)
+func (s *OperatorContext) GreaterThanOrEqualOperator() IGreaterThanOrEqualOperatorContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IGreaterThanOrEqualOperatorContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IGreaterThanOrEqualOperatorContext)
 }
 
-func (s *OperatorContext) LTE() antlr.TerminalNode {
-	return s.GetToken(MooncakeParserLTE, 0)
+func (s *OperatorContext) LessThanOrEqualOperator() ILessThanOrEqualOperatorContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*ILessThanOrEqualOperatorContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(ILessThanOrEqualOperatorContext)
 }
 
 func (s *OperatorContext) GetRuleContext() antlr.RuleContext {
@@ -2093,8 +2305,6 @@ func (s *OperatorContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 func (p *MooncakeParser) Operator() (localctx IOperatorContext) {
 	localctx = NewOperatorContext(p, p.GetParserRuleContext(), p.GetState())
 	p.EnterRule(localctx, 24, MooncakeParserRULE_operator)
-	var _la int
-
 
 	defer func() {
 		p.ExitRule()
@@ -2112,19 +2322,62 @@ func (p *MooncakeParser) Operator() (localctx IOperatorContext) {
 		}
 	}()
 
-	p.EnterOuterAlt(localctx, 1)
-	{
-		p.SetState(85)
-		_la = p.GetTokenStream().LA(1)
+	p.SetState(139)
+	p.GetErrorHandler().Sync(p)
 
-		if !((((_la) & -(0x1f+1)) == 0 && ((1 << uint(_la)) & ((1 << MooncakeParserEQ) | (1 << MooncakeParserNE) | (1 << MooncakeParserGT) | (1 << MooncakeParserLT) | (1 << MooncakeParserGTE) | (1 << MooncakeParserLTE))) != 0)) {
-			p.GetErrorHandler().RecoverInline(p)
-		} else {
-			p.GetErrorHandler().ReportMatch(p)
-			p.Consume()
+	switch p.GetTokenStream().LA(1) {
+	case MooncakeParserEQ:
+		p.EnterOuterAlt(localctx, 1)
+		{
+			p.SetState(133)
+			p.EqualOperator()
 		}
-	}
 
+
+	case MooncakeParserNE:
+		p.EnterOuterAlt(localctx, 2)
+		{
+			p.SetState(134)
+			p.NotEqualOperator()
+		}
+
+
+	case MooncakeParserGT:
+		p.EnterOuterAlt(localctx, 3)
+		{
+			p.SetState(135)
+			p.GreaterThanOperator()
+		}
+
+
+	case MooncakeParserLT:
+		p.EnterOuterAlt(localctx, 4)
+		{
+			p.SetState(136)
+			p.LessThanOperator()
+		}
+
+
+	case MooncakeParserGTE:
+		p.EnterOuterAlt(localctx, 5)
+		{
+			p.SetState(137)
+			p.GreaterThanOrEqualOperator()
+		}
+
+
+	case MooncakeParserLTE:
+		p.EnterOuterAlt(localctx, 6)
+		{
+			p.SetState(138)
+			p.LessThanOrEqualOperator()
+		}
+
+
+
+	default:
+		panic(antlr.NewNoViableAltException(p, nil, nil, nil, nil, nil))
+	}
 
 
 	return localctx
@@ -2169,16 +2422,34 @@ func NewErrorTypeContext(parser antlr.Parser, parent antlr.ParserRuleContext, in
 
 func (s *ErrorTypeContext) GetParser() antlr.Parser { return s.parser }
 
-func (s *ErrorTypeContext) FATAL() antlr.TerminalNode {
-	return s.GetToken(MooncakeParserFATAL, 0)
+func (s *ErrorTypeContext) FatalError() IFatalErrorContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IFatalErrorContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IFatalErrorContext)
 }
 
-func (s *ErrorTypeContext) SEVERE() antlr.TerminalNode {
-	return s.GetToken(MooncakeParserSEVERE, 0)
+func (s *ErrorTypeContext) SevereError() ISevereErrorContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*ISevereErrorContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(ISevereErrorContext)
 }
 
-func (s *ErrorTypeContext) WARNING() antlr.TerminalNode {
-	return s.GetToken(MooncakeParserWARNING, 0)
+func (s *ErrorTypeContext) WarningError() IWarningErrorContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IWarningErrorContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IWarningErrorContext)
 }
 
 func (s *ErrorTypeContext) GetRuleContext() antlr.RuleContext {
@@ -2218,8 +2489,140 @@ func (s *ErrorTypeContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 func (p *MooncakeParser) ErrorType() (localctx IErrorTypeContext) {
 	localctx = NewErrorTypeContext(p, p.GetParserRuleContext(), p.GetState())
 	p.EnterRule(localctx, 26, MooncakeParserRULE_errorType)
-	var _la int
 
+	defer func() {
+		p.ExitRule()
+	}()
+
+	defer func() {
+		if err := recover(); err != nil {
+			if v, ok := err.(antlr.RecognitionException); ok {
+				localctx.SetException(v)
+				p.GetErrorHandler().ReportError(p, v)
+				p.GetErrorHandler().Recover(p, v)
+			} else {
+				panic(err)
+			}
+		}
+	}()
+
+	p.SetState(144)
+	p.GetErrorHandler().Sync(p)
+
+	switch p.GetTokenStream().LA(1) {
+	case MooncakeParserFATAL:
+		p.EnterOuterAlt(localctx, 1)
+		{
+			p.SetState(141)
+			p.FatalError()
+		}
+
+
+	case MooncakeParserSEVERE:
+		p.EnterOuterAlt(localctx, 2)
+		{
+			p.SetState(142)
+			p.SevereError()
+		}
+
+
+	case MooncakeParserWARNING:
+		p.EnterOuterAlt(localctx, 3)
+		{
+			p.SetState(143)
+			p.WarningError()
+		}
+
+
+
+	default:
+		panic(antlr.NewNoViableAltException(p, nil, nil, nil, nil, nil))
+	}
+
+
+	return localctx
+}
+
+
+// IFatalErrorContext is an interface to support dynamic dispatch.
+type IFatalErrorContext interface {
+	antlr.ParserRuleContext
+
+	// GetParser returns the parser.
+	GetParser() antlr.Parser
+
+	// IsFatalErrorContext differentiates from other interfaces.
+	IsFatalErrorContext()
+}
+
+type FatalErrorContext struct {
+	*antlr.BaseParserRuleContext
+	parser antlr.Parser
+}
+
+func NewEmptyFatalErrorContext() *FatalErrorContext {
+	var p = new(FatalErrorContext)
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
+	p.RuleIndex = MooncakeParserRULE_fatalError
+	return p
+}
+
+func (*FatalErrorContext) IsFatalErrorContext() {}
+
+func NewFatalErrorContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *FatalErrorContext {
+	var p = new(FatalErrorContext)
+
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
+
+	p.parser = parser
+	p.RuleIndex = MooncakeParserRULE_fatalError
+
+	return p
+}
+
+func (s *FatalErrorContext) GetParser() antlr.Parser { return s.parser }
+
+func (s *FatalErrorContext) FATAL() antlr.TerminalNode {
+	return s.GetToken(MooncakeParserFATAL, 0)
+}
+
+func (s *FatalErrorContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *FatalErrorContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+	return antlr.TreesStringTree(s, ruleNames, recog)
+}
+
+
+func (s *FatalErrorContext) EnterRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.EnterFatalError(s)
+	}
+}
+
+func (s *FatalErrorContext) ExitRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.ExitFatalError(s)
+	}
+}
+
+func (s *FatalErrorContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MooncakeVisitor:
+		return t.VisitFatalError(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+
+
+
+func (p *MooncakeParser) FatalError() (localctx IFatalErrorContext) {
+	localctx = NewFatalErrorContext(p, p.GetParserRuleContext(), p.GetState())
+	p.EnterRule(localctx, 28, MooncakeParserRULE_fatalError)
 
 	defer func() {
 		p.ExitRule()
@@ -2239,15 +2642,1952 @@ func (p *MooncakeParser) ErrorType() (localctx IErrorTypeContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(87)
-		_la = p.GetTokenStream().LA(1)
+		p.SetState(146)
+		p.Match(MooncakeParserFATAL)
+	}
 
-		if !((((_la) & -(0x1f+1)) == 0 && ((1 << uint(_la)) & ((1 << MooncakeParserFATAL) | (1 << MooncakeParserSEVERE) | (1 << MooncakeParserWARNING))) != 0)) {
-			p.GetErrorHandler().RecoverInline(p)
-		} else {
-			p.GetErrorHandler().ReportMatch(p)
-			p.Consume()
+
+
+	return localctx
+}
+
+
+// ISevereErrorContext is an interface to support dynamic dispatch.
+type ISevereErrorContext interface {
+	antlr.ParserRuleContext
+
+	// GetParser returns the parser.
+	GetParser() antlr.Parser
+
+	// IsSevereErrorContext differentiates from other interfaces.
+	IsSevereErrorContext()
+}
+
+type SevereErrorContext struct {
+	*antlr.BaseParserRuleContext
+	parser antlr.Parser
+}
+
+func NewEmptySevereErrorContext() *SevereErrorContext {
+	var p = new(SevereErrorContext)
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
+	p.RuleIndex = MooncakeParserRULE_severeError
+	return p
+}
+
+func (*SevereErrorContext) IsSevereErrorContext() {}
+
+func NewSevereErrorContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *SevereErrorContext {
+	var p = new(SevereErrorContext)
+
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
+
+	p.parser = parser
+	p.RuleIndex = MooncakeParserRULE_severeError
+
+	return p
+}
+
+func (s *SevereErrorContext) GetParser() antlr.Parser { return s.parser }
+
+func (s *SevereErrorContext) SEVERE() antlr.TerminalNode {
+	return s.GetToken(MooncakeParserSEVERE, 0)
+}
+
+func (s *SevereErrorContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *SevereErrorContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+	return antlr.TreesStringTree(s, ruleNames, recog)
+}
+
+
+func (s *SevereErrorContext) EnterRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.EnterSevereError(s)
+	}
+}
+
+func (s *SevereErrorContext) ExitRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.ExitSevereError(s)
+	}
+}
+
+func (s *SevereErrorContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MooncakeVisitor:
+		return t.VisitSevereError(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+
+
+
+func (p *MooncakeParser) SevereError() (localctx ISevereErrorContext) {
+	localctx = NewSevereErrorContext(p, p.GetParserRuleContext(), p.GetState())
+	p.EnterRule(localctx, 30, MooncakeParserRULE_severeError)
+
+	defer func() {
+		p.ExitRule()
+	}()
+
+	defer func() {
+		if err := recover(); err != nil {
+			if v, ok := err.(antlr.RecognitionException); ok {
+				localctx.SetException(v)
+				p.GetErrorHandler().ReportError(p, v)
+				p.GetErrorHandler().Recover(p, v)
+			} else {
+				panic(err)
+			}
 		}
+	}()
+
+	p.EnterOuterAlt(localctx, 1)
+	{
+		p.SetState(148)
+		p.Match(MooncakeParserSEVERE)
+	}
+
+
+
+	return localctx
+}
+
+
+// IWarningErrorContext is an interface to support dynamic dispatch.
+type IWarningErrorContext interface {
+	antlr.ParserRuleContext
+
+	// GetParser returns the parser.
+	GetParser() antlr.Parser
+
+	// IsWarningErrorContext differentiates from other interfaces.
+	IsWarningErrorContext()
+}
+
+type WarningErrorContext struct {
+	*antlr.BaseParserRuleContext
+	parser antlr.Parser
+}
+
+func NewEmptyWarningErrorContext() *WarningErrorContext {
+	var p = new(WarningErrorContext)
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
+	p.RuleIndex = MooncakeParserRULE_warningError
+	return p
+}
+
+func (*WarningErrorContext) IsWarningErrorContext() {}
+
+func NewWarningErrorContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *WarningErrorContext {
+	var p = new(WarningErrorContext)
+
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
+
+	p.parser = parser
+	p.RuleIndex = MooncakeParserRULE_warningError
+
+	return p
+}
+
+func (s *WarningErrorContext) GetParser() antlr.Parser { return s.parser }
+
+func (s *WarningErrorContext) WARNING() antlr.TerminalNode {
+	return s.GetToken(MooncakeParserWARNING, 0)
+}
+
+func (s *WarningErrorContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *WarningErrorContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+	return antlr.TreesStringTree(s, ruleNames, recog)
+}
+
+
+func (s *WarningErrorContext) EnterRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.EnterWarningError(s)
+	}
+}
+
+func (s *WarningErrorContext) ExitRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.ExitWarningError(s)
+	}
+}
+
+func (s *WarningErrorContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MooncakeVisitor:
+		return t.VisitWarningError(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+
+
+
+func (p *MooncakeParser) WarningError() (localctx IWarningErrorContext) {
+	localctx = NewWarningErrorContext(p, p.GetParserRuleContext(), p.GetState())
+	p.EnterRule(localctx, 32, MooncakeParserRULE_warningError)
+
+	defer func() {
+		p.ExitRule()
+	}()
+
+	defer func() {
+		if err := recover(); err != nil {
+			if v, ok := err.(antlr.RecognitionException); ok {
+				localctx.SetException(v)
+				p.GetErrorHandler().ReportError(p, v)
+				p.GetErrorHandler().Recover(p, v)
+			} else {
+				panic(err)
+			}
+		}
+	}()
+
+	p.EnterOuterAlt(localctx, 1)
+	{
+		p.SetState(150)
+		p.Match(MooncakeParserWARNING)
+	}
+
+
+
+	return localctx
+}
+
+
+// IEqualOperatorContext is an interface to support dynamic dispatch.
+type IEqualOperatorContext interface {
+	antlr.ParserRuleContext
+
+	// GetParser returns the parser.
+	GetParser() antlr.Parser
+
+	// IsEqualOperatorContext differentiates from other interfaces.
+	IsEqualOperatorContext()
+}
+
+type EqualOperatorContext struct {
+	*antlr.BaseParserRuleContext
+	parser antlr.Parser
+}
+
+func NewEmptyEqualOperatorContext() *EqualOperatorContext {
+	var p = new(EqualOperatorContext)
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
+	p.RuleIndex = MooncakeParserRULE_equalOperator
+	return p
+}
+
+func (*EqualOperatorContext) IsEqualOperatorContext() {}
+
+func NewEqualOperatorContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *EqualOperatorContext {
+	var p = new(EqualOperatorContext)
+
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
+
+	p.parser = parser
+	p.RuleIndex = MooncakeParserRULE_equalOperator
+
+	return p
+}
+
+func (s *EqualOperatorContext) GetParser() antlr.Parser { return s.parser }
+
+func (s *EqualOperatorContext) EQ() antlr.TerminalNode {
+	return s.GetToken(MooncakeParserEQ, 0)
+}
+
+func (s *EqualOperatorContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *EqualOperatorContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+	return antlr.TreesStringTree(s, ruleNames, recog)
+}
+
+
+func (s *EqualOperatorContext) EnterRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.EnterEqualOperator(s)
+	}
+}
+
+func (s *EqualOperatorContext) ExitRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.ExitEqualOperator(s)
+	}
+}
+
+func (s *EqualOperatorContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MooncakeVisitor:
+		return t.VisitEqualOperator(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+
+
+
+func (p *MooncakeParser) EqualOperator() (localctx IEqualOperatorContext) {
+	localctx = NewEqualOperatorContext(p, p.GetParserRuleContext(), p.GetState())
+	p.EnterRule(localctx, 34, MooncakeParserRULE_equalOperator)
+
+	defer func() {
+		p.ExitRule()
+	}()
+
+	defer func() {
+		if err := recover(); err != nil {
+			if v, ok := err.(antlr.RecognitionException); ok {
+				localctx.SetException(v)
+				p.GetErrorHandler().ReportError(p, v)
+				p.GetErrorHandler().Recover(p, v)
+			} else {
+				panic(err)
+			}
+		}
+	}()
+
+	p.EnterOuterAlt(localctx, 1)
+	{
+		p.SetState(152)
+		p.Match(MooncakeParserEQ)
+	}
+
+
+
+	return localctx
+}
+
+
+// INotEqualOperatorContext is an interface to support dynamic dispatch.
+type INotEqualOperatorContext interface {
+	antlr.ParserRuleContext
+
+	// GetParser returns the parser.
+	GetParser() antlr.Parser
+
+	// IsNotEqualOperatorContext differentiates from other interfaces.
+	IsNotEqualOperatorContext()
+}
+
+type NotEqualOperatorContext struct {
+	*antlr.BaseParserRuleContext
+	parser antlr.Parser
+}
+
+func NewEmptyNotEqualOperatorContext() *NotEqualOperatorContext {
+	var p = new(NotEqualOperatorContext)
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
+	p.RuleIndex = MooncakeParserRULE_notEqualOperator
+	return p
+}
+
+func (*NotEqualOperatorContext) IsNotEqualOperatorContext() {}
+
+func NewNotEqualOperatorContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *NotEqualOperatorContext {
+	var p = new(NotEqualOperatorContext)
+
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
+
+	p.parser = parser
+	p.RuleIndex = MooncakeParserRULE_notEqualOperator
+
+	return p
+}
+
+func (s *NotEqualOperatorContext) GetParser() antlr.Parser { return s.parser }
+
+func (s *NotEqualOperatorContext) NE() antlr.TerminalNode {
+	return s.GetToken(MooncakeParserNE, 0)
+}
+
+func (s *NotEqualOperatorContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *NotEqualOperatorContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+	return antlr.TreesStringTree(s, ruleNames, recog)
+}
+
+
+func (s *NotEqualOperatorContext) EnterRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.EnterNotEqualOperator(s)
+	}
+}
+
+func (s *NotEqualOperatorContext) ExitRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.ExitNotEqualOperator(s)
+	}
+}
+
+func (s *NotEqualOperatorContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MooncakeVisitor:
+		return t.VisitNotEqualOperator(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+
+
+
+func (p *MooncakeParser) NotEqualOperator() (localctx INotEqualOperatorContext) {
+	localctx = NewNotEqualOperatorContext(p, p.GetParserRuleContext(), p.GetState())
+	p.EnterRule(localctx, 36, MooncakeParserRULE_notEqualOperator)
+
+	defer func() {
+		p.ExitRule()
+	}()
+
+	defer func() {
+		if err := recover(); err != nil {
+			if v, ok := err.(antlr.RecognitionException); ok {
+				localctx.SetException(v)
+				p.GetErrorHandler().ReportError(p, v)
+				p.GetErrorHandler().Recover(p, v)
+			} else {
+				panic(err)
+			}
+		}
+	}()
+
+	p.EnterOuterAlt(localctx, 1)
+	{
+		p.SetState(154)
+		p.Match(MooncakeParserNE)
+	}
+
+
+
+	return localctx
+}
+
+
+// IGreaterThanOperatorContext is an interface to support dynamic dispatch.
+type IGreaterThanOperatorContext interface {
+	antlr.ParserRuleContext
+
+	// GetParser returns the parser.
+	GetParser() antlr.Parser
+
+	// IsGreaterThanOperatorContext differentiates from other interfaces.
+	IsGreaterThanOperatorContext()
+}
+
+type GreaterThanOperatorContext struct {
+	*antlr.BaseParserRuleContext
+	parser antlr.Parser
+}
+
+func NewEmptyGreaterThanOperatorContext() *GreaterThanOperatorContext {
+	var p = new(GreaterThanOperatorContext)
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
+	p.RuleIndex = MooncakeParserRULE_greaterThanOperator
+	return p
+}
+
+func (*GreaterThanOperatorContext) IsGreaterThanOperatorContext() {}
+
+func NewGreaterThanOperatorContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *GreaterThanOperatorContext {
+	var p = new(GreaterThanOperatorContext)
+
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
+
+	p.parser = parser
+	p.RuleIndex = MooncakeParserRULE_greaterThanOperator
+
+	return p
+}
+
+func (s *GreaterThanOperatorContext) GetParser() antlr.Parser { return s.parser }
+
+func (s *GreaterThanOperatorContext) GT() antlr.TerminalNode {
+	return s.GetToken(MooncakeParserGT, 0)
+}
+
+func (s *GreaterThanOperatorContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *GreaterThanOperatorContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+	return antlr.TreesStringTree(s, ruleNames, recog)
+}
+
+
+func (s *GreaterThanOperatorContext) EnterRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.EnterGreaterThanOperator(s)
+	}
+}
+
+func (s *GreaterThanOperatorContext) ExitRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.ExitGreaterThanOperator(s)
+	}
+}
+
+func (s *GreaterThanOperatorContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MooncakeVisitor:
+		return t.VisitGreaterThanOperator(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+
+
+
+func (p *MooncakeParser) GreaterThanOperator() (localctx IGreaterThanOperatorContext) {
+	localctx = NewGreaterThanOperatorContext(p, p.GetParserRuleContext(), p.GetState())
+	p.EnterRule(localctx, 38, MooncakeParserRULE_greaterThanOperator)
+
+	defer func() {
+		p.ExitRule()
+	}()
+
+	defer func() {
+		if err := recover(); err != nil {
+			if v, ok := err.(antlr.RecognitionException); ok {
+				localctx.SetException(v)
+				p.GetErrorHandler().ReportError(p, v)
+				p.GetErrorHandler().Recover(p, v)
+			} else {
+				panic(err)
+			}
+		}
+	}()
+
+	p.EnterOuterAlt(localctx, 1)
+	{
+		p.SetState(156)
+		p.Match(MooncakeParserGT)
+	}
+
+
+
+	return localctx
+}
+
+
+// ILessThanOperatorContext is an interface to support dynamic dispatch.
+type ILessThanOperatorContext interface {
+	antlr.ParserRuleContext
+
+	// GetParser returns the parser.
+	GetParser() antlr.Parser
+
+	// IsLessThanOperatorContext differentiates from other interfaces.
+	IsLessThanOperatorContext()
+}
+
+type LessThanOperatorContext struct {
+	*antlr.BaseParserRuleContext
+	parser antlr.Parser
+}
+
+func NewEmptyLessThanOperatorContext() *LessThanOperatorContext {
+	var p = new(LessThanOperatorContext)
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
+	p.RuleIndex = MooncakeParserRULE_lessThanOperator
+	return p
+}
+
+func (*LessThanOperatorContext) IsLessThanOperatorContext() {}
+
+func NewLessThanOperatorContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *LessThanOperatorContext {
+	var p = new(LessThanOperatorContext)
+
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
+
+	p.parser = parser
+	p.RuleIndex = MooncakeParserRULE_lessThanOperator
+
+	return p
+}
+
+func (s *LessThanOperatorContext) GetParser() antlr.Parser { return s.parser }
+
+func (s *LessThanOperatorContext) LT() antlr.TerminalNode {
+	return s.GetToken(MooncakeParserLT, 0)
+}
+
+func (s *LessThanOperatorContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *LessThanOperatorContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+	return antlr.TreesStringTree(s, ruleNames, recog)
+}
+
+
+func (s *LessThanOperatorContext) EnterRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.EnterLessThanOperator(s)
+	}
+}
+
+func (s *LessThanOperatorContext) ExitRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.ExitLessThanOperator(s)
+	}
+}
+
+func (s *LessThanOperatorContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MooncakeVisitor:
+		return t.VisitLessThanOperator(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+
+
+
+func (p *MooncakeParser) LessThanOperator() (localctx ILessThanOperatorContext) {
+	localctx = NewLessThanOperatorContext(p, p.GetParserRuleContext(), p.GetState())
+	p.EnterRule(localctx, 40, MooncakeParserRULE_lessThanOperator)
+
+	defer func() {
+		p.ExitRule()
+	}()
+
+	defer func() {
+		if err := recover(); err != nil {
+			if v, ok := err.(antlr.RecognitionException); ok {
+				localctx.SetException(v)
+				p.GetErrorHandler().ReportError(p, v)
+				p.GetErrorHandler().Recover(p, v)
+			} else {
+				panic(err)
+			}
+		}
+	}()
+
+	p.EnterOuterAlt(localctx, 1)
+	{
+		p.SetState(158)
+		p.Match(MooncakeParserLT)
+	}
+
+
+
+	return localctx
+}
+
+
+// IGreaterThanOrEqualOperatorContext is an interface to support dynamic dispatch.
+type IGreaterThanOrEqualOperatorContext interface {
+	antlr.ParserRuleContext
+
+	// GetParser returns the parser.
+	GetParser() antlr.Parser
+
+	// IsGreaterThanOrEqualOperatorContext differentiates from other interfaces.
+	IsGreaterThanOrEqualOperatorContext()
+}
+
+type GreaterThanOrEqualOperatorContext struct {
+	*antlr.BaseParserRuleContext
+	parser antlr.Parser
+}
+
+func NewEmptyGreaterThanOrEqualOperatorContext() *GreaterThanOrEqualOperatorContext {
+	var p = new(GreaterThanOrEqualOperatorContext)
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
+	p.RuleIndex = MooncakeParserRULE_greaterThanOrEqualOperator
+	return p
+}
+
+func (*GreaterThanOrEqualOperatorContext) IsGreaterThanOrEqualOperatorContext() {}
+
+func NewGreaterThanOrEqualOperatorContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *GreaterThanOrEqualOperatorContext {
+	var p = new(GreaterThanOrEqualOperatorContext)
+
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
+
+	p.parser = parser
+	p.RuleIndex = MooncakeParserRULE_greaterThanOrEqualOperator
+
+	return p
+}
+
+func (s *GreaterThanOrEqualOperatorContext) GetParser() antlr.Parser { return s.parser }
+
+func (s *GreaterThanOrEqualOperatorContext) GTE() antlr.TerminalNode {
+	return s.GetToken(MooncakeParserGTE, 0)
+}
+
+func (s *GreaterThanOrEqualOperatorContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *GreaterThanOrEqualOperatorContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+	return antlr.TreesStringTree(s, ruleNames, recog)
+}
+
+
+func (s *GreaterThanOrEqualOperatorContext) EnterRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.EnterGreaterThanOrEqualOperator(s)
+	}
+}
+
+func (s *GreaterThanOrEqualOperatorContext) ExitRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.ExitGreaterThanOrEqualOperator(s)
+	}
+}
+
+func (s *GreaterThanOrEqualOperatorContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MooncakeVisitor:
+		return t.VisitGreaterThanOrEqualOperator(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+
+
+
+func (p *MooncakeParser) GreaterThanOrEqualOperator() (localctx IGreaterThanOrEqualOperatorContext) {
+	localctx = NewGreaterThanOrEqualOperatorContext(p, p.GetParserRuleContext(), p.GetState())
+	p.EnterRule(localctx, 42, MooncakeParserRULE_greaterThanOrEqualOperator)
+
+	defer func() {
+		p.ExitRule()
+	}()
+
+	defer func() {
+		if err := recover(); err != nil {
+			if v, ok := err.(antlr.RecognitionException); ok {
+				localctx.SetException(v)
+				p.GetErrorHandler().ReportError(p, v)
+				p.GetErrorHandler().Recover(p, v)
+			} else {
+				panic(err)
+			}
+		}
+	}()
+
+	p.EnterOuterAlt(localctx, 1)
+	{
+		p.SetState(160)
+		p.Match(MooncakeParserGTE)
+	}
+
+
+
+	return localctx
+}
+
+
+// ILessThanOrEqualOperatorContext is an interface to support dynamic dispatch.
+type ILessThanOrEqualOperatorContext interface {
+	antlr.ParserRuleContext
+
+	// GetParser returns the parser.
+	GetParser() antlr.Parser
+
+	// IsLessThanOrEqualOperatorContext differentiates from other interfaces.
+	IsLessThanOrEqualOperatorContext()
+}
+
+type LessThanOrEqualOperatorContext struct {
+	*antlr.BaseParserRuleContext
+	parser antlr.Parser
+}
+
+func NewEmptyLessThanOrEqualOperatorContext() *LessThanOrEqualOperatorContext {
+	var p = new(LessThanOrEqualOperatorContext)
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
+	p.RuleIndex = MooncakeParserRULE_lessThanOrEqualOperator
+	return p
+}
+
+func (*LessThanOrEqualOperatorContext) IsLessThanOrEqualOperatorContext() {}
+
+func NewLessThanOrEqualOperatorContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *LessThanOrEqualOperatorContext {
+	var p = new(LessThanOrEqualOperatorContext)
+
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
+
+	p.parser = parser
+	p.RuleIndex = MooncakeParserRULE_lessThanOrEqualOperator
+
+	return p
+}
+
+func (s *LessThanOrEqualOperatorContext) GetParser() antlr.Parser { return s.parser }
+
+func (s *LessThanOrEqualOperatorContext) LTE() antlr.TerminalNode {
+	return s.GetToken(MooncakeParserLTE, 0)
+}
+
+func (s *LessThanOrEqualOperatorContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *LessThanOrEqualOperatorContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+	return antlr.TreesStringTree(s, ruleNames, recog)
+}
+
+
+func (s *LessThanOrEqualOperatorContext) EnterRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.EnterLessThanOrEqualOperator(s)
+	}
+}
+
+func (s *LessThanOrEqualOperatorContext) ExitRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.ExitLessThanOrEqualOperator(s)
+	}
+}
+
+func (s *LessThanOrEqualOperatorContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MooncakeVisitor:
+		return t.VisitLessThanOrEqualOperator(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+
+
+
+func (p *MooncakeParser) LessThanOrEqualOperator() (localctx ILessThanOrEqualOperatorContext) {
+	localctx = NewLessThanOrEqualOperatorContext(p, p.GetParserRuleContext(), p.GetState())
+	p.EnterRule(localctx, 44, MooncakeParserRULE_lessThanOrEqualOperator)
+
+	defer func() {
+		p.ExitRule()
+	}()
+
+	defer func() {
+		if err := recover(); err != nil {
+			if v, ok := err.(antlr.RecognitionException); ok {
+				localctx.SetException(v)
+				p.GetErrorHandler().ReportError(p, v)
+				p.GetErrorHandler().Recover(p, v)
+			} else {
+				panic(err)
+			}
+		}
+	}()
+
+	p.EnterOuterAlt(localctx, 1)
+	{
+		p.SetState(162)
+		p.Match(MooncakeParserLTE)
+	}
+
+
+
+	return localctx
+}
+
+
+// IIntLiteralContext is an interface to support dynamic dispatch.
+type IIntLiteralContext interface {
+	antlr.ParserRuleContext
+
+	// GetParser returns the parser.
+	GetParser() antlr.Parser
+
+	// IsIntLiteralContext differentiates from other interfaces.
+	IsIntLiteralContext()
+}
+
+type IntLiteralContext struct {
+	*antlr.BaseParserRuleContext
+	parser antlr.Parser
+}
+
+func NewEmptyIntLiteralContext() *IntLiteralContext {
+	var p = new(IntLiteralContext)
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
+	p.RuleIndex = MooncakeParserRULE_intLiteral
+	return p
+}
+
+func (*IntLiteralContext) IsIntLiteralContext() {}
+
+func NewIntLiteralContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *IntLiteralContext {
+	var p = new(IntLiteralContext)
+
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
+
+	p.parser = parser
+	p.RuleIndex = MooncakeParserRULE_intLiteral
+
+	return p
+}
+
+func (s *IntLiteralContext) GetParser() antlr.Parser { return s.parser }
+
+func (s *IntLiteralContext) INT() antlr.TerminalNode {
+	return s.GetToken(MooncakeParserINT, 0)
+}
+
+func (s *IntLiteralContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *IntLiteralContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+	return antlr.TreesStringTree(s, ruleNames, recog)
+}
+
+
+func (s *IntLiteralContext) EnterRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.EnterIntLiteral(s)
+	}
+}
+
+func (s *IntLiteralContext) ExitRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.ExitIntLiteral(s)
+	}
+}
+
+func (s *IntLiteralContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MooncakeVisitor:
+		return t.VisitIntLiteral(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+
+
+
+func (p *MooncakeParser) IntLiteral() (localctx IIntLiteralContext) {
+	localctx = NewIntLiteralContext(p, p.GetParserRuleContext(), p.GetState())
+	p.EnterRule(localctx, 46, MooncakeParserRULE_intLiteral)
+
+	defer func() {
+		p.ExitRule()
+	}()
+
+	defer func() {
+		if err := recover(); err != nil {
+			if v, ok := err.(antlr.RecognitionException); ok {
+				localctx.SetException(v)
+				p.GetErrorHandler().ReportError(p, v)
+				p.GetErrorHandler().Recover(p, v)
+			} else {
+				panic(err)
+			}
+		}
+	}()
+
+	p.EnterOuterAlt(localctx, 1)
+	{
+		p.SetState(164)
+		p.Match(MooncakeParserINT)
+	}
+
+
+
+	return localctx
+}
+
+
+// IFloatLiteralContext is an interface to support dynamic dispatch.
+type IFloatLiteralContext interface {
+	antlr.ParserRuleContext
+
+	// GetParser returns the parser.
+	GetParser() antlr.Parser
+
+	// IsFloatLiteralContext differentiates from other interfaces.
+	IsFloatLiteralContext()
+}
+
+type FloatLiteralContext struct {
+	*antlr.BaseParserRuleContext
+	parser antlr.Parser
+}
+
+func NewEmptyFloatLiteralContext() *FloatLiteralContext {
+	var p = new(FloatLiteralContext)
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
+	p.RuleIndex = MooncakeParserRULE_floatLiteral
+	return p
+}
+
+func (*FloatLiteralContext) IsFloatLiteralContext() {}
+
+func NewFloatLiteralContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *FloatLiteralContext {
+	var p = new(FloatLiteralContext)
+
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
+
+	p.parser = parser
+	p.RuleIndex = MooncakeParserRULE_floatLiteral
+
+	return p
+}
+
+func (s *FloatLiteralContext) GetParser() antlr.Parser { return s.parser }
+
+func (s *FloatLiteralContext) FLOAT() antlr.TerminalNode {
+	return s.GetToken(MooncakeParserFLOAT, 0)
+}
+
+func (s *FloatLiteralContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *FloatLiteralContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+	return antlr.TreesStringTree(s, ruleNames, recog)
+}
+
+
+func (s *FloatLiteralContext) EnterRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.EnterFloatLiteral(s)
+	}
+}
+
+func (s *FloatLiteralContext) ExitRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.ExitFloatLiteral(s)
+	}
+}
+
+func (s *FloatLiteralContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MooncakeVisitor:
+		return t.VisitFloatLiteral(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+
+
+
+func (p *MooncakeParser) FloatLiteral() (localctx IFloatLiteralContext) {
+	localctx = NewFloatLiteralContext(p, p.GetParserRuleContext(), p.GetState())
+	p.EnterRule(localctx, 48, MooncakeParserRULE_floatLiteral)
+
+	defer func() {
+		p.ExitRule()
+	}()
+
+	defer func() {
+		if err := recover(); err != nil {
+			if v, ok := err.(antlr.RecognitionException); ok {
+				localctx.SetException(v)
+				p.GetErrorHandler().ReportError(p, v)
+				p.GetErrorHandler().Recover(p, v)
+			} else {
+				panic(err)
+			}
+		}
+	}()
+
+	p.EnterOuterAlt(localctx, 1)
+	{
+		p.SetState(166)
+		p.Match(MooncakeParserFLOAT)
+	}
+
+
+
+	return localctx
+}
+
+
+// IBoolLiteralContext is an interface to support dynamic dispatch.
+type IBoolLiteralContext interface {
+	antlr.ParserRuleContext
+
+	// GetParser returns the parser.
+	GetParser() antlr.Parser
+
+	// IsBoolLiteralContext differentiates from other interfaces.
+	IsBoolLiteralContext()
+}
+
+type BoolLiteralContext struct {
+	*antlr.BaseParserRuleContext
+	parser antlr.Parser
+}
+
+func NewEmptyBoolLiteralContext() *BoolLiteralContext {
+	var p = new(BoolLiteralContext)
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
+	p.RuleIndex = MooncakeParserRULE_boolLiteral
+	return p
+}
+
+func (*BoolLiteralContext) IsBoolLiteralContext() {}
+
+func NewBoolLiteralContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *BoolLiteralContext {
+	var p = new(BoolLiteralContext)
+
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
+
+	p.parser = parser
+	p.RuleIndex = MooncakeParserRULE_boolLiteral
+
+	return p
+}
+
+func (s *BoolLiteralContext) GetParser() antlr.Parser { return s.parser }
+
+func (s *BoolLiteralContext) BOOL() antlr.TerminalNode {
+	return s.GetToken(MooncakeParserBOOL, 0)
+}
+
+func (s *BoolLiteralContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *BoolLiteralContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+	return antlr.TreesStringTree(s, ruleNames, recog)
+}
+
+
+func (s *BoolLiteralContext) EnterRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.EnterBoolLiteral(s)
+	}
+}
+
+func (s *BoolLiteralContext) ExitRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.ExitBoolLiteral(s)
+	}
+}
+
+func (s *BoolLiteralContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MooncakeVisitor:
+		return t.VisitBoolLiteral(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+
+
+
+func (p *MooncakeParser) BoolLiteral() (localctx IBoolLiteralContext) {
+	localctx = NewBoolLiteralContext(p, p.GetParserRuleContext(), p.GetState())
+	p.EnterRule(localctx, 50, MooncakeParserRULE_boolLiteral)
+
+	defer func() {
+		p.ExitRule()
+	}()
+
+	defer func() {
+		if err := recover(); err != nil {
+			if v, ok := err.(antlr.RecognitionException); ok {
+				localctx.SetException(v)
+				p.GetErrorHandler().ReportError(p, v)
+				p.GetErrorHandler().Recover(p, v)
+			} else {
+				panic(err)
+			}
+		}
+	}()
+
+	p.EnterOuterAlt(localctx, 1)
+	{
+		p.SetState(168)
+		p.Match(MooncakeParserBOOL)
+	}
+
+
+
+	return localctx
+}
+
+
+// INullLiteralContext is an interface to support dynamic dispatch.
+type INullLiteralContext interface {
+	antlr.ParserRuleContext
+
+	// GetParser returns the parser.
+	GetParser() antlr.Parser
+
+	// IsNullLiteralContext differentiates from other interfaces.
+	IsNullLiteralContext()
+}
+
+type NullLiteralContext struct {
+	*antlr.BaseParserRuleContext
+	parser antlr.Parser
+}
+
+func NewEmptyNullLiteralContext() *NullLiteralContext {
+	var p = new(NullLiteralContext)
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
+	p.RuleIndex = MooncakeParserRULE_nullLiteral
+	return p
+}
+
+func (*NullLiteralContext) IsNullLiteralContext() {}
+
+func NewNullLiteralContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *NullLiteralContext {
+	var p = new(NullLiteralContext)
+
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
+
+	p.parser = parser
+	p.RuleIndex = MooncakeParserRULE_nullLiteral
+
+	return p
+}
+
+func (s *NullLiteralContext) GetParser() antlr.Parser { return s.parser }
+
+func (s *NullLiteralContext) NULL() antlr.TerminalNode {
+	return s.GetToken(MooncakeParserNULL, 0)
+}
+
+func (s *NullLiteralContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *NullLiteralContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+	return antlr.TreesStringTree(s, ruleNames, recog)
+}
+
+
+func (s *NullLiteralContext) EnterRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.EnterNullLiteral(s)
+	}
+}
+
+func (s *NullLiteralContext) ExitRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.ExitNullLiteral(s)
+	}
+}
+
+func (s *NullLiteralContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MooncakeVisitor:
+		return t.VisitNullLiteral(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+
+
+
+func (p *MooncakeParser) NullLiteral() (localctx INullLiteralContext) {
+	localctx = NewNullLiteralContext(p, p.GetParserRuleContext(), p.GetState())
+	p.EnterRule(localctx, 52, MooncakeParserRULE_nullLiteral)
+
+	defer func() {
+		p.ExitRule()
+	}()
+
+	defer func() {
+		if err := recover(); err != nil {
+			if v, ok := err.(antlr.RecognitionException); ok {
+				localctx.SetException(v)
+				p.GetErrorHandler().ReportError(p, v)
+				p.GetErrorHandler().Recover(p, v)
+			} else {
+				panic(err)
+			}
+		}
+	}()
+
+	p.EnterOuterAlt(localctx, 1)
+	{
+		p.SetState(170)
+		p.Match(MooncakeParserNULL)
+	}
+
+
+
+	return localctx
+}
+
+
+// ICtxLiteralContext is an interface to support dynamic dispatch.
+type ICtxLiteralContext interface {
+	antlr.ParserRuleContext
+
+	// GetParser returns the parser.
+	GetParser() antlr.Parser
+
+	// IsCtxLiteralContext differentiates from other interfaces.
+	IsCtxLiteralContext()
+}
+
+type CtxLiteralContext struct {
+	*antlr.BaseParserRuleContext
+	parser antlr.Parser
+}
+
+func NewEmptyCtxLiteralContext() *CtxLiteralContext {
+	var p = new(CtxLiteralContext)
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
+	p.RuleIndex = MooncakeParserRULE_ctxLiteral
+	return p
+}
+
+func (*CtxLiteralContext) IsCtxLiteralContext() {}
+
+func NewCtxLiteralContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *CtxLiteralContext {
+	var p = new(CtxLiteralContext)
+
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
+
+	p.parser = parser
+	p.RuleIndex = MooncakeParserRULE_ctxLiteral
+
+	return p
+}
+
+func (s *CtxLiteralContext) GetParser() antlr.Parser { return s.parser }
+
+func (s *CtxLiteralContext) CTX_ID() antlr.TerminalNode {
+	return s.GetToken(MooncakeParserCTX_ID, 0)
+}
+
+func (s *CtxLiteralContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *CtxLiteralContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+	return antlr.TreesStringTree(s, ruleNames, recog)
+}
+
+
+func (s *CtxLiteralContext) EnterRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.EnterCtxLiteral(s)
+	}
+}
+
+func (s *CtxLiteralContext) ExitRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.ExitCtxLiteral(s)
+	}
+}
+
+func (s *CtxLiteralContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MooncakeVisitor:
+		return t.VisitCtxLiteral(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+
+
+
+func (p *MooncakeParser) CtxLiteral() (localctx ICtxLiteralContext) {
+	localctx = NewCtxLiteralContext(p, p.GetParserRuleContext(), p.GetState())
+	p.EnterRule(localctx, 54, MooncakeParserRULE_ctxLiteral)
+
+	defer func() {
+		p.ExitRule()
+	}()
+
+	defer func() {
+		if err := recover(); err != nil {
+			if v, ok := err.(antlr.RecognitionException); ok {
+				localctx.SetException(v)
+				p.GetErrorHandler().ReportError(p, v)
+				p.GetErrorHandler().Recover(p, v)
+			} else {
+				panic(err)
+			}
+		}
+	}()
+
+	p.EnterOuterAlt(localctx, 1)
+	{
+		p.SetState(172)
+		p.Match(MooncakeParserCTX_ID)
+	}
+
+
+
+	return localctx
+}
+
+
+// IAttributeIdentifierContext is an interface to support dynamic dispatch.
+type IAttributeIdentifierContext interface {
+	antlr.ParserRuleContext
+
+	// GetParser returns the parser.
+	GetParser() antlr.Parser
+
+	// IsAttributeIdentifierContext differentiates from other interfaces.
+	IsAttributeIdentifierContext()
+}
+
+type AttributeIdentifierContext struct {
+	*antlr.BaseParserRuleContext
+	parser antlr.Parser
+}
+
+func NewEmptyAttributeIdentifierContext() *AttributeIdentifierContext {
+	var p = new(AttributeIdentifierContext)
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
+	p.RuleIndex = MooncakeParserRULE_attributeIdentifier
+	return p
+}
+
+func (*AttributeIdentifierContext) IsAttributeIdentifierContext() {}
+
+func NewAttributeIdentifierContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *AttributeIdentifierContext {
+	var p = new(AttributeIdentifierContext)
+
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
+
+	p.parser = parser
+	p.RuleIndex = MooncakeParserRULE_attributeIdentifier
+
+	return p
+}
+
+func (s *AttributeIdentifierContext) GetParser() antlr.Parser { return s.parser }
+
+func (s *AttributeIdentifierContext) ATTR_ID() antlr.TerminalNode {
+	return s.GetToken(MooncakeParserATTR_ID, 0)
+}
+
+func (s *AttributeIdentifierContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *AttributeIdentifierContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+	return antlr.TreesStringTree(s, ruleNames, recog)
+}
+
+
+func (s *AttributeIdentifierContext) EnterRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.EnterAttributeIdentifier(s)
+	}
+}
+
+func (s *AttributeIdentifierContext) ExitRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.ExitAttributeIdentifier(s)
+	}
+}
+
+func (s *AttributeIdentifierContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MooncakeVisitor:
+		return t.VisitAttributeIdentifier(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+
+
+
+func (p *MooncakeParser) AttributeIdentifier() (localctx IAttributeIdentifierContext) {
+	localctx = NewAttributeIdentifierContext(p, p.GetParserRuleContext(), p.GetState())
+	p.EnterRule(localctx, 56, MooncakeParserRULE_attributeIdentifier)
+
+	defer func() {
+		p.ExitRule()
+	}()
+
+	defer func() {
+		if err := recover(); err != nil {
+			if v, ok := err.(antlr.RecognitionException); ok {
+				localctx.SetException(v)
+				p.GetErrorHandler().ReportError(p, v)
+				p.GetErrorHandler().Recover(p, v)
+			} else {
+				panic(err)
+			}
+		}
+	}()
+
+	p.EnterOuterAlt(localctx, 1)
+	{
+		p.SetState(174)
+		p.Match(MooncakeParserATTR_ID)
+	}
+
+
+
+	return localctx
+}
+
+
+// IDeclarationIdentifierContext is an interface to support dynamic dispatch.
+type IDeclarationIdentifierContext interface {
+	antlr.ParserRuleContext
+
+	// GetParser returns the parser.
+	GetParser() antlr.Parser
+
+	// IsDeclarationIdentifierContext differentiates from other interfaces.
+	IsDeclarationIdentifierContext()
+}
+
+type DeclarationIdentifierContext struct {
+	*antlr.BaseParserRuleContext
+	parser antlr.Parser
+}
+
+func NewEmptyDeclarationIdentifierContext() *DeclarationIdentifierContext {
+	var p = new(DeclarationIdentifierContext)
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
+	p.RuleIndex = MooncakeParserRULE_declarationIdentifier
+	return p
+}
+
+func (*DeclarationIdentifierContext) IsDeclarationIdentifierContext() {}
+
+func NewDeclarationIdentifierContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *DeclarationIdentifierContext {
+	var p = new(DeclarationIdentifierContext)
+
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
+
+	p.parser = parser
+	p.RuleIndex = MooncakeParserRULE_declarationIdentifier
+
+	return p
+}
+
+func (s *DeclarationIdentifierContext) GetParser() antlr.Parser { return s.parser }
+
+func (s *DeclarationIdentifierContext) DECL_ID() antlr.TerminalNode {
+	return s.GetToken(MooncakeParserDECL_ID, 0)
+}
+
+func (s *DeclarationIdentifierContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *DeclarationIdentifierContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+	return antlr.TreesStringTree(s, ruleNames, recog)
+}
+
+
+func (s *DeclarationIdentifierContext) EnterRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.EnterDeclarationIdentifier(s)
+	}
+}
+
+func (s *DeclarationIdentifierContext) ExitRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.ExitDeclarationIdentifier(s)
+	}
+}
+
+func (s *DeclarationIdentifierContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MooncakeVisitor:
+		return t.VisitDeclarationIdentifier(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+
+
+
+func (p *MooncakeParser) DeclarationIdentifier() (localctx IDeclarationIdentifierContext) {
+	localctx = NewDeclarationIdentifierContext(p, p.GetParserRuleContext(), p.GetState())
+	p.EnterRule(localctx, 58, MooncakeParserRULE_declarationIdentifier)
+
+	defer func() {
+		p.ExitRule()
+	}()
+
+	defer func() {
+		if err := recover(); err != nil {
+			if v, ok := err.(antlr.RecognitionException); ok {
+				localctx.SetException(v)
+				p.GetErrorHandler().ReportError(p, v)
+				p.GetErrorHandler().Recover(p, v)
+			} else {
+				panic(err)
+			}
+		}
+	}()
+
+	p.EnterOuterAlt(localctx, 1)
+	{
+		p.SetState(176)
+		p.Match(MooncakeParserDECL_ID)
+	}
+
+
+
+	return localctx
+}
+
+
+// ILengthFunctionContext is an interface to support dynamic dispatch.
+type ILengthFunctionContext interface {
+	antlr.ParserRuleContext
+
+	// GetParser returns the parser.
+	GetParser() antlr.Parser
+
+	// IsLengthFunctionContext differentiates from other interfaces.
+	IsLengthFunctionContext()
+}
+
+type LengthFunctionContext struct {
+	*antlr.BaseParserRuleContext
+	parser antlr.Parser
+}
+
+func NewEmptyLengthFunctionContext() *LengthFunctionContext {
+	var p = new(LengthFunctionContext)
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
+	p.RuleIndex = MooncakeParserRULE_lengthFunction
+	return p
+}
+
+func (*LengthFunctionContext) IsLengthFunctionContext() {}
+
+func NewLengthFunctionContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *LengthFunctionContext {
+	var p = new(LengthFunctionContext)
+
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
+
+	p.parser = parser
+	p.RuleIndex = MooncakeParserRULE_lengthFunction
+
+	return p
+}
+
+func (s *LengthFunctionContext) GetParser() antlr.Parser { return s.parser }
+
+func (s *LengthFunctionContext) LEN_FUNC() antlr.TerminalNode {
+	return s.GetToken(MooncakeParserLEN_FUNC, 0)
+}
+
+func (s *LengthFunctionContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *LengthFunctionContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+	return antlr.TreesStringTree(s, ruleNames, recog)
+}
+
+
+func (s *LengthFunctionContext) EnterRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.EnterLengthFunction(s)
+	}
+}
+
+func (s *LengthFunctionContext) ExitRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.ExitLengthFunction(s)
+	}
+}
+
+func (s *LengthFunctionContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MooncakeVisitor:
+		return t.VisitLengthFunction(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+
+
+
+func (p *MooncakeParser) LengthFunction() (localctx ILengthFunctionContext) {
+	localctx = NewLengthFunctionContext(p, p.GetParserRuleContext(), p.GetState())
+	p.EnterRule(localctx, 60, MooncakeParserRULE_lengthFunction)
+
+	defer func() {
+		p.ExitRule()
+	}()
+
+	defer func() {
+		if err := recover(); err != nil {
+			if v, ok := err.(antlr.RecognitionException); ok {
+				localctx.SetException(v)
+				p.GetErrorHandler().ReportError(p, v)
+				p.GetErrorHandler().Recover(p, v)
+			} else {
+				panic(err)
+			}
+		}
+	}()
+
+	p.EnterOuterAlt(localctx, 1)
+	{
+		p.SetState(178)
+		p.Match(MooncakeParserLEN_FUNC)
+	}
+
+
+
+	return localctx
+}
+
+
+// IDateTimeLongFunctionContext is an interface to support dynamic dispatch.
+type IDateTimeLongFunctionContext interface {
+	antlr.ParserRuleContext
+
+	// GetParser returns the parser.
+	GetParser() antlr.Parser
+
+	// IsDateTimeLongFunctionContext differentiates from other interfaces.
+	IsDateTimeLongFunctionContext()
+}
+
+type DateTimeLongFunctionContext struct {
+	*antlr.BaseParserRuleContext
+	parser antlr.Parser
+}
+
+func NewEmptyDateTimeLongFunctionContext() *DateTimeLongFunctionContext {
+	var p = new(DateTimeLongFunctionContext)
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
+	p.RuleIndex = MooncakeParserRULE_dateTimeLongFunction
+	return p
+}
+
+func (*DateTimeLongFunctionContext) IsDateTimeLongFunctionContext() {}
+
+func NewDateTimeLongFunctionContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *DateTimeLongFunctionContext {
+	var p = new(DateTimeLongFunctionContext)
+
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
+
+	p.parser = parser
+	p.RuleIndex = MooncakeParserRULE_dateTimeLongFunction
+
+	return p
+}
+
+func (s *DateTimeLongFunctionContext) GetParser() antlr.Parser { return s.parser }
+
+func (s *DateTimeLongFunctionContext) DATETIME_LONG() antlr.TerminalNode {
+	return s.GetToken(MooncakeParserDATETIME_LONG, 0)
+}
+
+func (s *DateTimeLongFunctionContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *DateTimeLongFunctionContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+	return antlr.TreesStringTree(s, ruleNames, recog)
+}
+
+
+func (s *DateTimeLongFunctionContext) EnterRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.EnterDateTimeLongFunction(s)
+	}
+}
+
+func (s *DateTimeLongFunctionContext) ExitRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.ExitDateTimeLongFunction(s)
+	}
+}
+
+func (s *DateTimeLongFunctionContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MooncakeVisitor:
+		return t.VisitDateTimeLongFunction(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+
+
+
+func (p *MooncakeParser) DateTimeLongFunction() (localctx IDateTimeLongFunctionContext) {
+	localctx = NewDateTimeLongFunctionContext(p, p.GetParserRuleContext(), p.GetState())
+	p.EnterRule(localctx, 62, MooncakeParserRULE_dateTimeLongFunction)
+
+	defer func() {
+		p.ExitRule()
+	}()
+
+	defer func() {
+		if err := recover(); err != nil {
+			if v, ok := err.(antlr.RecognitionException); ok {
+				localctx.SetException(v)
+				p.GetErrorHandler().ReportError(p, v)
+				p.GetErrorHandler().Recover(p, v)
+			} else {
+				panic(err)
+			}
+		}
+	}()
+
+	p.EnterOuterAlt(localctx, 1)
+	{
+		p.SetState(180)
+		p.Match(MooncakeParserDATETIME_LONG)
+	}
+
+
+
+	return localctx
+}
+
+
+// IAfterCurrentTimeFunctionContext is an interface to support dynamic dispatch.
+type IAfterCurrentTimeFunctionContext interface {
+	antlr.ParserRuleContext
+
+	// GetParser returns the parser.
+	GetParser() antlr.Parser
+
+	// IsAfterCurrentTimeFunctionContext differentiates from other interfaces.
+	IsAfterCurrentTimeFunctionContext()
+}
+
+type AfterCurrentTimeFunctionContext struct {
+	*antlr.BaseParserRuleContext
+	parser antlr.Parser
+}
+
+func NewEmptyAfterCurrentTimeFunctionContext() *AfterCurrentTimeFunctionContext {
+	var p = new(AfterCurrentTimeFunctionContext)
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
+	p.RuleIndex = MooncakeParserRULE_afterCurrentTimeFunction
+	return p
+}
+
+func (*AfterCurrentTimeFunctionContext) IsAfterCurrentTimeFunctionContext() {}
+
+func NewAfterCurrentTimeFunctionContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *AfterCurrentTimeFunctionContext {
+	var p = new(AfterCurrentTimeFunctionContext)
+
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
+
+	p.parser = parser
+	p.RuleIndex = MooncakeParserRULE_afterCurrentTimeFunction
+
+	return p
+}
+
+func (s *AfterCurrentTimeFunctionContext) GetParser() antlr.Parser { return s.parser }
+
+func (s *AfterCurrentTimeFunctionContext) AFTER_CURR_TIME() antlr.TerminalNode {
+	return s.GetToken(MooncakeParserAFTER_CURR_TIME, 0)
+}
+
+func (s *AfterCurrentTimeFunctionContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *AfterCurrentTimeFunctionContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+	return antlr.TreesStringTree(s, ruleNames, recog)
+}
+
+
+func (s *AfterCurrentTimeFunctionContext) EnterRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.EnterAfterCurrentTimeFunction(s)
+	}
+}
+
+func (s *AfterCurrentTimeFunctionContext) ExitRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.ExitAfterCurrentTimeFunction(s)
+	}
+}
+
+func (s *AfterCurrentTimeFunctionContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MooncakeVisitor:
+		return t.VisitAfterCurrentTimeFunction(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+
+
+
+func (p *MooncakeParser) AfterCurrentTimeFunction() (localctx IAfterCurrentTimeFunctionContext) {
+	localctx = NewAfterCurrentTimeFunctionContext(p, p.GetParserRuleContext(), p.GetState())
+	p.EnterRule(localctx, 64, MooncakeParserRULE_afterCurrentTimeFunction)
+
+	defer func() {
+		p.ExitRule()
+	}()
+
+	defer func() {
+		if err := recover(); err != nil {
+			if v, ok := err.(antlr.RecognitionException); ok {
+				localctx.SetException(v)
+				p.GetErrorHandler().ReportError(p, v)
+				p.GetErrorHandler().Recover(p, v)
+			} else {
+				panic(err)
+			}
+		}
+	}()
+
+	p.EnterOuterAlt(localctx, 1)
+	{
+		p.SetState(182)
+		p.Match(MooncakeParserAFTER_CURR_TIME)
 	}
 
 

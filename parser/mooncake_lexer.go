@@ -1,4 +1,4 @@
-// Code generated from /Users/talal/Development/antlr-lang/mooncake/grammar/Mooncake.g4 by ANTLR 4.7.2. DO NOT EDIT.
+// Code generated from /Users/talal/go/src/mooncake/grammar/Mooncake.g4 by ANTLR 4.7.2. DO NOT EDIT.
 
 package parser
 
@@ -176,17 +176,17 @@ var lexerLiteralNames = []string{
 var lexerSymbolicNames = []string{
 	"", "", "", "", "", "", "", "FATAL", "SEVERE", "WARNING", "LINKED", "EQ", 
 	"NE", "AND", "OR", "GT", "LT", "GTE", "LTE", "LEN_FUNC", "FLOAT_FUNC", 
-	"DATETIME_LONG", "AFTER_CURR_TIME", "EXISTS", "EMPTY", "DOUBLE", "INT", 
-	"BOOL", "TRUE", "FALSE", "NULL", "COMMENT", "WS", "TERMINATOR", "IDENTIFIER", 
-	"CTX_ID", "INLINE_ID", "ERROR_CODE", "ERROR_INFO",
+	"DATETIME_LONG", "AFTER_CURR_TIME", "EXISTS", "EMPTY", "FLOAT", "INT", 
+	"BOOL", "TRUE", "FALSE", "NULL", "COMMENT", "WS", "TERMINATOR", "ATTR_ID", 
+	"CTX_ID", "DECL_ID", "ERROR_CODE", "ERROR_INFO",
 }
 
 var lexerRuleNames = []string{
 	"T__0", "T__1", "T__2", "T__3", "T__4", "T__5", "FATAL", "SEVERE", "WARNING", 
 	"LINKED", "EQ", "NE", "AND", "OR", "GT", "LT", "GTE", "LTE", "LEN_FUNC", 
-	"FLOAT_FUNC", "DATETIME_LONG", "AFTER_CURR_TIME", "EXISTS", "EMPTY", "DOUBLE", 
+	"FLOAT_FUNC", "DATETIME_LONG", "AFTER_CURR_TIME", "EXISTS", "EMPTY", "FLOAT", 
 	"INT", "BOOL", "TRUE", "FALSE", "NULL", "COMMENT", "WS", "TERMINATOR", 
-	"IDENTIFIER", "CTX_ID", "INLINE_ID", "ERROR_CODE", "ERROR_INFO",
+	"ATTR_ID", "CTX_ID", "DECL_ID", "ERROR_CODE", "ERROR_INFO",
 }
 
 type MooncakeLexer struct {
@@ -248,7 +248,7 @@ const (
 	MooncakeLexerAFTER_CURR_TIME = 22
 	MooncakeLexerEXISTS = 23
 	MooncakeLexerEMPTY = 24
-	MooncakeLexerDOUBLE = 25
+	MooncakeLexerFLOAT = 25
 	MooncakeLexerINT = 26
 	MooncakeLexerBOOL = 27
 	MooncakeLexerTRUE = 28
@@ -257,9 +257,9 @@ const (
 	MooncakeLexerCOMMENT = 31
 	MooncakeLexerWS = 32
 	MooncakeLexerTERMINATOR = 33
-	MooncakeLexerIDENTIFIER = 34
+	MooncakeLexerATTR_ID = 34
 	MooncakeLexerCTX_ID = 35
-	MooncakeLexerINLINE_ID = 36
+	MooncakeLexerDECL_ID = 36
 	MooncakeLexerERROR_CODE = 37
 	MooncakeLexerERROR_INFO = 38
 )

@@ -1,4 +1,4 @@
-package domain
+package lang
 
 type Error struct {
 	Code string

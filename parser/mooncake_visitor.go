@@ -1,4 +1,4 @@
-// Code generated from /Users/talal/Development/antlr-lang/mooncake/grammar/Mooncake.g4 by ANTLR 4.7.2. DO NOT EDIT.
+// Code generated from /Users/talal/go/src/mooncake/grammar/Mooncake.g4 by ANTLR 4.7.2. DO NOT EDIT.
 
 package parser // Mooncake
 
@@ -31,8 +31,8 @@ type MooncakeVisitor interface {
 	// Visit a parse tree produced by MooncakeParser#simpleStmt.
 	VisitSimpleStmt(ctx *SimpleStmtContext) interface{}
 
-	// Visit a parse tree produced by MooncakeParser#expression.
-	VisitExpression(ctx *ExpressionContext) interface{}
+	// Visit a parse tree produced by MooncakeParser#exprStmt.
+	VisitExprStmt(ctx *ExprStmtContext) interface{}
 
 	// Visit a parse tree produced by MooncakeParser#identifier.
 	VisitIdentifier(ctx *IdentifierContext) interface{}
@@ -48,5 +48,62 @@ type MooncakeVisitor interface {
 
 	// Visit a parse tree produced by MooncakeParser#errorType.
 	VisitErrorType(ctx *ErrorTypeContext) interface{}
+
+	// Visit a parse tree produced by MooncakeParser#fatalError.
+	VisitFatalError(ctx *FatalErrorContext) interface{}
+
+	// Visit a parse tree produced by MooncakeParser#severeError.
+	VisitSevereError(ctx *SevereErrorContext) interface{}
+
+	// Visit a parse tree produced by MooncakeParser#warningError.
+	VisitWarningError(ctx *WarningErrorContext) interface{}
+
+	// Visit a parse tree produced by MooncakeParser#equalOperator.
+	VisitEqualOperator(ctx *EqualOperatorContext) interface{}
+
+	// Visit a parse tree produced by MooncakeParser#notEqualOperator.
+	VisitNotEqualOperator(ctx *NotEqualOperatorContext) interface{}
+
+	// Visit a parse tree produced by MooncakeParser#greaterThanOperator.
+	VisitGreaterThanOperator(ctx *GreaterThanOperatorContext) interface{}
+
+	// Visit a parse tree produced by MooncakeParser#lessThanOperator.
+	VisitLessThanOperator(ctx *LessThanOperatorContext) interface{}
+
+	// Visit a parse tree produced by MooncakeParser#greaterThanOrEqualOperator.
+	VisitGreaterThanOrEqualOperator(ctx *GreaterThanOrEqualOperatorContext) interface{}
+
+	// Visit a parse tree produced by MooncakeParser#lessThanOrEqualOperator.
+	VisitLessThanOrEqualOperator(ctx *LessThanOrEqualOperatorContext) interface{}
+
+	// Visit a parse tree produced by MooncakeParser#intLiteral.
+	VisitIntLiteral(ctx *IntLiteralContext) interface{}
+
+	// Visit a parse tree produced by MooncakeParser#floatLiteral.
+	VisitFloatLiteral(ctx *FloatLiteralContext) interface{}
+
+	// Visit a parse tree produced by MooncakeParser#boolLiteral.
+	VisitBoolLiteral(ctx *BoolLiteralContext) interface{}
+
+	// Visit a parse tree produced by MooncakeParser#nullLiteral.
+	VisitNullLiteral(ctx *NullLiteralContext) interface{}
+
+	// Visit a parse tree produced by MooncakeParser#ctxLiteral.
+	VisitCtxLiteral(ctx *CtxLiteralContext) interface{}
+
+	// Visit a parse tree produced by MooncakeParser#attributeIdentifier.
+	VisitAttributeIdentifier(ctx *AttributeIdentifierContext) interface{}
+
+	// Visit a parse tree produced by MooncakeParser#declarationIdentifier.
+	VisitDeclarationIdentifier(ctx *DeclarationIdentifierContext) interface{}
+
+	// Visit a parse tree produced by MooncakeParser#lengthFunction.
+	VisitLengthFunction(ctx *LengthFunctionContext) interface{}
+
+	// Visit a parse tree produced by MooncakeParser#dateTimeLongFunction.
+	VisitDateTimeLongFunction(ctx *DateTimeLongFunctionContext) interface{}
+
+	// Visit a parse tree produced by MooncakeParser#afterCurrentTimeFunction.
+	VisitAfterCurrentTimeFunction(ctx *AfterCurrentTimeFunctionContext) interface{}
 
 }

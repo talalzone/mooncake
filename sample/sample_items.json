@@ -1,6 +1,6 @@
 {
   "sample": {
-    "someitem": {
+    "first": {
       "itemlist": [
         {
           "abc": 1
@@ -10,15 +10,28 @@
         }
       ]
     },
-    "coolcolors": [
+    "second": [
       {
-        "color":"red",
-        "hex":  "ff0000"
+        "color": "red",
+        "hex": "ff0000"
       },
       {
-        "color":"blue",
-        "hex":"0000ff"
+        "color": "blue",
+        "hex": "0000ff"
       }
-    ]
+    ],
+    "third": [
+      {
+        "name": "N1",
+        "value": 1
+      },
+      {
+        "name": "N2",
+        "value": 2
+      }
+    ],
+    "fourth": {
+      "value": 5
+    }
   }
 }

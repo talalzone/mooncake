@@ -1,53 +1,28 @@
 package executor
 
 import (
-	"../domain"
-	"../parser"
 	"encoding/json"
 	"github.com/antlr/antlr4/runtime/Go/antlr"
 	"github.com/yalp/jsonpath"
 	"io/ioutil"
 	"log"
+	"mooncake/lang"
+	"mooncake/parser"
 	"os"
 	"reflect"
-	"strconv"
-	"strings"
 )
-
-type inline struct {
-	id string
-	fn antlr.Token
-}
-
-type expr struct {
-	identifier interface{}
-	literal    interface{}
-	operator   antlr.Token
-}
-
-type err struct {
-	code      string
-	info      string
-	errorType antlr.Token
-}
-
-type rule struct {
-	inline
-	expr
-	err
-}
 
 type mooncakeVisitor struct {
 	*parser.BaseMooncakeVisitor
 
 	data        interface{}
 	ctx         interface{}
-	result      domain.ValidationResult
-	symbolTable map[string]interface{}
+	result      lang.ValidationResult
+	symbolTable lang.SymbolTable
 }
 
-func (mv *mooncakeVisitor) VisitErule(ctx *parser.McruleContext) interface{} {
-	log.Printf("VisitErule - %v", ctx.GetText())
+func (mv *mooncakeVisitor) VisitMcrule(ctx *parser.McruleContext) interface{} {
+	log.Printf("VisitMcrule - %v", ctx.GetText())
 	return mv.Visit(ctx)
 }
 
@@ -68,168 +43,197 @@ func (mv *mooncakeVisitor) VisitStatement(ctx *parser.StatementContext) interfac
 
 func (mv *mooncakeVisitor) VisitInlineStmt(ctx *parser.InlineStmtContext) interface{} {
 	log.Printf("VisitInlineStmt - %v", ctx.GetText())
-	inline := inline{}
+	stmt := lang.InlineStatement{}
 
 	if id := ctx.GetId(); id != nil {
-		inline.id = id.GetText()
+		stmt.DeclIdentifier = &lang.DeclIdentifier{Name: id.GetText(), Val: nil}
 	}
-
 	if fn := ctx.GetFn(); fn != nil {
-		inline.fn = fn.Accept(mv).(antlr.Token)
+		stmt.Function = fn.Accept(mv).(lang.Function)
 	}
-
-	return inline
+	return stmt
 }
 
 func (mv *mooncakeVisitor) VisitErrorStmt(ctx *parser.ErrorStmtContext) interface{} {
 	log.Printf("VisitErrorStmt - %v", ctx.GetText())
 	code := ctx.GetCode().GetText()
 	info := ctx.GetInfo().GetText()
-	errType := ctx.ErrorType().Accept(mv).(antlr.Token)
+	severity := ctx.ErrorType().Accept(mv).(int)
 
-	err := err{
-		code,
-		info,
-		errType,
-	}
-	return err
+	return lang.ErrorStatement{Code: code, Info: info, Severity: severity}
 }
 
 func (mv *mooncakeVisitor) VisitLinkedStmt(ctx *parser.LinkedStmtContext) interface{} {
 	log.Printf("VisitLinkedStmt - %v", ctx.GetText())
-	isValid := ctx.SimpleStmt().Accept(mv).(bool)
+	valid := ctx.SimpleStmt().Accept(mv).(bool)
 
 	// check linked statements
-	if isValid {
+	if !valid {
 		mv.Visit(ctx.LinkedStmt())
 	}
 
-	return isValid
+	return valid
 }
 
 func (mv *mooncakeVisitor) VisitSimpleStmt(ctx *parser.SimpleStmtContext) interface{} {
 	log.Printf("VisitSimpleStmt - %v", ctx.GetText())
-	rule := rule{}
+	stmt := lang.RuleStatement{}
+	stmt.SymbolTable = &mv.symbolTable
+	stmt.ExpressionStatement = ctx.ExprStmt().Accept(mv).(lang.ExpressionStatement)
+	stmt.ErrorStatement = ctx.ErrorStmt().Accept(mv).(lang.ErrorStatement)
 
-	rule.expr = ctx.Expression().Accept(mv).(expr)
-	rule.err = ctx.ErrorStmt().Accept(mv).(err)
-
-	identifier := rule.expr.identifier
-
-	if inStmt := ctx.InlineStmt(); inStmt != nil {
-		rule.inline = inStmt.Accept(mv).(inline)
-		log.Printf("Evaluating InlineStmt - %v", rule.inline)
-
-		if fn := rule.inline.fn; fn != nil {
-			switch fn.GetTokenType() {
-			case parser.MooncakeParserLEN_FUNC:
-				identifier = len(identifier.([]interface{}))
-			case parser.MooncakeParserDATETIME_LONG:
-				// to datetime long
-			case parser.MooncakeParserFLOAT_FUNC:
-				// to float
-			}
-		}
-
-		if id := rule.inline.id; id != "" {
-			mv.symbolTable[id] = identifier
-		}
+	if inlineStmt := ctx.InlineStmt(); inlineStmt != nil {
+		stmt.InlineStatement = inlineStmt.Accept(mv).(lang.InlineStatement)
 	}
 
-	log.Printf("Evaluating Expr - {%v, %v, %v} Err - %v:%v",
-		rule.expr.identifier, rule.expr.operator.GetText(),
-		rule.expr.literal, rule.err.code,
-		rule.err.info)
+	valid, err := stmt.Evaluate()
+	log.Printf("Error %v", err)
 
-	isValid := false
-	switch rule.expr.operator.GetTokenType() {
-	case parser.MooncakeParserEQ:
-		if identifier == rule.expr.literal {
-			isValid = true
-		}
-	case parser.MooncakeParserNE:
-		if rule.expr.identifier != rule.expr.literal {
-			isValid = true
-		}
-	}
-
-	if !isValid {
-		mv.setError(rule.err)
+	if valid {
+		mv.setError(err)
 	} else if reflect.ValueOf(ctx.Block()).IsValid() {
 		ctx.Block().Accept(mv)
 	}
 
-	log.Printf("Evaluated Expr - %v", mv.result)
-
-	return isValid
+	return valid
 }
 
-func (mv *mooncakeVisitor) VisitExpression(ctx *parser.ExpressionContext) interface{} {
+func (mv *mooncakeVisitor) VisitExprStmt(ctx *parser.ExprStmtContext) interface{} {
 	log.Printf("VisitExpression - %v", ctx.GetText())
-	expr := expr{
-		ctx.Identifier().Accept(mv),
-		ctx.Literal().Accept(mv),
-		ctx.Operator().Accept(mv).(antlr.Token),
-	}
-	return expr
+	identifier := ctx.Identifier().Accept(mv).(lang.Identifier)
+	operator := ctx.Operator().Accept(mv).(lang.Operator)
+	literal := ctx.Literal().Accept(mv).(lang.Literal)
+
+	expr := lang.Expression{Identifier: identifier, Operator: operator, Literal: literal}
+	return lang.ExpressionStatement{Expression: expr}
 }
 
 func (mv *mooncakeVisitor) VisitIdentifier(ctx *parser.IdentifierContext) interface{} {
 	log.Printf("VisitIdentifier - %v", ctx.GetText())
-	var value interface{}
-
-	switch ctx.GetStart().GetTokenType() {
-	case parser.MooncakeParserIDENTIFIER:
-		value, _ = jsonpath.Read(mv.data, "$."+ctx.GetText())
-		log.Printf("Evaluated IDENTIFIER - %v  %v", ctx.GetText(), value)
-	case parser.MooncakeParserINLINE_ID:
-		value = mv.symbolTable[ctx.GetText()]
-		log.Printf("Evaluated INLINE_ID - %v  %v", ctx.GetText(), value)
-	}
-
-	return value
+	return mv.Visit(ctx)
 }
 
 func (mv *mooncakeVisitor) VisitLiteral(ctx *parser.LiteralContext) interface{} {
 	log.Printf("VisitLiteral - %v", ctx.GetText())
-	var value interface{}
-
-	switch ctx.GetStart().GetTokenType() {
-	case parser.MooncakeParserCTX_ID:
-		r := strings.NewReplacer("${", "", "}", "")
-		id := r.Replace(ctx.GetText())
-		value = reflect.ValueOf(mv.ctx).FieldByName(id)
-		log.Printf("Evaluated CTX_ID - %v  %v", ctx.GetText(), value)
-	case parser.MooncakeParserINT:
-		value, _ = strconv.Atoi(ctx.GetText())
-		log.Printf("Evaluated INT - %v  %v", ctx.GetText(), value)
-	case parser.MooncakeParserBOOL:
-		value, _ = strconv.ParseBool(ctx.GetText())
-		log.Printf("Evaluated BOOL - %v  %v", ctx.GetText(), value)
-	case parser.MooncakeParserNULL:
-		value = nil
-		log.Printf("Evaluated NULL - %v  %v", ctx.GetText(), value)
-	}
-
-	return value
+	return mv.Visit(ctx)
 }
 
 func (mv *mooncakeVisitor) VisitFunction(ctx *parser.FunctionContext) interface{} {
 	log.Printf("VisitFunction - %v", ctx.GetText())
-	return ctx.GetStart()
+	return mv.Visit(ctx)
 }
 
 func (mv *mooncakeVisitor) VisitOperator(ctx *parser.OperatorContext) interface{} {
 	log.Printf("VisitOperator - %v", ctx.GetText())
-	return ctx.GetStart()
+	return mv.Visit(ctx)
 }
 
 func (mv *mooncakeVisitor) VisitErrorType(ctx *parser.ErrorTypeContext) interface{} {
 	log.Printf("VisitErrorType - %v", ctx.GetText())
-	return ctx.GetStart()
+	return mv.Visit(ctx)
+}
+
+func (mv *mooncakeVisitor) VisitFatalError(ctx *parser.FatalErrorContext) interface{} {
+	log.Printf("VisitFatalError - %v", ctx.GetText())
+	return ctx.GetStart().GetTokenType()
+}
+
+func (mv *mooncakeVisitor) VisitSevereError(ctx *parser.SevereErrorContext) interface{} {
+	log.Printf("VisitSevereError - %v", ctx.GetText())
+	return ctx.GetStart().GetTokenType()
+}
+
+func (mv *mooncakeVisitor) VisitWarningError(ctx *parser.WarningErrorContext) interface{} {
+	log.Printf("VisitWarningError - %v", ctx.GetText())
+	return ctx.GetStart().GetTokenType()
+}
+
+func (mv *mooncakeVisitor) VisitEqualOperator(ctx *parser.EqualOperatorContext) interface{} {
+	log.Printf("VisitEqualOperator - %v", ctx.GetText())
+	return &lang.EqualOperator{}
+}
+
+func (mv *mooncakeVisitor) VisitNotEqualOperator(ctx *parser.NotEqualOperatorContext) interface{} {
+	log.Printf("VisitNotEqualOperator - %v", ctx.GetText())
+	return &lang.NotEqualOperator{}
+}
+
+func (mv *mooncakeVisitor) VisitGreaterThanOperator(ctx *parser.GreaterThanOperatorContext) interface{} {
+	log.Printf("VisitGreaterThanOperator - %v", ctx.GetText())
+	return &lang.GreaterThanOperator{}
+}
+
+func (mv *mooncakeVisitor) VisitLessThanOperator(ctx *parser.LessThanOperatorContext) interface{} {
+	log.Printf("VisitLessThanOperator - %v", ctx.GetText())
+	return &lang.LessThanOperator{}
+}
+
+func (mv *mooncakeVisitor) VisitGreaterThanOrEqualOperator(ctx *parser.GreaterThanOrEqualOperatorContext) interface{} {
+	log.Printf("VisitGreaterThanOrEqualOperator - %v", ctx.GetText())
+	return &lang.GreaterThanOrEqualOperator{}
+}
+
+func (mv *mooncakeVisitor) VisitLessThanOrEqualOperator(ctx *parser.LessThanOrEqualOperatorContext) interface{} {
+	log.Printf("VisitLessThanOrEqualOperator - %v", ctx.GetText())
+	return &lang.LessThanOrEqualOperator{}
+}
+
+func (mv *mooncakeVisitor) VisitIntLiteral(ctx *parser.IntLiteralContext) interface{} {
+	log.Printf("VisitIntLiteral - %v", ctx.GetText())
+	val := lang.StrToInt(ctx.GetText())
+	return &lang.IntLiteral{Val: val}
+}
+
+func (mv *mooncakeVisitor) VisitFloatLiteral(ctx *parser.FloatLiteralContext) interface{} {
+	log.Printf("VisitFloatLiteral - %v", ctx.GetText())
+	val := lang.StrToFloat(ctx.GetText())
+	return &lang.FloatLiteral{Val: val}
+}
+
+func (mv *mooncakeVisitor) VisitBoolLiteral(ctx *parser.BoolLiteralContext) interface{} {
+	log.Printf("VisitBoolLiteral - %v", ctx.GetText())
+	val := lang.StrToBool(ctx.GetText())
+	return &lang.BoolLiteral{Val: val}
+}
+
+func (mv *mooncakeVisitor) VisitNullLiteral(ctx *parser.NullLiteralContext) interface{} {
+	log.Printf("VisitNullLiteral - %v", ctx.GetText())
+	return &lang.NullLiteral{}
+}
+
+func (mv *mooncakeVisitor) VisitCtxLiteral(ctx *parser.CtxLiteralContext) interface{} {
+	log.Printf("VisitCtxLiteral - %v", ctx.GetText())
+	id := lang.StrToCtx(ctx.GetText());
+	val := lang.GetValue(id, mv.ctx);
+	return &lang.CtxLiteral{Val: val}
+}
+
+func (mv *mooncakeVisitor) VisitAttributeIdentifier(ctx *parser.AttributeIdentifierContext) interface{} {
+	log.Printf("VisitAttributeIdentifier - %v", ctx.GetText())
+	val, _ := jsonpath.Read(mv.data, "$."+ctx.GetText())
+	return &lang.AttrIdentifier{Name: ctx.GetText(), Val: val}
+}
+
+func (mv *mooncakeVisitor) VisitDeclarationIdentifier(ctx *parser.DeclarationIdentifierContext) interface{} {
+	log.Printf("VisitDeclarationIdentifier - %v", ctx.GetText())
+	val := mv.symbolTable.Get(ctx.GetText())
+	return &lang.DeclIdentifier{Name: ctx.GetText(), Val: val}
+}
+
+func (v *mooncakeVisitor) VisitLengthFunction(ctx *parser.LengthFunctionContext) interface{} {
+	return &lang.LengthFunction{}
+}
+
+func (v *mooncakeVisitor) VisitDateTimeLongFunction(ctx *parser.DateTimeLongFunctionContext) interface{} {
+	return &lang.DateTimeLongFunction{}
+}
+
+func (v *mooncakeVisitor) VisitAfterCurrentTimeFunction(ctx *parser.AfterCurrentTimeFunctionContext) interface{} {
+	return &lang.AfterCurrentTimeFunction{}
 }
 
 func (mv *mooncakeVisitor) Visit(tree antlr.ParseTree) interface{} {
+	var value interface{}
 	for _, child := range tree.GetChildren() {
 		log.Printf("Visiting child - %v", child)
 
@@ -239,13 +243,12 @@ func (mv *mooncakeVisitor) Visit(tree antlr.ParseTree) interface{} {
 		case antlr.ErrorNode:
 			mv.VisitErrorNode(child)
 		case antlr.RuleNode:
-			child.Accept(mv)
+			value = child.Accept(mv)
 		default:
 			// can this happen??
 		}
 	}
-
-	return nil // not aggregating results for now
+	return value // not aggregating results - will get the last child for now
 }
 
 func (v *mooncakeVisitor) VisitTerminal(node antlr.TerminalNode) interface{} {
@@ -256,18 +259,20 @@ func (v *mooncakeVisitor) VisitErrorNode(node antlr.ErrorNode) interface{} {
 	return node.GetSymbol()
 }
 
-func (v *mooncakeVisitor) setError(err err) {
-	switch err.errorType.GetTokenType() {
+func (v *mooncakeVisitor) setError(err lang.ErrorStatement) {
+	e := lang.Error{Code: err.Code, Info: err.Info}
+
+	switch err.Severity {
 	case parser.MooncakeParserWARNING:
-		v.result.Warning = append(v.result.Warning, domain.Error{err.code, err.info})
+		v.result.Warning = append(v.result.Warning, e)
 	case parser.MooncakeParserSEVERE:
-		v.result.Severe = append(v.result.Severe, domain.Error{err.code, err.info})
+		v.result.Severe = append(v.result.Severe, e)
 	case parser.MooncakeParserFATAL:
-		v.result.Fatal = append(v.result.Fatal, domain.Error{err.code, err.info})
+		v.result.Fatal = append(v.result.Fatal, e)
 	}
 }
 
-func Execute(rules string, filePath string, ctx interface{}) domain.ValidationResult {
+func Execute(rules string, filePath string, ctx interface{}) lang.ValidationResult {
 	is := antlr.NewInputStream(rules)
 
 	lexer := parser.NewMooncakeLexer(is)
@@ -293,7 +298,7 @@ func Execute(rules string, filePath string, ctx interface{}) domain.ValidationRe
 	mooncakeVisitor := &mooncakeVisitor{
 		data:        fileData,
 		ctx:         ctx,
-		symbolTable: map[string]interface{}{},
+		symbolTable: lang.NewSymbolTable(),
 	}
 
 	antlr.ParseTreeVisitor.Visit(mooncakeVisitor, p.Mcrule())
