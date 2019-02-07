@@ -2,7 +2,9 @@ Mooncake
 ========
 **A simplistic validation language for validating complex objects.**
 
-Built with Antlr and Golang.
+Built with Antlr and Golang. 
+
+Visit the blog https://talal.zone/static/mooncake/
 
 Getting Started
 ---------------
@@ -17,7 +19,7 @@ For now objects in json format are handled.
 A simple validation statement has the following syntax:
 
 ```
-item.name eq nil => [E0123, 'item is null']!!! # if item.name is empty then fatal error
+item.name eq nil => [E0123, 'item name is null']!!! # if item.name is empty then fatal error
 ```
 
 Breaking it down we have:
@@ -26,7 +28,7 @@ Breaking it down we have:
 * _Operator:_ `eq`
 * _Literal:_ `nil`
 * _Implication:_ `=>`
-* _Error:_ `[E0123, 'item is null']!!` containing error code, info and severity
+* _Error:_ `[E0123, 'item name is null']!!` containing error code, info and severity
 * _Comment:_ `# if item.name is empty then severe error`
 
 
@@ -59,7 +61,7 @@ item.name eq nil  => [E0001, 'info-1']!!!
     }
 }
 ```
-This is similar to using `~` to have a dependent relations:
+This is similar to using `~` to have  dependent relations:
 
 ```
 ~item.name eq nil           => [E0001, 'info-1']!!!
@@ -148,7 +150,6 @@ Operators
 | `lte` or `<=`             | left is less or equal to right                                     |
 | `gt` or `>`               | left is greater than right                                         |
 | `gte` or `>=`             | left is greater than or equal to right                             |
-| `lt` or `<`               | left is less than right                                            |
 | `in`                      | left exists in right. **incomplete**                               |
 | `nin`                     | left does not exists in right. **incomplete**                      |
 
