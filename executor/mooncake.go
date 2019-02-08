@@ -9,7 +9,6 @@ import (
 	"mooncake/lang"
 	"mooncake/parser"
 	"os"
-	"reflect"
 )
 
 type mooncakeVisitor struct {
@@ -26,11 +25,6 @@ func (mv *mooncakeVisitor) VisitMcrule(ctx *parser.McruleContext) interface{} {
 	return mv.Visit(ctx)
 }
 
-func (mv *mooncakeVisitor) VisitBlock(ctx *parser.BlockContext) interface{} {
-	log.Printf("VisitBlock - %v", ctx.GetText())
-	return mv.Visit(ctx)
-}
-
 func (mv *mooncakeVisitor) VisitStatementList(ctx *parser.StatementListContext) interface{} {
 	log.Printf("VisitStatementList - %v", ctx.GetText())
 	return mv.Visit(ctx)
@@ -41,26 +35,9 @@ func (mv *mooncakeVisitor) VisitStatement(ctx *parser.StatementContext) interfac
 	return mv.Visit(ctx)
 }
 
-func (mv *mooncakeVisitor) VisitInlineStmt(ctx *parser.InlineStmtContext) interface{} {
-	log.Printf("VisitInlineStmt - %v", ctx.GetText())
-	stmt := lang.InlineStatement{}
-
-	if id := ctx.GetId(); id != nil {
-		stmt.DeclIdentifier = &lang.DeclIdentifier{Name: id.GetText(), Val: nil}
-	}
-	if fn := ctx.GetFn(); fn != nil {
-		stmt.Function = fn.Accept(mv).(lang.Function)
-	}
-	return stmt
-}
-
-func (mv *mooncakeVisitor) VisitErrorStmt(ctx *parser.ErrorStmtContext) interface{} {
-	log.Printf("VisitErrorStmt - %v", ctx.GetText())
-	code := ctx.GetCode().GetText()
-	info := ctx.GetInfo().GetText()
-	severity := ctx.ErrorType().Accept(mv).(int)
-
-	return lang.ErrorStatement{Code: code, Info: info, Severity: severity}
+func (mv *mooncakeVisitor) VisitBlock(ctx *parser.BlockContext) interface{} {
+	log.Printf("VisitBlock - %v", ctx.GetText())
+	return mv.Visit(ctx)
 }
 
 func (mv *mooncakeVisitor) VisitLinkedStmt(ctx *parser.LinkedStmtContext) interface{} {
@@ -68,7 +45,7 @@ func (mv *mooncakeVisitor) VisitLinkedStmt(ctx *parser.LinkedStmtContext) interf
 	valid := ctx.SimpleStmt().Accept(mv).(bool)
 
 	// check linked statements
-	if !valid {
+	if !valid && ctx.LinkedStmt() != nil {
 		ctx.LinkedStmt().Accept(mv)
 	}
 
@@ -90,11 +67,24 @@ func (mv *mooncakeVisitor) VisitSimpleStmt(ctx *parser.SimpleStmtContext) interf
 
 	if valid {
 		mv.setError(err)
-	} else if reflect.ValueOf(ctx.Block()).IsValid() {
+	} else if ctx.Block() != nil {
 		ctx.Block().Accept(mv)
 	}
 
 	return valid
+}
+
+func (mv *mooncakeVisitor) VisitInlineStmt(ctx *parser.InlineStmtContext) interface{} {
+	log.Printf("VisitInlineStmt - %v", ctx.GetText())
+	stmt := lang.InlineStatement{}
+
+	if id := ctx.GetId(); id != nil {
+		stmt.DeclIdentifier = &lang.DeclIdentifier{Name: id.GetText(), Val: nil}
+	}
+	if fn := ctx.GetFn(); fn != nil {
+		stmt.Function = fn.Accept(mv).(lang.Function)
+	}
+	return stmt
 }
 
 func (mv *mooncakeVisitor) VisitExprStmt(ctx *parser.ExprStmtContext) interface{} {
@@ -105,6 +95,15 @@ func (mv *mooncakeVisitor) VisitExprStmt(ctx *parser.ExprStmtContext) interface{
 
 	expr := lang.Expression{Identifier: identifier, Operator: operator, Literal: literal}
 	return lang.ExpressionStatement{Expression: expr}
+}
+
+func (mv *mooncakeVisitor) VisitErrorStmt(ctx *parser.ErrorStmtContext) interface{} {
+	log.Printf("VisitErrorStmt - %v", ctx.GetText())
+	code := ctx.GetCode().GetText()
+	info := ctx.GetInfo().GetText()
+	severity := ctx.ErrorType().Accept(mv).(int)
+
+	return lang.ErrorStatement{Code: code, Info: info, Severity: severity}
 }
 
 func (mv *mooncakeVisitor) VisitIdentifier(ctx *parser.IdentifierContext) interface{} {

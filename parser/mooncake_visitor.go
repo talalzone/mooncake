@@ -10,20 +10,14 @@ type MooncakeVisitor interface {
 	// Visit a parse tree produced by MooncakeParser#mcrule.
 	VisitMcrule(ctx *McruleContext) interface{}
 
-	// Visit a parse tree produced by MooncakeParser#block.
-	VisitBlock(ctx *BlockContext) interface{}
-
 	// Visit a parse tree produced by MooncakeParser#statementList.
 	VisitStatementList(ctx *StatementListContext) interface{}
 
 	// Visit a parse tree produced by MooncakeParser#statement.
 	VisitStatement(ctx *StatementContext) interface{}
 
-	// Visit a parse tree produced by MooncakeParser#inlineStmt.
-	VisitInlineStmt(ctx *InlineStmtContext) interface{}
-
-	// Visit a parse tree produced by MooncakeParser#errorStmt.
-	VisitErrorStmt(ctx *ErrorStmtContext) interface{}
+	// Visit a parse tree produced by MooncakeParser#block.
+	VisitBlock(ctx *BlockContext) interface{}
 
 	// Visit a parse tree produced by MooncakeParser#linkedStmt.
 	VisitLinkedStmt(ctx *LinkedStmtContext) interface{}
@@ -31,8 +25,14 @@ type MooncakeVisitor interface {
 	// Visit a parse tree produced by MooncakeParser#simpleStmt.
 	VisitSimpleStmt(ctx *SimpleStmtContext) interface{}
 
+	// Visit a parse tree produced by MooncakeParser#inlineStmt.
+	VisitInlineStmt(ctx *InlineStmtContext) interface{}
+
 	// Visit a parse tree produced by MooncakeParser#exprStmt.
 	VisitExprStmt(ctx *ExprStmtContext) interface{}
+
+	// Visit a parse tree produced by MooncakeParser#errorStmt.
+	VisitErrorStmt(ctx *ErrorStmtContext) interface{}
 
 	// Visit a parse tree produced by MooncakeParser#identifier.
 	VisitIdentifier(ctx *IdentifierContext) interface{}

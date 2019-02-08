@@ -12,10 +12,6 @@ func (v *BaseMooncakeVisitor) VisitMcrule(ctx *McruleContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseMooncakeVisitor) VisitBlock(ctx *BlockContext) interface{} {
-	return v.VisitChildren(ctx)
-}
-
 func (v *BaseMooncakeVisitor) VisitStatementList(ctx *StatementListContext) interface{} {
 	return v.VisitChildren(ctx)
 }
@@ -24,11 +20,7 @@ func (v *BaseMooncakeVisitor) VisitStatement(ctx *StatementContext) interface{} 
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseMooncakeVisitor) VisitInlineStmt(ctx *InlineStmtContext) interface{} {
-	return v.VisitChildren(ctx)
-}
-
-func (v *BaseMooncakeVisitor) VisitErrorStmt(ctx *ErrorStmtContext) interface{} {
+func (v *BaseMooncakeVisitor) VisitBlock(ctx *BlockContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
@@ -40,7 +32,15 @@ func (v *BaseMooncakeVisitor) VisitSimpleStmt(ctx *SimpleStmtContext) interface{
 	return v.VisitChildren(ctx)
 }
 
+func (v *BaseMooncakeVisitor) VisitInlineStmt(ctx *InlineStmtContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
 func (v *BaseMooncakeVisitor) VisitExprStmt(ctx *ExprStmtContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMooncakeVisitor) VisitErrorStmt(ctx *ErrorStmtContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 

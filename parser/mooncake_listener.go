@@ -11,20 +11,14 @@ type MooncakeListener interface {
 	// EnterMcrule is called when entering the mcrule production.
 	EnterMcrule(c *McruleContext)
 
-	// EnterBlock is called when entering the block production.
-	EnterBlock(c *BlockContext)
-
 	// EnterStatementList is called when entering the statementList production.
 	EnterStatementList(c *StatementListContext)
 
 	// EnterStatement is called when entering the statement production.
 	EnterStatement(c *StatementContext)
 
-	// EnterInlineStmt is called when entering the inlineStmt production.
-	EnterInlineStmt(c *InlineStmtContext)
-
-	// EnterErrorStmt is called when entering the errorStmt production.
-	EnterErrorStmt(c *ErrorStmtContext)
+	// EnterBlock is called when entering the block production.
+	EnterBlock(c *BlockContext)
 
 	// EnterLinkedStmt is called when entering the linkedStmt production.
 	EnterLinkedStmt(c *LinkedStmtContext)
@@ -32,8 +26,14 @@ type MooncakeListener interface {
 	// EnterSimpleStmt is called when entering the simpleStmt production.
 	EnterSimpleStmt(c *SimpleStmtContext)
 
+	// EnterInlineStmt is called when entering the inlineStmt production.
+	EnterInlineStmt(c *InlineStmtContext)
+
 	// EnterExprStmt is called when entering the exprStmt production.
 	EnterExprStmt(c *ExprStmtContext)
+
+	// EnterErrorStmt is called when entering the errorStmt production.
+	EnterErrorStmt(c *ErrorStmtContext)
 
 	// EnterIdentifier is called when entering the identifier production.
 	EnterIdentifier(c *IdentifierContext)
@@ -110,20 +110,14 @@ type MooncakeListener interface {
 	// ExitMcrule is called when exiting the mcrule production.
 	ExitMcrule(c *McruleContext)
 
-	// ExitBlock is called when exiting the block production.
-	ExitBlock(c *BlockContext)
-
 	// ExitStatementList is called when exiting the statementList production.
 	ExitStatementList(c *StatementListContext)
 
 	// ExitStatement is called when exiting the statement production.
 	ExitStatement(c *StatementContext)
 
-	// ExitInlineStmt is called when exiting the inlineStmt production.
-	ExitInlineStmt(c *InlineStmtContext)
-
-	// ExitErrorStmt is called when exiting the errorStmt production.
-	ExitErrorStmt(c *ErrorStmtContext)
+	// ExitBlock is called when exiting the block production.
+	ExitBlock(c *BlockContext)
 
 	// ExitLinkedStmt is called when exiting the linkedStmt production.
 	ExitLinkedStmt(c *LinkedStmtContext)
@@ -131,8 +125,14 @@ type MooncakeListener interface {
 	// ExitSimpleStmt is called when exiting the simpleStmt production.
 	ExitSimpleStmt(c *SimpleStmtContext)
 
+	// ExitInlineStmt is called when exiting the inlineStmt production.
+	ExitInlineStmt(c *InlineStmtContext)
+
 	// ExitExprStmt is called when exiting the exprStmt production.
 	ExitExprStmt(c *ExprStmtContext)
+
+	// ExitErrorStmt is called when exiting the errorStmt production.
+	ExitErrorStmt(c *ErrorStmtContext)
 
 	// ExitIdentifier is called when exiting the identifier production.
 	ExitIdentifier(c *IdentifierContext)

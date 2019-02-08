@@ -16,7 +16,7 @@ func TestBasicRules(t *testing.T) {
 	}
 
 	rules := string(content)
-	jsonFile := "../sample/sample_items.json"
+	jsonFile := "../sample/sample_item.json"
 
 	// sample context struct
 	ctx := struct {

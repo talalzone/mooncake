@@ -4,10 +4,6 @@ mcrule
     : statementList
     ;
 
-block
-    : '{' statementList '}'
-    ;
-
 statementList
     : ( statement COMMENT? )*
     ;
@@ -18,14 +14,8 @@ statement
     | simpleStmt
 	;
 
-inlineStmt
-    : id=DECL_ID
-    | fn=function
-    | id=DECL_ID fn=function
-    ;
-
-errorStmt
-    : '[' code=ERROR_CODE ',' info=ERROR_INFO ']' errType=errorType
+block
+    : '{' statementList '}'
     ;
 
 linkedStmt
@@ -36,8 +26,18 @@ simpleStmt
     : ( inlineStmt )? exprStmt '=>' errorStmt block?
     ;
 
+inlineStmt
+    : id=DECL_ID
+    | fn=function
+    | id=DECL_ID fn=function
+    ;
+
 exprStmt
     : id=identifier  op=operator  val=literal
+    ;
+
+errorStmt
+    : '[' code=ERROR_CODE ',' info=ERROR_INFO ']' errType=errorType
     ;
 
 identifier

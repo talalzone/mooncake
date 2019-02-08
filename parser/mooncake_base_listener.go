@@ -27,12 +27,6 @@ func (s *BaseMooncakeListener) EnterMcrule(ctx *McruleContext) {}
 // ExitMcrule is called when production mcrule is exited.
 func (s *BaseMooncakeListener) ExitMcrule(ctx *McruleContext) {}
 
-// EnterBlock is called when production block is entered.
-func (s *BaseMooncakeListener) EnterBlock(ctx *BlockContext) {}
-
-// ExitBlock is called when production block is exited.
-func (s *BaseMooncakeListener) ExitBlock(ctx *BlockContext) {}
-
 // EnterStatementList is called when production statementList is entered.
 func (s *BaseMooncakeListener) EnterStatementList(ctx *StatementListContext) {}
 
@@ -45,17 +39,11 @@ func (s *BaseMooncakeListener) EnterStatement(ctx *StatementContext) {}
 // ExitStatement is called when production statement is exited.
 func (s *BaseMooncakeListener) ExitStatement(ctx *StatementContext) {}
 
-// EnterInlineStmt is called when production inlineStmt is entered.
-func (s *BaseMooncakeListener) EnterInlineStmt(ctx *InlineStmtContext) {}
+// EnterBlock is called when production block is entered.
+func (s *BaseMooncakeListener) EnterBlock(ctx *BlockContext) {}
 
-// ExitInlineStmt is called when production inlineStmt is exited.
-func (s *BaseMooncakeListener) ExitInlineStmt(ctx *InlineStmtContext) {}
-
-// EnterErrorStmt is called when production errorStmt is entered.
-func (s *BaseMooncakeListener) EnterErrorStmt(ctx *ErrorStmtContext) {}
-
-// ExitErrorStmt is called when production errorStmt is exited.
-func (s *BaseMooncakeListener) ExitErrorStmt(ctx *ErrorStmtContext) {}
+// ExitBlock is called when production block is exited.
+func (s *BaseMooncakeListener) ExitBlock(ctx *BlockContext) {}
 
 // EnterLinkedStmt is called when production linkedStmt is entered.
 func (s *BaseMooncakeListener) EnterLinkedStmt(ctx *LinkedStmtContext) {}
@@ -69,11 +57,23 @@ func (s *BaseMooncakeListener) EnterSimpleStmt(ctx *SimpleStmtContext) {}
 // ExitSimpleStmt is called when production simpleStmt is exited.
 func (s *BaseMooncakeListener) ExitSimpleStmt(ctx *SimpleStmtContext) {}
 
+// EnterInlineStmt is called when production inlineStmt is entered.
+func (s *BaseMooncakeListener) EnterInlineStmt(ctx *InlineStmtContext) {}
+
+// ExitInlineStmt is called when production inlineStmt is exited.
+func (s *BaseMooncakeListener) ExitInlineStmt(ctx *InlineStmtContext) {}
+
 // EnterExprStmt is called when production exprStmt is entered.
 func (s *BaseMooncakeListener) EnterExprStmt(ctx *ExprStmtContext) {}
 
 // ExitExprStmt is called when production exprStmt is exited.
 func (s *BaseMooncakeListener) ExitExprStmt(ctx *ExprStmtContext) {}
+
+// EnterErrorStmt is called when production errorStmt is entered.
+func (s *BaseMooncakeListener) EnterErrorStmt(ctx *ErrorStmtContext) {}
+
+// ExitErrorStmt is called when production errorStmt is exited.
+func (s *BaseMooncakeListener) ExitErrorStmt(ctx *ErrorStmtContext) {}
 
 // EnterIdentifier is called when production identifier is entered.
 func (s *BaseMooncakeListener) EnterIdentifier(ctx *IdentifierContext) {}
