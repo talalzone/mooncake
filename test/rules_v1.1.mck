@@ -14,6 +14,25 @@ sample eq nil                                                    => [E0001, 'sam
 
      _x @len sample.third gt 4                                   => [E0008, 'someitem2 not valid']!!  #  This is a severe error
      {
-        _x eq 2                                                  => [E0009, 'someitem4 has 2 threshold']!  # This is a warning
+        ~_x eq 3                                                 => [E0009, 'someitem4 has 2 threshold']!  # This is a warning
+        ~_x lte 2                                                => [E0009, 'someitem4 has 3 threshold']!  # This is a warning
      }
+}
+
+
+item eq nil => [E023, 'item is empty']!!! # This is a fatal error when item is null
+{
+    item.first eq nil => [E001, 'first is empty']!!! # Fatal error
+    _x @len item.first.list eq 3 => [E0123, 'length is 3']!
+    {
+        #_x eq 4 => [E0123, 'length is 4']!
+        #_x lt ${threshold} => [E0124, 'x is greater than threshold']!
+    }
+
+    #~item.second eq nil => [E002, 'Second is empty']!!! # Fatal error
+    #~item.third eq nil => [E003, 'Third is empty']!!! # Fatal error
+    #~item.fourth eq nil => [E004, 'Fourth is empty']!
+
+    #~item.fifth ne nil => [E005, 'Fifth is empty']!
+
 }

@@ -69,7 +69,7 @@ func (mv *mooncakeVisitor) VisitLinkedStmt(ctx *parser.LinkedStmtContext) interf
 
 	// check linked statements
 	if !valid {
-		mv.Visit(ctx.LinkedStmt())
+		ctx.LinkedStmt().Accept(mv)
 	}
 
 	return valid
@@ -87,7 +87,6 @@ func (mv *mooncakeVisitor) VisitSimpleStmt(ctx *parser.SimpleStmtContext) interf
 	}
 
 	valid, err := stmt.Evaluate()
-	log.Printf("Error %v", err)
 
 	if valid {
 		mv.setError(err)
@@ -234,6 +233,7 @@ func (v *mooncakeVisitor) VisitAfterCurrentTimeFunction(ctx *parser.AfterCurrent
 
 func (mv *mooncakeVisitor) Visit(tree antlr.ParseTree) interface{} {
 	var value interface{}
+
 	for _, child := range tree.GetChildren() {
 		log.Printf("Visiting child - %v", child)
 
@@ -248,7 +248,7 @@ func (mv *mooncakeVisitor) Visit(tree antlr.ParseTree) interface{} {
 			// can this happen??
 		}
 	}
-	return value // not aggregating results - will get the last child for now
+	return value // not aggregating results
 }
 
 func (v *mooncakeVisitor) VisitTerminal(node antlr.TerminalNode) interface{} {
@@ -274,9 +274,7 @@ func (v *mooncakeVisitor) setError(err lang.ErrorStatement) {
 
 func Execute(rules string, filePath string, ctx interface{}) lang.ValidationResult {
 	is := antlr.NewInputStream(rules)
-
 	lexer := parser.NewMooncakeLexer(is)
-
 	stream := antlr.NewCommonTokenStream(lexer, antlr.TokenDefaultChannel)
 
 	// Create the Parser
@@ -298,6 +296,7 @@ func Execute(rules string, filePath string, ctx interface{}) lang.ValidationResu
 	mooncakeVisitor := &mooncakeVisitor{
 		data:        fileData,
 		ctx:         ctx,
+		result:      lang.NewValidationResult(),
 		symbolTable: lang.NewSymbolTable(),
 	}
 

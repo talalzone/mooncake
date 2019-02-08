@@ -9,7 +9,7 @@ import (
 )
 
 func TestBasicRules(t *testing.T) {
-	content, err := ioutil.ReadFile("../test/rules_v1.1.mck")
+	content, err := ioutil.ReadFile("../test/rules_v1.0.mck")
 
 	if err != nil {
 		panic(err)

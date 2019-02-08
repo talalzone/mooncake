@@ -6,7 +6,11 @@ type Error struct {
 }
 
 type ValidationResult struct {
-	Fatal   []Error `json:"fatalCodes"`
-	Severe  []Error `json:"severeCodes"`
-	Warning []Error `json:"warningCodes"`
+	Fatal   []Error `json:"Fatal"`
+	Severe  []Error `json:"Severe"`
+	Warning []Error `json:"Warning"`
+}
+
+func NewValidationResult() ValidationResult {
+	return ValidationResult{}
 }

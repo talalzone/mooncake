@@ -161,19 +161,19 @@ func (l *FloatLiteral) ne(value interface{}) bool {
 }
 
 func (l *FloatLiteral) gt(value interface{}) bool {
-	return value.(float64) > l.Val
+	return ToFloat(value) > l.Val
 }
 
 func (l *FloatLiteral) lt(value interface{}) bool {
-	return value.(float64) < l.Val
+	return ToFloat(value) < l.Val
 }
 
 func (l *FloatLiteral) gte(value interface{}) bool {
-	return value.(float64) >= l.Val
+	return ToFloat(value) >= l.Val
 }
 
 func (l *FloatLiteral) lte(value interface{}) bool {
-	return value.(float64) <= l.Val
+	return ToFloat(value) <= l.Val
 }
 
 type CtxLiteral struct {
