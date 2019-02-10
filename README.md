@@ -150,7 +150,7 @@ Literals
 | Integer                   | `signed` or `unsigned` integer values e.g., `12, 0, -50,`                                    |              
 | Float                     | `signed` or `unsiged` floating point values e.g., `49.10, -23.21`                                           |
 | Null                      | `nil` or `null`                                 |
-| String                    | `single quoted characters without space` e.g., `'sample'`, `'ExampleString'`                                       |
+| String                    | `single quoted characters` e.g., `'sample'`, `'ExampleString'`                                       |
 
 Operators
 ---------
