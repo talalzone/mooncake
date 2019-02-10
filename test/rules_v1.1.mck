@@ -1,38 +1,22 @@
-sample eq nil                                                    => [E0001, 'sample is empty']!!!     # This is a fatal error
+item eq nil                                     => ['E406', 'Item is empty']!!! # Fatal error
 {
-     sample.first eq nil                                         => [E0002, 'someitem1 not set']!!  #  This is a severe error
-     sample.second eq nil                                        => [E0003, 'someitem2 not set']!!  #  This is a severe error
-     {
-         sample.third eq nil                                     => [E0004, 'someitem3 not set']!!  #  This is a severe error
-     }
+    ~item.first eq nil                          => ['E010', 'First attribute is empty']!! # Severe
+    ~@len item.first.list eq 0                  => ['E011', 'List in first is empty']!! # Severe
 
-     sample.fourth.value gt 5                                    => [E0005, 'someitem4 not valid']!!  #  This is a severe error
-
-     sample.fourth.value < ${threshold}                          => [E0006, 'someitem4 not in threshold']!  # This is a warning
-
-     @len sample.third gt 3                                      => [E0007, 'someitem2 not valid']!!  #  This is a severe error
-
-     _x @len sample.third gt 4                                   => [E0008, 'someitem2 not valid']!!  #  This is a severe error
-     {
-        ~_x eq 3                                                 => [E0009, 'someitem4 has 2 threshold']!  # This is a warning
-        ~_x lte 2                                                => [E0009, 'someitem4 has 3 threshold']!  # This is a warning
-     }
-}
-
-
-item eq nil => [E023, 'item is empty']!!! # This is a fatal error when item is null
-{
-    item.first eq nil => [E001, 'first is empty']!!! # Fatal error
-    _x @len item.first.list eq 3 => [E0123, 'length is 3']!
+    _x @len item.second eq 0                    => ['E020', 'Second list is empty']!! # Severe
     {
-        #_x eq 4 => [E0123, 'length is 4']!
-        #_x lt ${threshold} => [E0124, 'x is greater than threshold']!
+        _x eq 1                                 => ['E021', 'Second list has only 1 object']! # Warning
+        _x gt ${threshold}                      => ['E022', 'Second list exceeds threshold']! # Warning
     }
 
-    #~item.second eq nil => [E002, 'Second is empty']!!! # Fatal error
-    #~item.third eq nil => [E003, 'Third is empty']!!! # Fatal error
-    #~item.fourth eq nil => [E004, 'Fourth is empty']!
+    ~item.third eq nil                          => ['E030', 'Third attribute is empty']!!
+    ~item.third.intValue eq 20                  => ['E031', 'Third value is 20']!!
 
-    #~item.fifth ne nil => [E005, 'Fifth is empty']!
+    item.fourth.floatValue gt 30.10             => ['E040', 'Fourth value exceeds 30.10']!!
 
+    item.fifth.boolValue eq false               => ['E050', 'Fifth value is false ']!
+
+    item.sixth.stringValue ne 'xyz'             => ['E060', 'Sixth value does not match xyz']!!
+
+    item.temp_req.value lte ${tempValue}        => ['E070', 'Temp value is less than required']!!!
 }

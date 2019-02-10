@@ -1,9 +1,0 @@
-~item.first eq nil => [E002, 'First is empty']!!! # Fatal error
-~item.second eq nil => [E002, 'Second is empty']!! # Fatal error
-~item.third eq nil => [E003, 'Third is empty']! # Fatal error
-~item.fourth eq nil => [E004, 'Fourth is empty']!
-{
-    item.fifth ne nil => [E005, 'fifth is not null']!
-}
-
-# ~item.fifth.value eq 'abcd' => [E005, 'Fifth is not abc']

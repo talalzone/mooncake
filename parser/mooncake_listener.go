@@ -29,11 +29,11 @@ type MooncakeListener interface {
 	// EnterInlineStmt is called when entering the inlineStmt production.
 	EnterInlineStmt(c *InlineStmtContext)
 
-	// EnterExprStmt is called when entering the exprStmt production.
-	EnterExprStmt(c *ExprStmtContext)
-
 	// EnterErrorStmt is called when entering the errorStmt production.
 	EnterErrorStmt(c *ErrorStmtContext)
+
+	// EnterExprStmt is called when entering the exprStmt production.
+	EnterExprStmt(c *ExprStmtContext)
 
 	// EnterIdentifier is called when entering the identifier production.
 	EnterIdentifier(c *IdentifierContext)
@@ -89,6 +89,9 @@ type MooncakeListener interface {
 	// EnterNullLiteral is called when entering the nullLiteral production.
 	EnterNullLiteral(c *NullLiteralContext)
 
+	// EnterStringLiteral is called when entering the stringLiteral production.
+	EnterStringLiteral(c *StringLiteralContext)
+
 	// EnterCtxLiteral is called when entering the ctxLiteral production.
 	EnterCtxLiteral(c *CtxLiteralContext)
 
@@ -128,11 +131,11 @@ type MooncakeListener interface {
 	// ExitInlineStmt is called when exiting the inlineStmt production.
 	ExitInlineStmt(c *InlineStmtContext)
 
-	// ExitExprStmt is called when exiting the exprStmt production.
-	ExitExprStmt(c *ExprStmtContext)
-
 	// ExitErrorStmt is called when exiting the errorStmt production.
 	ExitErrorStmt(c *ErrorStmtContext)
+
+	// ExitExprStmt is called when exiting the exprStmt production.
+	ExitExprStmt(c *ExprStmtContext)
 
 	// ExitIdentifier is called when exiting the identifier production.
 	ExitIdentifier(c *IdentifierContext)
@@ -187,6 +190,9 @@ type MooncakeListener interface {
 
 	// ExitNullLiteral is called when exiting the nullLiteral production.
 	ExitNullLiteral(c *NullLiteralContext)
+
+	// ExitStringLiteral is called when exiting the stringLiteral production.
+	ExitStringLiteral(c *StringLiteralContext)
 
 	// ExitCtxLiteral is called when exiting the ctxLiteral production.
 	ExitCtxLiteral(c *CtxLiteralContext)

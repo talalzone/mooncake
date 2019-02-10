@@ -36,11 +36,11 @@ func (v *BaseMooncakeVisitor) VisitInlineStmt(ctx *InlineStmtContext) interface{
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseMooncakeVisitor) VisitExprStmt(ctx *ExprStmtContext) interface{} {
+func (v *BaseMooncakeVisitor) VisitErrorStmt(ctx *ErrorStmtContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseMooncakeVisitor) VisitErrorStmt(ctx *ErrorStmtContext) interface{} {
+func (v *BaseMooncakeVisitor) VisitExprStmt(ctx *ExprStmtContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
@@ -113,6 +113,10 @@ func (v *BaseMooncakeVisitor) VisitBoolLiteral(ctx *BoolLiteralContext) interfac
 }
 
 func (v *BaseMooncakeVisitor) VisitNullLiteral(ctx *NullLiteralContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseMooncakeVisitor) VisitStringLiteral(ctx *StringLiteralContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 

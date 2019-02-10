@@ -63,17 +63,17 @@ func (s *BaseMooncakeListener) EnterInlineStmt(ctx *InlineStmtContext) {}
 // ExitInlineStmt is called when production inlineStmt is exited.
 func (s *BaseMooncakeListener) ExitInlineStmt(ctx *InlineStmtContext) {}
 
-// EnterExprStmt is called when production exprStmt is entered.
-func (s *BaseMooncakeListener) EnterExprStmt(ctx *ExprStmtContext) {}
-
-// ExitExprStmt is called when production exprStmt is exited.
-func (s *BaseMooncakeListener) ExitExprStmt(ctx *ExprStmtContext) {}
-
 // EnterErrorStmt is called when production errorStmt is entered.
 func (s *BaseMooncakeListener) EnterErrorStmt(ctx *ErrorStmtContext) {}
 
 // ExitErrorStmt is called when production errorStmt is exited.
 func (s *BaseMooncakeListener) ExitErrorStmt(ctx *ErrorStmtContext) {}
+
+// EnterExprStmt is called when production exprStmt is entered.
+func (s *BaseMooncakeListener) EnterExprStmt(ctx *ExprStmtContext) {}
+
+// ExitExprStmt is called when production exprStmt is exited.
+func (s *BaseMooncakeListener) ExitExprStmt(ctx *ExprStmtContext) {}
 
 // EnterIdentifier is called when production identifier is entered.
 func (s *BaseMooncakeListener) EnterIdentifier(ctx *IdentifierContext) {}
@@ -182,6 +182,12 @@ func (s *BaseMooncakeListener) EnterNullLiteral(ctx *NullLiteralContext) {}
 
 // ExitNullLiteral is called when production nullLiteral is exited.
 func (s *BaseMooncakeListener) ExitNullLiteral(ctx *NullLiteralContext) {}
+
+// EnterStringLiteral is called when production stringLiteral is entered.
+func (s *BaseMooncakeListener) EnterStringLiteral(ctx *StringLiteralContext) {}
+
+// ExitStringLiteral is called when production stringLiteral is exited.
+func (s *BaseMooncakeListener) ExitStringLiteral(ctx *StringLiteralContext) {}
 
 // EnterCtxLiteral is called when production ctxLiteral is entered.
 func (s *BaseMooncakeListener) EnterCtxLiteral(ctx *CtxLiteralContext) {}

@@ -1,7 +1,7 @@
 package lang
 
 type Params struct {
-	// TODO:
+	// TODO: encapsulate generic params interface with this struct
 }
 
 type Function interface {
@@ -9,14 +9,6 @@ type Function interface {
 }
 
 type LengthFunction struct {
-	Function
-}
-
-type DateTimeLongFunction struct {
-	Function
-}
-
-type AfterCurrentTimeFunction struct {
 	Function
 }
 
@@ -29,8 +21,16 @@ func (f *LengthFunction) apply(params []interface{}) interface{} {
 	}
 }
 
+type DateTimeLongFunction struct {
+	Function
+}
+
 func (f *DateTimeLongFunction) apply(params []interface{}) interface{} {
 	panic("DateTimeLongFunction not implemented!")
+}
+
+type AfterCurrentTimeFunction struct {
+	Function
 }
 
 func (f *AfterCurrentTimeFunction) apply(params []interface{}) interface{} {

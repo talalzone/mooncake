@@ -32,12 +32,12 @@ inlineStmt
     | id=DECL_ID fn=function
     ;
 
-exprStmt
-    : id=identifier  op=operator  val=literal
+errorStmt
+    : '[' code=STRING ',' info=STRING ']' errType=errorType
     ;
 
-errorStmt
-    : '[' code=ERROR_CODE ',' info=ERROR_INFO ']' errType=errorType
+exprStmt
+    : id=identifier  op=operator  val=literal
     ;
 
 identifier
@@ -50,6 +50,7 @@ literal
     | floatLiteral
     | boolLiteral
     | nullLiteral
+    | stringLiteral
     | ctxLiteral
     ;
 
@@ -124,6 +125,10 @@ boolLiteral
 
 nullLiteral
     : NULL
+    ;
+
+stringLiteral
+    : STRING
     ;
 
 ctxLiteral
@@ -214,20 +219,12 @@ AFTER_CURR_TIME
     : '@afterCurrentTime'
     ;
 
-EXISTS
-    : 'exists'
-    ;
-
-EMPTY
-    : 'empty'
-    ;
-
 FLOAT
-    : '-'? INT '.' [0-9]+
+    :  INT '.' Numeric+
     ;
 
 INT
-    : [0-9] [0-9]*
+    : '-'? Numeric+
     ;
 
 BOOL
@@ -235,19 +232,24 @@ BOOL
     | FALSE
     ;
 
-TRUE
-    : 'true'
-    ;
-FALSE
-    : 'false'
-    ;
-
 NULL
     : 'nil'
     ;
 
+STRING
+    : SingleQuoteString
+    ;
+
+TRUE
+    : 'true'
+    ;
+
+FALSE
+    : 'false'
+    ;
+
 COMMENT
-    : '#' ~[\r\n]* -> skip
+    : ('#' ~[\r\n]*) -> skip
     ;
 
 WS  :  [ \t]+ -> channel(HIDDEN)
@@ -257,22 +259,55 @@ TERMINATOR
 	: [\r\n]+ -> channel(HIDDEN)
 	;
 
+DECL_ID
+    : Underscore AlphaNumeric
+    ;
+
 ATTR_ID
-    : ( 'a'..'z' | 'A'..'Z'  | '[' INT ']' )+ ( '.' ATTR_ID )?
+    : ( AlphaNumeric | '[' Numeric ']' | Underscore )+ ( '.' ATTR_ID )?
     ;
 
 CTX_ID
     : '${' ATTR_ID '}'
     ;
 
-DECL_ID
-    : '_' ( 'a'..'z' | 'A'..'Z' )+
+fragment Character
+    : ('a'..'z' | 'A'..'Z')
     ;
 
-ERROR_CODE
-    : ( 'a'..'z' | 'A'..'Z' | [0-9] )+
+fragment Numeric
+    : [0-9]
     ;
 
-ERROR_INFO
-    :  '\'' .*? '\''
+fragment AlphaNumeric
+    : (Character | Numeric)
     ;
+
+fragment Underscore
+    : '_'
+    ;
+
+fragment SingleQuote
+    : '\''
+    ;
+
+fragment DoubleQuote
+    : '"'
+    ;
+
+fragment SingleQuoteString
+    : SingleQuote ( EscSeq | ~['\r\n\\] )* SingleQuote
+    ;
+
+fragment EscSeq
+	:	Esc ( [btnfr"'\\] | . | EOF	)
+	;
+
+fragment EscAny
+	:	Esc .
+	;
+
+fragment Esc
+    : '\\'
+    ;
+

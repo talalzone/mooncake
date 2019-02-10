@@ -28,11 +28,11 @@ type MooncakeVisitor interface {
 	// Visit a parse tree produced by MooncakeParser#inlineStmt.
 	VisitInlineStmt(ctx *InlineStmtContext) interface{}
 
-	// Visit a parse tree produced by MooncakeParser#exprStmt.
-	VisitExprStmt(ctx *ExprStmtContext) interface{}
-
 	// Visit a parse tree produced by MooncakeParser#errorStmt.
 	VisitErrorStmt(ctx *ErrorStmtContext) interface{}
+
+	// Visit a parse tree produced by MooncakeParser#exprStmt.
+	VisitExprStmt(ctx *ExprStmtContext) interface{}
 
 	// Visit a parse tree produced by MooncakeParser#identifier.
 	VisitIdentifier(ctx *IdentifierContext) interface{}
@@ -87,6 +87,9 @@ type MooncakeVisitor interface {
 
 	// Visit a parse tree produced by MooncakeParser#nullLiteral.
 	VisitNullLiteral(ctx *NullLiteralContext) interface{}
+
+	// Visit a parse tree produced by MooncakeParser#stringLiteral.
+	VisitStringLiteral(ctx *StringLiteralContext) interface{}
 
 	// Visit a parse tree produced by MooncakeParser#ctxLiteral.
 	VisitCtxLiteral(ctx *CtxLiteralContext) interface{}

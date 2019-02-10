@@ -12,5 +12,5 @@ type ValidationResult struct {
 }
 
 func NewValidationResult() ValidationResult {
-	return ValidationResult{make([]Error, 0), make([]Error, 0), make([]Error, 0)}
+	return ValidationResult{[]Error{}, []Error{}, []Error{}}
 }

@@ -55,6 +55,11 @@ func ToLiteral(val reflect.Value) Literal {
 	}
 }
 
+func ToUnescapedStr(val string) string {
+	unescapedStr := val[1 : len(val)-1] // for now removing superfluous quotes
+	return unescapedStr
+}
+
 func StrToInt(val string) int {
 	intVal, _ := strconv.Atoi(val)
 	return intVal

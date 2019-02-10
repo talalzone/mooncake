@@ -17,80 +17,82 @@ var _ = strconv.Itoa
 
 
 var parserATN = []uint16{
-	3, 24715, 42794, 33075, 47597, 16764, 15335, 30598, 22884, 3, 40, 187, 
+	3, 24715, 42794, 33075, 47597, 16764, 15335, 30598, 22884, 3, 37, 192, 
 	4, 2, 9, 2, 4, 3, 9, 3, 4, 4, 9, 4, 4, 5, 9, 5, 4, 6, 9, 6, 4, 7, 9, 7, 
 	4, 8, 9, 8, 4, 9, 9, 9, 4, 10, 9, 10, 4, 11, 9, 11, 4, 12, 9, 12, 4, 13, 
 	9, 13, 4, 14, 9, 14, 4, 15, 9, 15, 4, 16, 9, 16, 4, 17, 9, 17, 4, 18, 9, 
 	18, 4, 19, 9, 19, 4, 20, 9, 20, 4, 21, 9, 21, 4, 22, 9, 22, 4, 23, 9, 23, 
 	4, 24, 9, 24, 4, 25, 9, 25, 4, 26, 9, 26, 4, 27, 9, 27, 4, 28, 9, 28, 4, 
 	29, 9, 29, 4, 30, 9, 30, 4, 31, 9, 31, 4, 32, 9, 32, 4, 33, 9, 33, 4, 34, 
-	9, 34, 3, 2, 3, 2, 3, 3, 3, 3, 5, 3, 73, 10, 3, 7, 3, 75, 10, 3, 12, 3, 
-	14, 3, 78, 11, 3, 3, 4, 3, 4, 3, 4, 5, 4, 83, 10, 4, 3, 5, 3, 5, 3, 5, 
-	3, 5, 3, 6, 3, 6, 3, 6, 5, 6, 92, 10, 6, 3, 7, 5, 7, 95, 10, 7, 3, 7, 3, 
-	7, 3, 7, 3, 7, 5, 7, 101, 10, 7, 3, 8, 3, 8, 3, 8, 3, 8, 5, 8, 107, 10, 
-	8, 3, 9, 3, 9, 3, 9, 3, 9, 3, 10, 3, 10, 3, 10, 3, 10, 3, 10, 3, 10, 3, 
-	10, 3, 11, 3, 11, 5, 11, 122, 10, 11, 3, 12, 3, 12, 3, 12, 3, 12, 3, 12, 
-	5, 12, 129, 10, 12, 3, 13, 3, 13, 3, 13, 5, 13, 134, 10, 13, 3, 14, 3, 
-	14, 3, 14, 3, 14, 3, 14, 3, 14, 5, 14, 142, 10, 14, 3, 15, 3, 15, 3, 15, 
-	5, 15, 147, 10, 15, 3, 16, 3, 16, 3, 17, 3, 17, 3, 18, 3, 18, 3, 19, 3, 
-	19, 3, 20, 3, 20, 3, 21, 3, 21, 3, 22, 3, 22, 3, 23, 3, 23, 3, 24, 3, 24, 
-	3, 25, 3, 25, 3, 26, 3, 26, 3, 27, 3, 27, 3, 28, 3, 28, 3, 29, 3, 29, 3, 
-	30, 3, 30, 3, 31, 3, 31, 3, 32, 3, 32, 3, 33, 3, 33, 3, 34, 3, 34, 3, 34, 
-	2, 2, 35, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 
-	36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 2, 2, 2, 
-	176, 2, 68, 3, 2, 2, 2, 4, 76, 3, 2, 2, 2, 6, 82, 3, 2, 2, 2, 8, 84, 3, 
-	2, 2, 2, 10, 88, 3, 2, 2, 2, 12, 94, 3, 2, 2, 2, 14, 106, 3, 2, 2, 2, 16, 
-	108, 3, 2, 2, 2, 18, 112, 3, 2, 2, 2, 20, 121, 3, 2, 2, 2, 22, 128, 3, 
-	2, 2, 2, 24, 133, 3, 2, 2, 2, 26, 141, 3, 2, 2, 2, 28, 146, 3, 2, 2, 2, 
-	30, 148, 3, 2, 2, 2, 32, 150, 3, 2, 2, 2, 34, 152, 3, 2, 2, 2, 36, 154, 
-	3, 2, 2, 2, 38, 156, 3, 2, 2, 2, 40, 158, 3, 2, 2, 2, 42, 160, 3, 2, 2, 
-	2, 44, 162, 3, 2, 2, 2, 46, 164, 3, 2, 2, 2, 48, 166, 3, 2, 2, 2, 50, 168, 
-	3, 2, 2, 2, 52, 170, 3, 2, 2, 2, 54, 172, 3, 2, 2, 2, 56, 174, 3, 2, 2, 
-	2, 58, 176, 3, 2, 2, 2, 60, 178, 3, 2, 2, 2, 62, 180, 3, 2, 2, 2, 64, 182, 
-	3, 2, 2, 2, 66, 184, 3, 2, 2, 2, 68, 69, 5, 4, 3, 2, 69, 3, 3, 2, 2, 2, 
-	70, 72, 5, 6, 4, 2, 71, 73, 7, 33, 2, 2, 72, 71, 3, 2, 2, 2, 72, 73, 3, 
-	2, 2, 2, 73, 75, 3, 2, 2, 2, 74, 70, 3, 2, 2, 2, 75, 78, 3, 2, 2, 2, 76, 
-	74, 3, 2, 2, 2, 76, 77, 3, 2, 2, 2, 77, 5, 3, 2, 2, 2, 78, 76, 3, 2, 2, 
-	2, 79, 83, 5, 8, 5, 2, 80, 83, 5, 10, 6, 2, 81, 83, 5, 12, 7, 2, 82, 79, 
-	3, 2, 2, 2, 82, 80, 3, 2, 2, 2, 82, 81, 3, 2, 2, 2, 83, 7, 3, 2, 2, 2, 
-	84, 85, 7, 3, 2, 2, 85, 86, 5, 4, 3, 2, 86, 87, 7, 4, 2, 2, 87, 9, 3, 2, 
-	2, 2, 88, 89, 7, 12, 2, 2, 89, 91, 5, 12, 7, 2, 90, 92, 5, 10, 6, 2, 91, 
-	90, 3, 2, 2, 2, 91, 92, 3, 2, 2, 2, 92, 11, 3, 2, 2, 2, 93, 95, 5, 14, 
-	8, 2, 94, 93, 3, 2, 2, 2, 94, 95, 3, 2, 2, 2, 95, 96, 3, 2, 2, 2, 96, 97, 
-	5, 16, 9, 2, 97, 98, 7, 5, 2, 2, 98, 100, 5, 18, 10, 2, 99, 101, 5, 8, 
-	5, 2, 100, 99, 3, 2, 2, 2, 100, 101, 3, 2, 2, 2, 101, 13, 3, 2, 2, 2, 102, 
-	107, 7, 38, 2, 2, 103, 107, 5, 24, 13, 2, 104, 105, 7, 38, 2, 2, 105, 107, 
-	5, 24, 13, 2, 106, 102, 3, 2, 2, 2, 106, 103, 3, 2, 2, 2, 106, 104, 3, 
-	2, 2, 2, 107, 15, 3, 2, 2, 2, 108, 109, 5, 20, 11, 2, 109, 110, 5, 26, 
-	14, 2, 110, 111, 5, 22, 12, 2, 111, 17, 3, 2, 2, 2, 112, 113, 7, 6, 2, 
-	2, 113, 114, 7, 39, 2, 2, 114, 115, 7, 7, 2, 2, 115, 116, 7, 40, 2, 2, 
-	116, 117, 7, 8, 2, 2, 117, 118, 5, 28, 15, 2, 118, 19, 3, 2, 2, 2, 119, 
-	122, 5, 58, 30, 2, 120, 122, 5, 60, 31, 2, 121, 119, 3, 2, 2, 2, 121, 120, 
-	3, 2, 2, 2, 122, 21, 3, 2, 2, 2, 123, 129, 5, 48, 25, 2, 124, 129, 5, 50, 
-	26, 2, 125, 129, 5, 52, 27, 2, 126, 129, 5, 54, 28, 2, 127, 129, 5, 56, 
-	29, 2, 128, 123, 3, 2, 2, 2, 128, 124, 3, 2, 2, 2, 128, 125, 3, 2, 2, 2, 
-	128, 126, 3, 2, 2, 2, 128, 127, 3, 2, 2, 2, 129, 23, 3, 2, 2, 2, 130, 134, 
-	5, 62, 32, 2, 131, 134, 5, 64, 33, 2, 132, 134, 5, 66, 34, 2, 133, 130, 
-	3, 2, 2, 2, 133, 131, 3, 2, 2, 2, 133, 132, 3, 2, 2, 2, 134, 25, 3, 2, 
-	2, 2, 135, 142, 5, 36, 19, 2, 136, 142, 5, 38, 20, 2, 137, 142, 5, 40, 
-	21, 2, 138, 142, 5, 42, 22, 2, 139, 142, 5, 44, 23, 2, 140, 142, 5, 46, 
-	24, 2, 141, 135, 3, 2, 2, 2, 141, 136, 3, 2, 2, 2, 141, 137, 3, 2, 2, 2, 
-	141, 138, 3, 2, 2, 2, 141, 139, 3, 2, 2, 2, 141, 140, 3, 2, 2, 2, 142, 
-	27, 3, 2, 2, 2, 143, 147, 5, 30, 16, 2, 144, 147, 5, 32, 17, 2, 145, 147, 
-	5, 34, 18, 2, 146, 143, 3, 2, 2, 2, 146, 144, 3, 2, 2, 2, 146, 145, 3, 
-	2, 2, 2, 147, 29, 3, 2, 2, 2, 148, 149, 7, 9, 2, 2, 149, 31, 3, 2, 2, 2, 
-	150, 151, 7, 10, 2, 2, 151, 33, 3, 2, 2, 2, 152, 153, 7, 11, 2, 2, 153, 
-	35, 3, 2, 2, 2, 154, 155, 7, 13, 2, 2, 155, 37, 3, 2, 2, 2, 156, 157, 7, 
-	14, 2, 2, 157, 39, 3, 2, 2, 2, 158, 159, 7, 17, 2, 2, 159, 41, 3, 2, 2, 
-	2, 160, 161, 7, 18, 2, 2, 161, 43, 3, 2, 2, 2, 162, 163, 7, 19, 2, 2, 163, 
-	45, 3, 2, 2, 2, 164, 165, 7, 20, 2, 2, 165, 47, 3, 2, 2, 2, 166, 167, 7, 
-	28, 2, 2, 167, 49, 3, 2, 2, 2, 168, 169, 7, 27, 2, 2, 169, 51, 3, 2, 2, 
-	2, 170, 171, 7, 29, 2, 2, 171, 53, 3, 2, 2, 2, 172, 173, 7, 32, 2, 2, 173, 
-	55, 3, 2, 2, 2, 174, 175, 7, 37, 2, 2, 175, 57, 3, 2, 2, 2, 176, 177, 7, 
-	36, 2, 2, 177, 59, 3, 2, 2, 2, 178, 179, 7, 38, 2, 2, 179, 61, 3, 2, 2, 
-	2, 180, 181, 7, 21, 2, 2, 181, 63, 3, 2, 2, 2, 182, 183, 7, 23, 2, 2, 183, 
-	65, 3, 2, 2, 2, 184, 185, 7, 24, 2, 2, 185, 67, 3, 2, 2, 2, 14, 72, 76, 
-	82, 91, 94, 100, 106, 121, 128, 133, 141, 146,
+	9, 34, 4, 35, 9, 35, 3, 2, 3, 2, 3, 3, 3, 3, 5, 3, 75, 10, 3, 7, 3, 77, 
+	10, 3, 12, 3, 14, 3, 80, 11, 3, 3, 4, 3, 4, 3, 4, 5, 4, 85, 10, 4, 3, 5, 
+	3, 5, 3, 5, 3, 5, 3, 6, 3, 6, 3, 6, 5, 6, 94, 10, 6, 3, 7, 5, 7, 97, 10, 
+	7, 3, 7, 3, 7, 3, 7, 3, 7, 5, 7, 103, 10, 7, 3, 8, 3, 8, 3, 8, 3, 8, 5, 
+	8, 109, 10, 8, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 10, 3, 10, 
+	3, 10, 3, 10, 3, 11, 3, 11, 5, 11, 124, 10, 11, 3, 12, 3, 12, 3, 12, 3, 
+	12, 3, 12, 3, 12, 5, 12, 132, 10, 12, 3, 13, 3, 13, 3, 13, 5, 13, 137, 
+	10, 13, 3, 14, 3, 14, 3, 14, 3, 14, 3, 14, 3, 14, 5, 14, 145, 10, 14, 3, 
+	15, 3, 15, 3, 15, 5, 15, 150, 10, 15, 3, 16, 3, 16, 3, 17, 3, 17, 3, 18, 
+	3, 18, 3, 19, 3, 19, 3, 20, 3, 20, 3, 21, 3, 21, 3, 22, 3, 22, 3, 23, 3, 
+	23, 3, 24, 3, 24, 3, 25, 3, 25, 3, 26, 3, 26, 3, 27, 3, 27, 3, 28, 3, 28, 
+	3, 29, 3, 29, 3, 30, 3, 30, 3, 31, 3, 31, 3, 32, 3, 32, 3, 33, 3, 33, 3, 
+	34, 3, 34, 3, 35, 3, 35, 3, 35, 2, 2, 36, 2, 4, 6, 8, 10, 12, 14, 16, 18, 
+	20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 
+	56, 58, 60, 62, 64, 66, 68, 2, 2, 2, 181, 2, 70, 3, 2, 2, 2, 4, 78, 3, 
+	2, 2, 2, 6, 84, 3, 2, 2, 2, 8, 86, 3, 2, 2, 2, 10, 90, 3, 2, 2, 2, 12, 
+	96, 3, 2, 2, 2, 14, 108, 3, 2, 2, 2, 16, 110, 3, 2, 2, 2, 18, 117, 3, 2, 
+	2, 2, 20, 123, 3, 2, 2, 2, 22, 131, 3, 2, 2, 2, 24, 136, 3, 2, 2, 2, 26, 
+	144, 3, 2, 2, 2, 28, 149, 3, 2, 2, 2, 30, 151, 3, 2, 2, 2, 32, 153, 3, 
+	2, 2, 2, 34, 155, 3, 2, 2, 2, 36, 157, 3, 2, 2, 2, 38, 159, 3, 2, 2, 2, 
+	40, 161, 3, 2, 2, 2, 42, 163, 3, 2, 2, 2, 44, 165, 3, 2, 2, 2, 46, 167, 
+	3, 2, 2, 2, 48, 169, 3, 2, 2, 2, 50, 171, 3, 2, 2, 2, 52, 173, 3, 2, 2, 
+	2, 54, 175, 3, 2, 2, 2, 56, 177, 3, 2, 2, 2, 58, 179, 3, 2, 2, 2, 60, 181, 
+	3, 2, 2, 2, 62, 183, 3, 2, 2, 2, 64, 185, 3, 2, 2, 2, 66, 187, 3, 2, 2, 
+	2, 68, 189, 3, 2, 2, 2, 70, 71, 5, 4, 3, 2, 71, 3, 3, 2, 2, 2, 72, 74, 
+	5, 6, 4, 2, 73, 75, 7, 32, 2, 2, 74, 73, 3, 2, 2, 2, 74, 75, 3, 2, 2, 2, 
+	75, 77, 3, 2, 2, 2, 76, 72, 3, 2, 2, 2, 77, 80, 3, 2, 2, 2, 78, 76, 3, 
+	2, 2, 2, 78, 79, 3, 2, 2, 2, 79, 5, 3, 2, 2, 2, 80, 78, 3, 2, 2, 2, 81, 
+	85, 5, 8, 5, 2, 82, 85, 5, 10, 6, 2, 83, 85, 5, 12, 7, 2, 84, 81, 3, 2, 
+	2, 2, 84, 82, 3, 2, 2, 2, 84, 83, 3, 2, 2, 2, 85, 7, 3, 2, 2, 2, 86, 87, 
+	7, 3, 2, 2, 87, 88, 5, 4, 3, 2, 88, 89, 7, 4, 2, 2, 89, 9, 3, 2, 2, 2, 
+	90, 91, 7, 12, 2, 2, 91, 93, 5, 12, 7, 2, 92, 94, 5, 10, 6, 2, 93, 92, 
+	3, 2, 2, 2, 93, 94, 3, 2, 2, 2, 94, 11, 3, 2, 2, 2, 95, 97, 5, 14, 8, 2, 
+	96, 95, 3, 2, 2, 2, 96, 97, 3, 2, 2, 2, 97, 98, 3, 2, 2, 2, 98, 99, 5, 
+	18, 10, 2, 99, 100, 7, 5, 2, 2, 100, 102, 5, 16, 9, 2, 101, 103, 5, 8, 
+	5, 2, 102, 101, 3, 2, 2, 2, 102, 103, 3, 2, 2, 2, 103, 13, 3, 2, 2, 2, 
+	104, 109, 7, 35, 2, 2, 105, 109, 5, 24, 13, 2, 106, 107, 7, 35, 2, 2, 107, 
+	109, 5, 24, 13, 2, 108, 104, 3, 2, 2, 2, 108, 105, 3, 2, 2, 2, 108, 106, 
+	3, 2, 2, 2, 109, 15, 3, 2, 2, 2, 110, 111, 7, 6, 2, 2, 111, 112, 7, 29, 
+	2, 2, 112, 113, 7, 7, 2, 2, 113, 114, 7, 29, 2, 2, 114, 115, 7, 8, 2, 2, 
+	115, 116, 5, 28, 15, 2, 116, 17, 3, 2, 2, 2, 117, 118, 5, 20, 11, 2, 118, 
+	119, 5, 26, 14, 2, 119, 120, 5, 22, 12, 2, 120, 19, 3, 2, 2, 2, 121, 124, 
+	5, 60, 31, 2, 122, 124, 5, 62, 32, 2, 123, 121, 3, 2, 2, 2, 123, 122, 3, 
+	2, 2, 2, 124, 21, 3, 2, 2, 2, 125, 132, 5, 48, 25, 2, 126, 132, 5, 50, 
+	26, 2, 127, 132, 5, 52, 27, 2, 128, 132, 5, 54, 28, 2, 129, 132, 5, 56, 
+	29, 2, 130, 132, 5, 58, 30, 2, 131, 125, 3, 2, 2, 2, 131, 126, 3, 2, 2, 
+	2, 131, 127, 3, 2, 2, 2, 131, 128, 3, 2, 2, 2, 131, 129, 3, 2, 2, 2, 131, 
+	130, 3, 2, 2, 2, 132, 23, 3, 2, 2, 2, 133, 137, 5, 64, 33, 2, 134, 137, 
+	5, 66, 34, 2, 135, 137, 5, 68, 35, 2, 136, 133, 3, 2, 2, 2, 136, 134, 3, 
+	2, 2, 2, 136, 135, 3, 2, 2, 2, 137, 25, 3, 2, 2, 2, 138, 145, 5, 36, 19, 
+	2, 139, 145, 5, 38, 20, 2, 140, 145, 5, 40, 21, 2, 141, 145, 5, 42, 22, 
+	2, 142, 145, 5, 44, 23, 2, 143, 145, 5, 46, 24, 2, 144, 138, 3, 2, 2, 2, 
+	144, 139, 3, 2, 2, 2, 144, 140, 3, 2, 2, 2, 144, 141, 3, 2, 2, 2, 144, 
+	142, 3, 2, 2, 2, 144, 143, 3, 2, 2, 2, 145, 27, 3, 2, 2, 2, 146, 150, 5, 
+	30, 16, 2, 147, 150, 5, 32, 17, 2, 148, 150, 5, 34, 18, 2, 149, 146, 3, 
+	2, 2, 2, 149, 147, 3, 2, 2, 2, 149, 148, 3, 2, 2, 2, 150, 29, 3, 2, 2, 
+	2, 151, 152, 7, 9, 2, 2, 152, 31, 3, 2, 2, 2, 153, 154, 7, 10, 2, 2, 154, 
+	33, 3, 2, 2, 2, 155, 156, 7, 11, 2, 2, 156, 35, 3, 2, 2, 2, 157, 158, 7, 
+	13, 2, 2, 158, 37, 3, 2, 2, 2, 159, 160, 7, 14, 2, 2, 160, 39, 3, 2, 2, 
+	2, 161, 162, 7, 17, 2, 2, 162, 41, 3, 2, 2, 2, 163, 164, 7, 18, 2, 2, 164, 
+	43, 3, 2, 2, 2, 165, 166, 7, 19, 2, 2, 166, 45, 3, 2, 2, 2, 167, 168, 7, 
+	20, 2, 2, 168, 47, 3, 2, 2, 2, 169, 170, 7, 26, 2, 2, 170, 49, 3, 2, 2, 
+	2, 171, 172, 7, 25, 2, 2, 172, 51, 3, 2, 2, 2, 173, 174, 7, 27, 2, 2, 174, 
+	53, 3, 2, 2, 2, 175, 176, 7, 28, 2, 2, 176, 55, 3, 2, 2, 2, 177, 178, 7, 
+	29, 2, 2, 178, 57, 3, 2, 2, 2, 179, 180, 7, 37, 2, 2, 180, 59, 3, 2, 2, 
+	2, 181, 182, 7, 36, 2, 2, 182, 61, 3, 2, 2, 2, 183, 184, 7, 35, 2, 2, 184, 
+	63, 3, 2, 2, 2, 185, 186, 7, 21, 2, 2, 186, 65, 3, 2, 2, 2, 187, 188, 7, 
+	23, 2, 2, 188, 67, 3, 2, 2, 2, 189, 190, 7, 24, 2, 2, 190, 69, 3, 2, 2, 
+	2, 14, 74, 78, 84, 93, 96, 102, 108, 123, 131, 136, 144, 149,
 }
 var deserializer = antlr.NewATNDeserializer(nil)
 var deserializedATN = deserializer.DeserializeFromUInt16(parserATN)
@@ -98,24 +100,22 @@ var deserializedATN = deserializer.DeserializeFromUInt16(parserATN)
 var literalNames = []string{
 	"", "'{'", "'}'", "'=>'", "'['", "','", "']'", "'!!!'", "'!!'", "'!'", 
 	"'~'", "", "", "", "", "", "", "", "", "'@len'", "'@float'", "'@dateTimeLong'", 
-	"'@afterCurrentTime'", "'exists'", "'empty'", "", "", "", "'true'", "'false'", 
-	"'nil'",
+	"'@afterCurrentTime'", "", "", "", "'nil'", "", "'true'", "'false'",
 }
 var symbolicNames = []string{
 	"", "", "", "", "", "", "", "FATAL", "SEVERE", "WARNING", "LINKED", "EQ", 
 	"NE", "AND", "OR", "GT", "LT", "GTE", "LTE", "LEN_FUNC", "FLOAT_FUNC", 
-	"DATETIME_LONG", "AFTER_CURR_TIME", "EXISTS", "EMPTY", "FLOAT", "INT", 
-	"BOOL", "TRUE", "FALSE", "NULL", "COMMENT", "WS", "TERMINATOR", "ATTR_ID", 
-	"CTX_ID", "DECL_ID", "ERROR_CODE", "ERROR_INFO",
+	"DATETIME_LONG", "AFTER_CURR_TIME", "FLOAT", "INT", "BOOL", "NULL", "STRING", 
+	"TRUE", "FALSE", "COMMENT", "WS", "TERMINATOR", "DECL_ID", "ATTR_ID", "CTX_ID",
 }
 
 var ruleNames = []string{
 	"mcrule", "statementList", "statement", "block", "linkedStmt", "simpleStmt", 
-	"inlineStmt", "exprStmt", "errorStmt", "identifier", "literal", "function", 
+	"inlineStmt", "errorStmt", "exprStmt", "identifier", "literal", "function", 
 	"operator", "errorType", "fatalError", "severeError", "warningError", "equalOperator", 
 	"notEqualOperator", "greaterThanOperator", "lessThanOperator", "greaterThanOrEqualOperator", 
 	"lessThanOrEqualOperator", "intLiteral", "floatLiteral", "boolLiteral", 
-	"nullLiteral", "ctxLiteral", "attributeIdentifier", "declarationIdentifier", 
+	"nullLiteral", "stringLiteral", "ctxLiteral", "attributeIdentifier", "declarationIdentifier", 
 	"lengthFunction", "dateTimeLongFunction", "afterCurrentTimeFunction",
 }
 var decisionToDFA = make([]*antlr.DFA, len(deserializedATN.DecisionToState))
@@ -169,22 +169,19 @@ const (
 	MooncakeParserFLOAT_FUNC = 20
 	MooncakeParserDATETIME_LONG = 21
 	MooncakeParserAFTER_CURR_TIME = 22
-	MooncakeParserEXISTS = 23
-	MooncakeParserEMPTY = 24
-	MooncakeParserFLOAT = 25
-	MooncakeParserINT = 26
-	MooncakeParserBOOL = 27
+	MooncakeParserFLOAT = 23
+	MooncakeParserINT = 24
+	MooncakeParserBOOL = 25
+	MooncakeParserNULL = 26
+	MooncakeParserSTRING = 27
 	MooncakeParserTRUE = 28
 	MooncakeParserFALSE = 29
-	MooncakeParserNULL = 30
-	MooncakeParserCOMMENT = 31
-	MooncakeParserWS = 32
-	MooncakeParserTERMINATOR = 33
+	MooncakeParserCOMMENT = 30
+	MooncakeParserWS = 31
+	MooncakeParserTERMINATOR = 32
+	MooncakeParserDECL_ID = 33
 	MooncakeParserATTR_ID = 34
 	MooncakeParserCTX_ID = 35
-	MooncakeParserDECL_ID = 36
-	MooncakeParserERROR_CODE = 37
-	MooncakeParserERROR_INFO = 38
 )
 
 // MooncakeParser rules.
@@ -196,8 +193,8 @@ const (
 	MooncakeParserRULE_linkedStmt = 4
 	MooncakeParserRULE_simpleStmt = 5
 	MooncakeParserRULE_inlineStmt = 6
-	MooncakeParserRULE_exprStmt = 7
-	MooncakeParserRULE_errorStmt = 8
+	MooncakeParserRULE_errorStmt = 7
+	MooncakeParserRULE_exprStmt = 8
 	MooncakeParserRULE_identifier = 9
 	MooncakeParserRULE_literal = 10
 	MooncakeParserRULE_function = 11
@@ -216,12 +213,13 @@ const (
 	MooncakeParserRULE_floatLiteral = 24
 	MooncakeParserRULE_boolLiteral = 25
 	MooncakeParserRULE_nullLiteral = 26
-	MooncakeParserRULE_ctxLiteral = 27
-	MooncakeParserRULE_attributeIdentifier = 28
-	MooncakeParserRULE_declarationIdentifier = 29
-	MooncakeParserRULE_lengthFunction = 30
-	MooncakeParserRULE_dateTimeLongFunction = 31
-	MooncakeParserRULE_afterCurrentTimeFunction = 32
+	MooncakeParserRULE_stringLiteral = 27
+	MooncakeParserRULE_ctxLiteral = 28
+	MooncakeParserRULE_attributeIdentifier = 29
+	MooncakeParserRULE_declarationIdentifier = 30
+	MooncakeParserRULE_lengthFunction = 31
+	MooncakeParserRULE_dateTimeLongFunction = 32
+	MooncakeParserRULE_afterCurrentTimeFunction = 33
 )
 
 // IMcruleContext is an interface to support dynamic dispatch.
@@ -328,7 +326,7 @@ func (p *MooncakeParser) Mcrule() (localctx IMcruleContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(66)
+		p.SetState(68)
 		p.StatementList()
 	}
 
@@ -464,31 +462,31 @@ func (p *MooncakeParser) StatementList() (localctx IStatementListContext) {
 	}()
 
 	p.EnterOuterAlt(localctx, 1)
-	p.SetState(74)
+	p.SetState(76)
 	p.GetErrorHandler().Sync(p)
 	_la = p.GetTokenStream().LA(1)
 
 
-	for (((_la) & -(0x1f+1)) == 0 && ((1 << uint(_la)) & ((1 << MooncakeParserT__0) | (1 << MooncakeParserLINKED) | (1 << MooncakeParserLEN_FUNC) | (1 << MooncakeParserDATETIME_LONG) | (1 << MooncakeParserAFTER_CURR_TIME))) != 0) || _la == MooncakeParserATTR_ID || _la == MooncakeParserDECL_ID {
+	for (((_la) & -(0x1f+1)) == 0 && ((1 << uint(_la)) & ((1 << MooncakeParserT__0) | (1 << MooncakeParserLINKED) | (1 << MooncakeParserLEN_FUNC) | (1 << MooncakeParserDATETIME_LONG) | (1 << MooncakeParserAFTER_CURR_TIME))) != 0) || _la == MooncakeParserDECL_ID || _la == MooncakeParserATTR_ID {
 		{
-			p.SetState(68)
+			p.SetState(70)
 			p.Statement()
 		}
-		p.SetState(70)
+		p.SetState(72)
 		p.GetErrorHandler().Sync(p)
 		_la = p.GetTokenStream().LA(1)
 
 
 		if _la == MooncakeParserCOMMENT {
 			{
-				p.SetState(69)
+				p.SetState(71)
 				p.Match(MooncakeParserCOMMENT)
 			}
 
 		}
 
 
-		p.SetState(76)
+		p.SetState(78)
 		p.GetErrorHandler().Sync(p)
 		_la = p.GetTokenStream().LA(1)
 	}
@@ -621,14 +619,14 @@ func (p *MooncakeParser) Statement() (localctx IStatementContext) {
 		}
 	}()
 
-	p.SetState(80)
+	p.SetState(82)
 	p.GetErrorHandler().Sync(p)
 
 	switch p.GetTokenStream().LA(1) {
 	case MooncakeParserT__0:
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(77)
+			p.SetState(79)
 			p.Block()
 		}
 
@@ -636,15 +634,15 @@ func (p *MooncakeParser) Statement() (localctx IStatementContext) {
 	case MooncakeParserLINKED:
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(78)
+			p.SetState(80)
 			p.LinkedStmt()
 		}
 
 
-	case MooncakeParserLEN_FUNC, MooncakeParserDATETIME_LONG, MooncakeParserAFTER_CURR_TIME, MooncakeParserATTR_ID, MooncakeParserDECL_ID:
+	case MooncakeParserLEN_FUNC, MooncakeParserDATETIME_LONG, MooncakeParserAFTER_CURR_TIME, MooncakeParserDECL_ID, MooncakeParserATTR_ID:
 		p.EnterOuterAlt(localctx, 3)
 		{
-			p.SetState(79)
+			p.SetState(81)
 			p.SimpleStmt()
 		}
 
@@ -763,15 +761,15 @@ func (p *MooncakeParser) Block() (localctx IBlockContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(82)
+		p.SetState(84)
 		p.Match(MooncakeParserT__0)
 	}
 	{
-		p.SetState(83)
+		p.SetState(85)
 		p.StatementList()
 	}
 	{
-		p.SetState(84)
+		p.SetState(86)
 		p.Match(MooncakeParserT__1)
 	}
 
@@ -899,20 +897,20 @@ func (p *MooncakeParser) LinkedStmt() (localctx ILinkedStmtContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(86)
+		p.SetState(88)
 		p.Match(MooncakeParserLINKED)
 	}
 	{
-		p.SetState(87)
+		p.SetState(89)
 		p.SimpleStmt()
 	}
-	p.SetState(89)
+	p.SetState(91)
 	p.GetErrorHandler().Sync(p)
 
 
 	if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 3, p.GetParserRuleContext()) == 1 {
 		{
-			p.SetState(88)
+			p.SetState(90)
 			p.LinkedStmt()
 		}
 
@@ -1058,37 +1056,37 @@ func (p *MooncakeParser) SimpleStmt() (localctx ISimpleStmtContext) {
 	}()
 
 	p.EnterOuterAlt(localctx, 1)
-	p.SetState(92)
+	p.SetState(94)
 	p.GetErrorHandler().Sync(p)
 
 
 	if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 4, p.GetParserRuleContext()) == 1 {
 		{
-			p.SetState(91)
+			p.SetState(93)
 			p.InlineStmt()
 		}
 
 
 	}
 	{
-		p.SetState(94)
+		p.SetState(96)
 		p.ExprStmt()
 	}
 	{
-		p.SetState(95)
+		p.SetState(97)
 		p.Match(MooncakeParserT__2)
 	}
 	{
-		p.SetState(96)
+		p.SetState(98)
 		p.ErrorStmt()
 	}
-	p.SetState(98)
+	p.SetState(100)
 	p.GetErrorHandler().Sync(p)
 
 
 	if p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 5, p.GetParserRuleContext()) == 1 {
 		{
-			p.SetState(97)
+			p.SetState(99)
 			p.Block()
 		}
 
@@ -1237,13 +1235,13 @@ func (p *MooncakeParser) InlineStmt() (localctx IInlineStmtContext) {
 		}
 	}()
 
-	p.SetState(104)
+	p.SetState(106)
 	p.GetErrorHandler().Sync(p)
 	switch p.GetInterpreter().AdaptivePredict(p.GetTokenStream(), 6, p.GetParserRuleContext()) {
 	case 1:
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(100)
+			p.SetState(102)
 
 			var _m = p.Match(MooncakeParserDECL_ID)
 
@@ -1254,7 +1252,7 @@ func (p *MooncakeParser) InlineStmt() (localctx IInlineStmtContext) {
 	case 2:
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(101)
+			p.SetState(103)
 
 			var _x = p.Function()
 
@@ -1266,14 +1264,14 @@ func (p *MooncakeParser) InlineStmt() (localctx IInlineStmtContext) {
 	case 3:
 		p.EnterOuterAlt(localctx, 3)
 		{
-			p.SetState(102)
+			p.SetState(104)
 
 			var _m = p.Match(MooncakeParserDECL_ID)
 
 			localctx.(*InlineStmtContext).id = _m
 		}
 		{
-			p.SetState(103)
+			p.SetState(105)
 
 			var _x = p.Function()
 
@@ -1282,6 +1280,199 @@ func (p *MooncakeParser) InlineStmt() (localctx IInlineStmtContext) {
 		}
 
 	}
+
+
+	return localctx
+}
+
+
+// IErrorStmtContext is an interface to support dynamic dispatch.
+type IErrorStmtContext interface {
+	antlr.ParserRuleContext
+
+	// GetParser returns the parser.
+	GetParser() antlr.Parser
+
+	// GetCode returns the code token.
+	GetCode() antlr.Token 
+
+	// GetInfo returns the info token.
+	GetInfo() antlr.Token 
+
+
+	// SetCode sets the code token.
+	SetCode(antlr.Token) 
+
+	// SetInfo sets the info token.
+	SetInfo(antlr.Token) 
+
+
+	// GetErrType returns the errType rule contexts.
+	GetErrType() IErrorTypeContext
+
+
+	// SetErrType sets the errType rule contexts.
+	SetErrType(IErrorTypeContext)
+
+
+	// IsErrorStmtContext differentiates from other interfaces.
+	IsErrorStmtContext()
+}
+
+type ErrorStmtContext struct {
+	*antlr.BaseParserRuleContext
+	parser antlr.Parser
+	code antlr.Token
+	info antlr.Token
+	errType IErrorTypeContext 
+}
+
+func NewEmptyErrorStmtContext() *ErrorStmtContext {
+	var p = new(ErrorStmtContext)
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
+	p.RuleIndex = MooncakeParserRULE_errorStmt
+	return p
+}
+
+func (*ErrorStmtContext) IsErrorStmtContext() {}
+
+func NewErrorStmtContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *ErrorStmtContext {
+	var p = new(ErrorStmtContext)
+
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
+
+	p.parser = parser
+	p.RuleIndex = MooncakeParserRULE_errorStmt
+
+	return p
+}
+
+func (s *ErrorStmtContext) GetParser() antlr.Parser { return s.parser }
+
+func (s *ErrorStmtContext) GetCode() antlr.Token { return s.code }
+
+func (s *ErrorStmtContext) GetInfo() antlr.Token { return s.info }
+
+
+func (s *ErrorStmtContext) SetCode(v antlr.Token) { s.code = v }
+
+func (s *ErrorStmtContext) SetInfo(v antlr.Token) { s.info = v }
+
+
+func (s *ErrorStmtContext) GetErrType() IErrorTypeContext { return s.errType }
+
+
+func (s *ErrorStmtContext) SetErrType(v IErrorTypeContext) { s.errType = v }
+
+
+func (s *ErrorStmtContext) AllSTRING() []antlr.TerminalNode {
+	return s.GetTokens(MooncakeParserSTRING)
+}
+
+func (s *ErrorStmtContext) STRING(i int) antlr.TerminalNode {
+	return s.GetToken(MooncakeParserSTRING, i)
+}
+
+func (s *ErrorStmtContext) ErrorType() IErrorTypeContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IErrorTypeContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IErrorTypeContext)
+}
+
+func (s *ErrorStmtContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *ErrorStmtContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+	return antlr.TreesStringTree(s, ruleNames, recog)
+}
+
+
+func (s *ErrorStmtContext) EnterRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.EnterErrorStmt(s)
+	}
+}
+
+func (s *ErrorStmtContext) ExitRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.ExitErrorStmt(s)
+	}
+}
+
+func (s *ErrorStmtContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MooncakeVisitor:
+		return t.VisitErrorStmt(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+
+
+
+func (p *MooncakeParser) ErrorStmt() (localctx IErrorStmtContext) {
+	localctx = NewErrorStmtContext(p, p.GetParserRuleContext(), p.GetState())
+	p.EnterRule(localctx, 14, MooncakeParserRULE_errorStmt)
+
+	defer func() {
+		p.ExitRule()
+	}()
+
+	defer func() {
+		if err := recover(); err != nil {
+			if v, ok := err.(antlr.RecognitionException); ok {
+				localctx.SetException(v)
+				p.GetErrorHandler().ReportError(p, v)
+				p.GetErrorHandler().Recover(p, v)
+			} else {
+				panic(err)
+			}
+		}
+	}()
+
+	p.EnterOuterAlt(localctx, 1)
+	{
+		p.SetState(108)
+		p.Match(MooncakeParserT__3)
+	}
+	{
+		p.SetState(109)
+
+		var _m = p.Match(MooncakeParserSTRING)
+
+		localctx.(*ErrorStmtContext).code = _m
+	}
+	{
+		p.SetState(110)
+		p.Match(MooncakeParserT__4)
+	}
+	{
+		p.SetState(111)
+
+		var _m = p.Match(MooncakeParserSTRING)
+
+		localctx.(*ErrorStmtContext).info = _m
+	}
+	{
+		p.SetState(112)
+		p.Match(MooncakeParserT__5)
+	}
+	{
+		p.SetState(113)
+
+		var _x = p.ErrorType()
+
+
+		localctx.(*ErrorStmtContext).errType = _x
+	}
+
 
 
 	return localctx
@@ -1429,7 +1620,7 @@ func (s *ExprStmtContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 
 func (p *MooncakeParser) ExprStmt() (localctx IExprStmtContext) {
 	localctx = NewExprStmtContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 14, MooncakeParserRULE_exprStmt)
+	p.EnterRule(localctx, 16, MooncakeParserRULE_exprStmt)
 
 	defer func() {
 		p.ExitRule()
@@ -1449,7 +1640,7 @@ func (p *MooncakeParser) ExprStmt() (localctx IExprStmtContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(106)
+		p.SetState(115)
 
 		var _x = p.Identifier()
 
@@ -1457,7 +1648,7 @@ func (p *MooncakeParser) ExprStmt() (localctx IExprStmtContext) {
 		localctx.(*ExprStmtContext).id = _x
 	}
 	{
-		p.SetState(107)
+		p.SetState(116)
 
 		var _x = p.Operator()
 
@@ -1465,205 +1656,12 @@ func (p *MooncakeParser) ExprStmt() (localctx IExprStmtContext) {
 		localctx.(*ExprStmtContext).op = _x
 	}
 	{
-		p.SetState(108)
+		p.SetState(117)
 
 		var _x = p.Literal()
 
 
 		localctx.(*ExprStmtContext).val = _x
-	}
-
-
-
-	return localctx
-}
-
-
-// IErrorStmtContext is an interface to support dynamic dispatch.
-type IErrorStmtContext interface {
-	antlr.ParserRuleContext
-
-	// GetParser returns the parser.
-	GetParser() antlr.Parser
-
-	// GetCode returns the code token.
-	GetCode() antlr.Token 
-
-	// GetInfo returns the info token.
-	GetInfo() antlr.Token 
-
-
-	// SetCode sets the code token.
-	SetCode(antlr.Token) 
-
-	// SetInfo sets the info token.
-	SetInfo(antlr.Token) 
-
-
-	// GetErrType returns the errType rule contexts.
-	GetErrType() IErrorTypeContext
-
-
-	// SetErrType sets the errType rule contexts.
-	SetErrType(IErrorTypeContext)
-
-
-	// IsErrorStmtContext differentiates from other interfaces.
-	IsErrorStmtContext()
-}
-
-type ErrorStmtContext struct {
-	*antlr.BaseParserRuleContext
-	parser antlr.Parser
-	code antlr.Token
-	info antlr.Token
-	errType IErrorTypeContext 
-}
-
-func NewEmptyErrorStmtContext() *ErrorStmtContext {
-	var p = new(ErrorStmtContext)
-	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
-	p.RuleIndex = MooncakeParserRULE_errorStmt
-	return p
-}
-
-func (*ErrorStmtContext) IsErrorStmtContext() {}
-
-func NewErrorStmtContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *ErrorStmtContext {
-	var p = new(ErrorStmtContext)
-
-	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
-
-	p.parser = parser
-	p.RuleIndex = MooncakeParserRULE_errorStmt
-
-	return p
-}
-
-func (s *ErrorStmtContext) GetParser() antlr.Parser { return s.parser }
-
-func (s *ErrorStmtContext) GetCode() antlr.Token { return s.code }
-
-func (s *ErrorStmtContext) GetInfo() antlr.Token { return s.info }
-
-
-func (s *ErrorStmtContext) SetCode(v antlr.Token) { s.code = v }
-
-func (s *ErrorStmtContext) SetInfo(v antlr.Token) { s.info = v }
-
-
-func (s *ErrorStmtContext) GetErrType() IErrorTypeContext { return s.errType }
-
-
-func (s *ErrorStmtContext) SetErrType(v IErrorTypeContext) { s.errType = v }
-
-
-func (s *ErrorStmtContext) ERROR_CODE() antlr.TerminalNode {
-	return s.GetToken(MooncakeParserERROR_CODE, 0)
-}
-
-func (s *ErrorStmtContext) ERROR_INFO() antlr.TerminalNode {
-	return s.GetToken(MooncakeParserERROR_INFO, 0)
-}
-
-func (s *ErrorStmtContext) ErrorType() IErrorTypeContext {
-	var t = s.GetTypedRuleContext(reflect.TypeOf((*IErrorTypeContext)(nil)).Elem(), 0)
-
-	if t == nil {
-		return nil
-	}
-
-	return t.(IErrorTypeContext)
-}
-
-func (s *ErrorStmtContext) GetRuleContext() antlr.RuleContext {
-	return s
-}
-
-func (s *ErrorStmtContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
-	return antlr.TreesStringTree(s, ruleNames, recog)
-}
-
-
-func (s *ErrorStmtContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MooncakeListener); ok {
-		listenerT.EnterErrorStmt(s)
-	}
-}
-
-func (s *ErrorStmtContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(MooncakeListener); ok {
-		listenerT.ExitErrorStmt(s)
-	}
-}
-
-func (s *ErrorStmtContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
-	switch t := visitor.(type) {
-	case MooncakeVisitor:
-		return t.VisitErrorStmt(s)
-
-	default:
-		return t.VisitChildren(s)
-	}
-}
-
-
-
-
-func (p *MooncakeParser) ErrorStmt() (localctx IErrorStmtContext) {
-	localctx = NewErrorStmtContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 16, MooncakeParserRULE_errorStmt)
-
-	defer func() {
-		p.ExitRule()
-	}()
-
-	defer func() {
-		if err := recover(); err != nil {
-			if v, ok := err.(antlr.RecognitionException); ok {
-				localctx.SetException(v)
-				p.GetErrorHandler().ReportError(p, v)
-				p.GetErrorHandler().Recover(p, v)
-			} else {
-				panic(err)
-			}
-		}
-	}()
-
-	p.EnterOuterAlt(localctx, 1)
-	{
-		p.SetState(110)
-		p.Match(MooncakeParserT__3)
-	}
-	{
-		p.SetState(111)
-
-		var _m = p.Match(MooncakeParserERROR_CODE)
-
-		localctx.(*ErrorStmtContext).code = _m
-	}
-	{
-		p.SetState(112)
-		p.Match(MooncakeParserT__4)
-	}
-	{
-		p.SetState(113)
-
-		var _m = p.Match(MooncakeParserERROR_INFO)
-
-		localctx.(*ErrorStmtContext).info = _m
-	}
-	{
-		p.SetState(114)
-		p.Match(MooncakeParserT__5)
-	}
-	{
-		p.SetState(115)
-
-		var _x = p.ErrorType()
-
-
-		localctx.(*ErrorStmtContext).errType = _x
 	}
 
 
@@ -1784,14 +1782,14 @@ func (p *MooncakeParser) Identifier() (localctx IIdentifierContext) {
 		}
 	}()
 
-	p.SetState(119)
+	p.SetState(121)
 	p.GetErrorHandler().Sync(p)
 
 	switch p.GetTokenStream().LA(1) {
 	case MooncakeParserATTR_ID:
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(117)
+			p.SetState(119)
 			p.AttributeIdentifier()
 		}
 
@@ -1799,7 +1797,7 @@ func (p *MooncakeParser) Identifier() (localctx IIdentifierContext) {
 	case MooncakeParserDECL_ID:
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(118)
+			p.SetState(120)
 			p.DeclarationIdentifier()
 		}
 
@@ -1892,6 +1890,16 @@ func (s *LiteralContext) NullLiteral() INullLiteralContext {
 	return t.(INullLiteralContext)
 }
 
+func (s *LiteralContext) StringLiteral() IStringLiteralContext {
+	var t = s.GetTypedRuleContext(reflect.TypeOf((*IStringLiteralContext)(nil)).Elem(), 0)
+
+	if t == nil {
+		return nil
+	}
+
+	return t.(IStringLiteralContext)
+}
+
 func (s *LiteralContext) CtxLiteral() ICtxLiteralContext {
 	var t = s.GetTypedRuleContext(reflect.TypeOf((*ICtxLiteralContext)(nil)).Elem(), 0)
 
@@ -1956,14 +1964,14 @@ func (p *MooncakeParser) Literal() (localctx ILiteralContext) {
 		}
 	}()
 
-	p.SetState(126)
+	p.SetState(129)
 	p.GetErrorHandler().Sync(p)
 
 	switch p.GetTokenStream().LA(1) {
 	case MooncakeParserINT:
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(121)
+			p.SetState(123)
 			p.IntLiteral()
 		}
 
@@ -1971,7 +1979,7 @@ func (p *MooncakeParser) Literal() (localctx ILiteralContext) {
 	case MooncakeParserFLOAT:
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(122)
+			p.SetState(124)
 			p.FloatLiteral()
 		}
 
@@ -1979,7 +1987,7 @@ func (p *MooncakeParser) Literal() (localctx ILiteralContext) {
 	case MooncakeParserBOOL:
 		p.EnterOuterAlt(localctx, 3)
 		{
-			p.SetState(123)
+			p.SetState(125)
 			p.BoolLiteral()
 		}
 
@@ -1987,15 +1995,23 @@ func (p *MooncakeParser) Literal() (localctx ILiteralContext) {
 	case MooncakeParserNULL:
 		p.EnterOuterAlt(localctx, 4)
 		{
-			p.SetState(124)
+			p.SetState(126)
 			p.NullLiteral()
 		}
 
 
-	case MooncakeParserCTX_ID:
+	case MooncakeParserSTRING:
 		p.EnterOuterAlt(localctx, 5)
 		{
-			p.SetState(125)
+			p.SetState(127)
+			p.StringLiteral()
+		}
+
+
+	case MooncakeParserCTX_ID:
+		p.EnterOuterAlt(localctx, 6)
+		{
+			p.SetState(128)
 			p.CtxLiteral()
 		}
 
@@ -2132,14 +2148,14 @@ func (p *MooncakeParser) Function() (localctx IFunctionContext) {
 		}
 	}()
 
-	p.SetState(131)
+	p.SetState(134)
 	p.GetErrorHandler().Sync(p)
 
 	switch p.GetTokenStream().LA(1) {
 	case MooncakeParserLEN_FUNC:
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(128)
+			p.SetState(131)
 			p.LengthFunction()
 		}
 
@@ -2147,7 +2163,7 @@ func (p *MooncakeParser) Function() (localctx IFunctionContext) {
 	case MooncakeParserDATETIME_LONG:
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(129)
+			p.SetState(132)
 			p.DateTimeLongFunction()
 		}
 
@@ -2155,7 +2171,7 @@ func (p *MooncakeParser) Function() (localctx IFunctionContext) {
 	case MooncakeParserAFTER_CURR_TIME:
 		p.EnterOuterAlt(localctx, 3)
 		{
-			p.SetState(130)
+			p.SetState(133)
 			p.AfterCurrentTimeFunction()
 		}
 
@@ -2322,14 +2338,14 @@ func (p *MooncakeParser) Operator() (localctx IOperatorContext) {
 		}
 	}()
 
-	p.SetState(139)
+	p.SetState(142)
 	p.GetErrorHandler().Sync(p)
 
 	switch p.GetTokenStream().LA(1) {
 	case MooncakeParserEQ:
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(133)
+			p.SetState(136)
 			p.EqualOperator()
 		}
 
@@ -2337,7 +2353,7 @@ func (p *MooncakeParser) Operator() (localctx IOperatorContext) {
 	case MooncakeParserNE:
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(134)
+			p.SetState(137)
 			p.NotEqualOperator()
 		}
 
@@ -2345,7 +2361,7 @@ func (p *MooncakeParser) Operator() (localctx IOperatorContext) {
 	case MooncakeParserGT:
 		p.EnterOuterAlt(localctx, 3)
 		{
-			p.SetState(135)
+			p.SetState(138)
 			p.GreaterThanOperator()
 		}
 
@@ -2353,7 +2369,7 @@ func (p *MooncakeParser) Operator() (localctx IOperatorContext) {
 	case MooncakeParserLT:
 		p.EnterOuterAlt(localctx, 4)
 		{
-			p.SetState(136)
+			p.SetState(139)
 			p.LessThanOperator()
 		}
 
@@ -2361,7 +2377,7 @@ func (p *MooncakeParser) Operator() (localctx IOperatorContext) {
 	case MooncakeParserGTE:
 		p.EnterOuterAlt(localctx, 5)
 		{
-			p.SetState(137)
+			p.SetState(140)
 			p.GreaterThanOrEqualOperator()
 		}
 
@@ -2369,7 +2385,7 @@ func (p *MooncakeParser) Operator() (localctx IOperatorContext) {
 	case MooncakeParserLTE:
 		p.EnterOuterAlt(localctx, 6)
 		{
-			p.SetState(138)
+			p.SetState(141)
 			p.LessThanOrEqualOperator()
 		}
 
@@ -2506,14 +2522,14 @@ func (p *MooncakeParser) ErrorType() (localctx IErrorTypeContext) {
 		}
 	}()
 
-	p.SetState(144)
+	p.SetState(147)
 	p.GetErrorHandler().Sync(p)
 
 	switch p.GetTokenStream().LA(1) {
 	case MooncakeParserFATAL:
 		p.EnterOuterAlt(localctx, 1)
 		{
-			p.SetState(141)
+			p.SetState(144)
 			p.FatalError()
 		}
 
@@ -2521,7 +2537,7 @@ func (p *MooncakeParser) ErrorType() (localctx IErrorTypeContext) {
 	case MooncakeParserSEVERE:
 		p.EnterOuterAlt(localctx, 2)
 		{
-			p.SetState(142)
+			p.SetState(145)
 			p.SevereError()
 		}
 
@@ -2529,7 +2545,7 @@ func (p *MooncakeParser) ErrorType() (localctx IErrorTypeContext) {
 	case MooncakeParserWARNING:
 		p.EnterOuterAlt(localctx, 3)
 		{
-			p.SetState(143)
+			p.SetState(146)
 			p.WarningError()
 		}
 
@@ -2642,7 +2658,7 @@ func (p *MooncakeParser) FatalError() (localctx IFatalErrorContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(146)
+		p.SetState(149)
 		p.Match(MooncakeParserFATAL)
 	}
 
@@ -2750,7 +2766,7 @@ func (p *MooncakeParser) SevereError() (localctx ISevereErrorContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(148)
+		p.SetState(151)
 		p.Match(MooncakeParserSEVERE)
 	}
 
@@ -2858,7 +2874,7 @@ func (p *MooncakeParser) WarningError() (localctx IWarningErrorContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(150)
+		p.SetState(153)
 		p.Match(MooncakeParserWARNING)
 	}
 
@@ -2966,7 +2982,7 @@ func (p *MooncakeParser) EqualOperator() (localctx IEqualOperatorContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(152)
+		p.SetState(155)
 		p.Match(MooncakeParserEQ)
 	}
 
@@ -3074,7 +3090,7 @@ func (p *MooncakeParser) NotEqualOperator() (localctx INotEqualOperatorContext) 
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(154)
+		p.SetState(157)
 		p.Match(MooncakeParserNE)
 	}
 
@@ -3182,7 +3198,7 @@ func (p *MooncakeParser) GreaterThanOperator() (localctx IGreaterThanOperatorCon
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(156)
+		p.SetState(159)
 		p.Match(MooncakeParserGT)
 	}
 
@@ -3290,7 +3306,7 @@ func (p *MooncakeParser) LessThanOperator() (localctx ILessThanOperatorContext) 
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(158)
+		p.SetState(161)
 		p.Match(MooncakeParserLT)
 	}
 
@@ -3398,7 +3414,7 @@ func (p *MooncakeParser) GreaterThanOrEqualOperator() (localctx IGreaterThanOrEq
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(160)
+		p.SetState(163)
 		p.Match(MooncakeParserGTE)
 	}
 
@@ -3506,7 +3522,7 @@ func (p *MooncakeParser) LessThanOrEqualOperator() (localctx ILessThanOrEqualOpe
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(162)
+		p.SetState(165)
 		p.Match(MooncakeParserLTE)
 	}
 
@@ -3614,7 +3630,7 @@ func (p *MooncakeParser) IntLiteral() (localctx IIntLiteralContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(164)
+		p.SetState(167)
 		p.Match(MooncakeParserINT)
 	}
 
@@ -3722,7 +3738,7 @@ func (p *MooncakeParser) FloatLiteral() (localctx IFloatLiteralContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(166)
+		p.SetState(169)
 		p.Match(MooncakeParserFLOAT)
 	}
 
@@ -3830,7 +3846,7 @@ func (p *MooncakeParser) BoolLiteral() (localctx IBoolLiteralContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(168)
+		p.SetState(171)
 		p.Match(MooncakeParserBOOL)
 	}
 
@@ -3938,8 +3954,116 @@ func (p *MooncakeParser) NullLiteral() (localctx INullLiteralContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(170)
+		p.SetState(173)
 		p.Match(MooncakeParserNULL)
+	}
+
+
+
+	return localctx
+}
+
+
+// IStringLiteralContext is an interface to support dynamic dispatch.
+type IStringLiteralContext interface {
+	antlr.ParserRuleContext
+
+	// GetParser returns the parser.
+	GetParser() antlr.Parser
+
+	// IsStringLiteralContext differentiates from other interfaces.
+	IsStringLiteralContext()
+}
+
+type StringLiteralContext struct {
+	*antlr.BaseParserRuleContext
+	parser antlr.Parser
+}
+
+func NewEmptyStringLiteralContext() *StringLiteralContext {
+	var p = new(StringLiteralContext)
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
+	p.RuleIndex = MooncakeParserRULE_stringLiteral
+	return p
+}
+
+func (*StringLiteralContext) IsStringLiteralContext() {}
+
+func NewStringLiteralContext(parser antlr.Parser, parent antlr.ParserRuleContext, invokingState int) *StringLiteralContext {
+	var p = new(StringLiteralContext)
+
+	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
+
+	p.parser = parser
+	p.RuleIndex = MooncakeParserRULE_stringLiteral
+
+	return p
+}
+
+func (s *StringLiteralContext) GetParser() antlr.Parser { return s.parser }
+
+func (s *StringLiteralContext) STRING() antlr.TerminalNode {
+	return s.GetToken(MooncakeParserSTRING, 0)
+}
+
+func (s *StringLiteralContext) GetRuleContext() antlr.RuleContext {
+	return s
+}
+
+func (s *StringLiteralContext) ToStringTree(ruleNames []string, recog antlr.Recognizer) string {
+	return antlr.TreesStringTree(s, ruleNames, recog)
+}
+
+
+func (s *StringLiteralContext) EnterRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.EnterStringLiteral(s)
+	}
+}
+
+func (s *StringLiteralContext) ExitRule(listener antlr.ParseTreeListener) {
+	if listenerT, ok := listener.(MooncakeListener); ok {
+		listenerT.ExitStringLiteral(s)
+	}
+}
+
+func (s *StringLiteralContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
+	switch t := visitor.(type) {
+	case MooncakeVisitor:
+		return t.VisitStringLiteral(s)
+
+	default:
+		return t.VisitChildren(s)
+	}
+}
+
+
+
+
+func (p *MooncakeParser) StringLiteral() (localctx IStringLiteralContext) {
+	localctx = NewStringLiteralContext(p, p.GetParserRuleContext(), p.GetState())
+	p.EnterRule(localctx, 54, MooncakeParserRULE_stringLiteral)
+
+	defer func() {
+		p.ExitRule()
+	}()
+
+	defer func() {
+		if err := recover(); err != nil {
+			if v, ok := err.(antlr.RecognitionException); ok {
+				localctx.SetException(v)
+				p.GetErrorHandler().ReportError(p, v)
+				p.GetErrorHandler().Recover(p, v)
+			} else {
+				panic(err)
+			}
+		}
+	}()
+
+	p.EnterOuterAlt(localctx, 1)
+	{
+		p.SetState(175)
+		p.Match(MooncakeParserSTRING)
 	}
 
 
@@ -4026,7 +4150,7 @@ func (s *CtxLiteralContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 
 func (p *MooncakeParser) CtxLiteral() (localctx ICtxLiteralContext) {
 	localctx = NewCtxLiteralContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 54, MooncakeParserRULE_ctxLiteral)
+	p.EnterRule(localctx, 56, MooncakeParserRULE_ctxLiteral)
 
 	defer func() {
 		p.ExitRule()
@@ -4046,7 +4170,7 @@ func (p *MooncakeParser) CtxLiteral() (localctx ICtxLiteralContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(172)
+		p.SetState(177)
 		p.Match(MooncakeParserCTX_ID)
 	}
 
@@ -4134,7 +4258,7 @@ func (s *AttributeIdentifierContext) Accept(visitor antlr.ParseTreeVisitor) inte
 
 func (p *MooncakeParser) AttributeIdentifier() (localctx IAttributeIdentifierContext) {
 	localctx = NewAttributeIdentifierContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 56, MooncakeParserRULE_attributeIdentifier)
+	p.EnterRule(localctx, 58, MooncakeParserRULE_attributeIdentifier)
 
 	defer func() {
 		p.ExitRule()
@@ -4154,7 +4278,7 @@ func (p *MooncakeParser) AttributeIdentifier() (localctx IAttributeIdentifierCon
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(174)
+		p.SetState(179)
 		p.Match(MooncakeParserATTR_ID)
 	}
 
@@ -4242,7 +4366,7 @@ func (s *DeclarationIdentifierContext) Accept(visitor antlr.ParseTreeVisitor) in
 
 func (p *MooncakeParser) DeclarationIdentifier() (localctx IDeclarationIdentifierContext) {
 	localctx = NewDeclarationIdentifierContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 58, MooncakeParserRULE_declarationIdentifier)
+	p.EnterRule(localctx, 60, MooncakeParserRULE_declarationIdentifier)
 
 	defer func() {
 		p.ExitRule()
@@ -4262,7 +4386,7 @@ func (p *MooncakeParser) DeclarationIdentifier() (localctx IDeclarationIdentifie
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(176)
+		p.SetState(181)
 		p.Match(MooncakeParserDECL_ID)
 	}
 
@@ -4350,7 +4474,7 @@ func (s *LengthFunctionContext) Accept(visitor antlr.ParseTreeVisitor) interface
 
 func (p *MooncakeParser) LengthFunction() (localctx ILengthFunctionContext) {
 	localctx = NewLengthFunctionContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 60, MooncakeParserRULE_lengthFunction)
+	p.EnterRule(localctx, 62, MooncakeParserRULE_lengthFunction)
 
 	defer func() {
 		p.ExitRule()
@@ -4370,7 +4494,7 @@ func (p *MooncakeParser) LengthFunction() (localctx ILengthFunctionContext) {
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(178)
+		p.SetState(183)
 		p.Match(MooncakeParserLEN_FUNC)
 	}
 
@@ -4458,7 +4582,7 @@ func (s *DateTimeLongFunctionContext) Accept(visitor antlr.ParseTreeVisitor) int
 
 func (p *MooncakeParser) DateTimeLongFunction() (localctx IDateTimeLongFunctionContext) {
 	localctx = NewDateTimeLongFunctionContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 62, MooncakeParserRULE_dateTimeLongFunction)
+	p.EnterRule(localctx, 64, MooncakeParserRULE_dateTimeLongFunction)
 
 	defer func() {
 		p.ExitRule()
@@ -4478,7 +4602,7 @@ func (p *MooncakeParser) DateTimeLongFunction() (localctx IDateTimeLongFunctionC
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(180)
+		p.SetState(185)
 		p.Match(MooncakeParserDATETIME_LONG)
 	}
 
@@ -4566,7 +4690,7 @@ func (s *AfterCurrentTimeFunctionContext) Accept(visitor antlr.ParseTreeVisitor)
 
 func (p *MooncakeParser) AfterCurrentTimeFunction() (localctx IAfterCurrentTimeFunctionContext) {
 	localctx = NewAfterCurrentTimeFunctionContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 64, MooncakeParserRULE_afterCurrentTimeFunction)
+	p.EnterRule(localctx, 66, MooncakeParserRULE_afterCurrentTimeFunction)
 
 	defer func() {
 		p.ExitRule()
@@ -4586,7 +4710,7 @@ func (p *MooncakeParser) AfterCurrentTimeFunction() (localctx IAfterCurrentTimeF
 
 	p.EnterOuterAlt(localctx, 1)
 	{
-		p.SetState(182)
+		p.SetState(187)
 		p.Match(MooncakeParserAFTER_CURR_TIME)
 	}
 

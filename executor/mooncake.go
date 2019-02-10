@@ -99,8 +99,8 @@ func (mv *mooncakeVisitor) VisitExprStmt(ctx *parser.ExprStmtContext) interface{
 
 func (mv *mooncakeVisitor) VisitErrorStmt(ctx *parser.ErrorStmtContext) interface{} {
 	log.Printf("VisitErrorStmt - %v", ctx.GetText())
-	code := ctx.GetCode().GetText()
-	info := ctx.GetInfo().GetText()
+	code := lang.ToUnescapedStr(ctx.GetCode().GetText())
+	info := lang.ToUnescapedStr(ctx.GetInfo().GetText())
 	severity := ctx.ErrorType().Accept(mv).(int)
 
 	return lang.ErrorStatement{Code: code, Info: info, Severity: severity}
@@ -199,10 +199,16 @@ func (mv *mooncakeVisitor) VisitNullLiteral(ctx *parser.NullLiteralContext) inte
 	return &lang.NullLiteral{}
 }
 
+func (mv *mooncakeVisitor) VisitStringLiteral(ctx *parser.StringLiteralContext) interface{} {
+	log.Printf("VisitStringLiteral - %v", ctx.GetText())
+	val := lang.ToUnescapedStr(ctx.GetText())
+	return &lang.StringLiteral{Val: val}
+}
+
 func (mv *mooncakeVisitor) VisitCtxLiteral(ctx *parser.CtxLiteralContext) interface{} {
 	log.Printf("VisitCtxLiteral - %v", ctx.GetText())
-	id := lang.StrToCtx(ctx.GetText());
-	val := lang.GetValue(id, mv.ctx);
+	id := lang.StrToCtx(ctx.GetText())
+	val := lang.GetValue(id, mv.ctx)
 	return &lang.CtxLiteral{Val: val}
 }
 

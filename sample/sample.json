@@ -1,0 +1,42 @@
+{
+  "item": {
+    "first": {
+      "list": [
+        {
+          "name": "N1",
+          "value": 1
+        },
+        {
+          "name": "N2",
+          "value": 2
+        }
+      ]
+    },
+    "second": [
+      {
+        "obj1": "AO1"
+      },
+      {
+        "obj2": "AO2"
+      },
+      {
+        "obj3": "AO3"
+      }
+    ],
+    "third": {
+      "intValue": 20
+    },
+    "fourth": {
+      "floatValue": 30.80
+    },
+    "fifth": {
+      "boolValue": true
+    },
+    "sixth": {
+      "stringValue": "xyz"
+    },
+    "temp_req": {
+      "value": 300
+    }
+  }
+}

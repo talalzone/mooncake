@@ -55,7 +55,7 @@ func (l *BoolLiteral) eq(value interface{}) bool {
 }
 
 func (l *BoolLiteral) ne(value interface{}) bool {
-	return value.(bool) == l.Val
+	return value.(bool) != l.Val
 }
 
 func (l *BoolLiteral) lt(value interface{}) bool {
@@ -85,11 +85,11 @@ func (l *StringLiteral) GetValue() interface{} {
 }
 
 func (l *StringLiteral) eq(value interface{}) bool {
-	return value.(string) == l.Val
+	return value == l.Val
 }
 
 func (l *StringLiteral) ne(value interface{}) bool {
-	return value.(string) == l.Val
+	return value != l.Val
 }
 
 func (l *StringLiteral) lt(value interface{}) bool {
