@@ -47,6 +47,5 @@ CTX_ID=35
 '@float'=20
 '@dateTimeLong'=21
 '@afterCurrentTime'=22
-'nil'=26
 'true'=28
 'false'=29

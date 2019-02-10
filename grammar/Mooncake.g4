@@ -234,6 +234,7 @@ BOOL
 
 NULL
     : 'nil'
+    | 'null'
     ;
 
 STRING

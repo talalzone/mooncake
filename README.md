@@ -19,7 +19,7 @@ For now objects in json format are handled.
 A simple validation statement has the following syntax:
 
 ```
-item.name eq nil => [E0123, 'item name is null']!!! # if item.name is empty then fatal error
+item.name eq nil => ['E0123', 'item name is null']!!! # if item.name is empty then fatal error
 ```
 
 Breaking it down we have:
@@ -28,17 +28,17 @@ Breaking it down we have:
 * _Operator:_ `eq`
 * _Literal:_ `nil`
 * _Implication:_ `=>`
-* _Error:_ `[E0123, 'item name is null']!!` containing error code, info and severity
+* _Error:_ `['E406', 'item name is null']!!` containing error code, info and severity
 * _Comment:_ `# if item.name is empty then severe error`
 
 
 A group of statements can depend on each or could be independent:
 
 ```
-~item.name   eq nil  => [E0001, 'info-1']!!!
-~item.value  eq nil  => [E0002, 'info-2']!!
+~item.name   eq nil  => ['E001', 'info-1']!!!
+~item.value  eq nil  => ['E002', 'info-2']!!
 
- item.info   eq nil  => [E0003, 'info-3']!
+ item.info   eq nil  => ['E003', 'info-3']!
 ```
 
 Here, `~` implies an inorder dependent relation i.e., only if the `item.name` expression doesn't hold
@@ -50,13 +50,13 @@ then the following statement `item.value` is evaluated.
 A statement can also have a body block which is evaluated only if the expression doesn't hold:
 
 ```
-item.name eq nil  => [E0001, 'info-1']!!!
+item.name eq nil  => ['E001', 'info-1']!!!
 {
-    item.value eq nil => [E0002, 'info-2']!!
+    item.value eq nil => ['E002', 'info-2']!!
     {
-        item.value.first eq nil => [E0003, 'info-3']!
+        item.value.first eq nil => ['E003', 'info-3']!
         {
-            item.value.second eq nil => [E0004, 'info-4']!
+            item.value.second eq nil => ['E004', 'info-4']!
         }
     }
 }
@@ -64,25 +64,25 @@ item.name eq nil  => [E0001, 'info-1']!!!
 This is similar to using `~` to have  dependent relations:
 
 ```
-~item.name eq nil           => [E0001, 'info-1']!!!
-~item.value eq nil          => [E0002, 'info-2']!!
-~item.value.first eq nil    => [E0003, 'info-3']!
-~item.value.second eq nil   => [E0004, 'info-4']!
+~item.name eq nil           => ['E001', 'info-1']!!!
+~item.value eq nil          => ['E002', 'info-2']!!
+~item.value.first eq nil    => ['E003', 'info-3']!
+~item.value.second eq nil   => ['E004', 'info-4']!
 ```
 
 Blocks are useful when using functions and inline declarations:
 
 ```$xslt
- _x @len item.list eq 0  => [E0005, 'info-5']!!
+ _x @len item.list eq 0  => ['E005', 'info-5']!!
  {
-    ~ _x eq 10 => [E0006, 'info-6']!! # some special case
-    ~ _x eq 20 => [E0007, 'info-7']!! # another special case
+    ~ _x eq 10 => ['E006', 'info-6']!! # some special case
+    ~ _x eq 20 => ['E007', 'info-7']!! # another special case
  }
 ``` 
 
 If there is a need to reference structures then it could be done as:
 ```
-item.name eq ${ctx.item1}  => [E0005, 'info-5']!!
+item.name eq ${ctx.item1}  => ['E005', 'info-5']!!
 ```
 
 Here, `${...}` reflectively gets the passed `struct` and check it against the expression.
@@ -124,7 +124,7 @@ with respect to severity. Example:
 {
    "Fatal":[
       {
-         "Code":"E0001",
+         "Code":"E406",
          "Info":"sample is empty"
       }
    ],
@@ -138,6 +138,19 @@ with respect to severity. Example:
 
 ```
 
+Specification
+-------------
+
+Literals
+---------
+
+| Type                      | Specification                                                        |
+| :------------------------ | :----------------------------------------------------------------- |
+| Boolean                   | `true` or `false`                                             |
+| Integer                   | `signed` or `unsigned` integer values e.g., `12, 0, -50,`                                    |              
+| Float                     | `signed` or `unsiged` floating point values e.g., `49.10, -23.21`                                           |
+| Null                      | `nil` or `null`                                 |
+| String                    | `single quoted characters without space` e.g., `'sample'`, `'ExampleString'`                                       |
 
 Operators
 ---------
@@ -174,9 +187,9 @@ Errors
 
 | Notation                  | Severity                                                           |
 | :------------------------ | :----------------------------------------------------------------- |
-| `!`                       | Warning                                                            |
-| `!!`                      | Severe                                                             |              
 | `!!!`                     | Fatal                                                              |
+| `!!`                      | Severe                                                             |              
+| `!`                       | Warning                                                            |
 
 Comments
 --------
@@ -184,14 +197,14 @@ Inline comments are represented with `#` and can come after a rule statement:
 
 ```
 
-~item.name eq nil => [E0001, 'info-1']!! # this is a comment
+~item.name eq nil => ['E001', 'info-1']!! # this is a comment
 	
 ```
 
 Commented out statement looks as follows:
 ```
 
-# ~item.name eq nil => [E0001, 'info-1']!! # this rule is commented out
+# ~item.name eq nil => ['E001', 'info-1']!! # this rule is commented out
 	
 ```
 
